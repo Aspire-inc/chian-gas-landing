@@ -1,0 +1,214 @@
+import LogoIcon from "@/assets/icons/logo-icon.svg";
+import CaretDownIcon from "@/assets/icons/caret-down-icon.svg";
+import SmsIcon from "@/assets/icons/sms-icon.svg";
+import PhoneIcon from "@/assets/icons/phone-icon.svg";
+import LocationIcon from "@/assets/icons/location-icon.svg";
+import FacebookIcon from "@/assets/icons/facebook-icon.svg";
+import TwitterIcon from "@/assets/icons/twitter-icon.svg";
+import InstagramIcon from "@/assets/icons/instagram-icon.svg";
+import LinkedInIcon from "@/assets/icons/linkedin-icon.svg";
+import DownloadOnAppStoreIcon from "@/assets/icons/download-on-app-store-icon.svg";
+import GetOnGooglePlayIcon from "@/assets/icons/get-on-google-play-icon.svg";
+import CaretUpIcon from "@/assets/icons/caret-up-icon.svg";
+
+import "./globals.css";
+import { Inter } from "next/font/google";
+
+import Image from "next/image";
+
+export const metadata = {
+  title: "Chian Gas",
+  description: "Connect, Refill, Cook with ease",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body>
+        <nav>
+          <div className="h-[37px] bg-[#0043A7] flex items-center px-10 justify-between">
+            <div className="flex gap-3">
+              <span className="text-white text-[14px] font-semibold">
+                Open: 24 Hours
+              </span>
+              <span className="text-white text-[14px] font-semibold">|</span>
+              <span className="text-white text-[14px] font-semibold">
+                7 Days
+              </span>
+            </div>
+
+            <div className="flex gap-5">
+              <span className="text-white text-[14px] font-normal">
+                Partner with Chian as a:
+              </span>
+              <span className="text-white text-[14px] font-semibold cursor-pointer">
+                Vendor
+              </span>
+              <span className="text-white text-[14px] font-semibold cursor-pointer">
+                Sponsor
+              </span>
+              <span className="text-white text-[14px] font-semibold cursor-pointer">
+                Delivery
+              </span>
+            </div>
+          </div>
+          <div className="h-[80px] bg-white px-10 flex justify-between">
+            <Image src={LogoIcon} alt="" />
+            <div className="w-[calc(100%-150px)] h-full flex justify-between items-center">
+              <ul className="flex items-center gap-12">
+                <li className="flex items-center gap-x-1">
+                  <span className="text-[20px] text-[#5B5B5B]">Company</span>
+                  <Image src={CaretDownIcon} alt="" />
+                </li>
+                <li>
+                  <span className="text-[20px] text-[#5B5B5B]">Support</span>
+                </li>
+                <li>
+                  <span className="text-[20px] text-[#5B5B5B]">Safety</span>
+                </li>
+              </ul>
+
+              <ul className="flex items-center gap-12">
+                <li className="flex items-center gap-x-1">
+                  <span className="text-[20px] text-[#5B5B5B]">
+                    Partner with Chian
+                  </span>
+                </li>
+                <li>
+                  <span className="text-[20px] text-[#5B5B5B]">Solutions</span>
+                </li>
+                <li>
+                  <button className="text-[#5B5B5B] font-semibold text-[16px] w-[200px] h-[50px] rounded-[30px] border border-[#A7AEC1]">
+                    Download App
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        {children}
+        <footer className="bg-[#FBFAFA] py-24 px-28 mt-20">
+          <div className="flex gap-x-5">
+            <ul className="flex flex-col gap-y-5 w-[25%]">
+              <li>
+                <Image src={LogoIcon} alt="" />
+              </li>
+              <li className="flex items-center gap-x-2">
+                <Image src={SmsIcon} alt="" />
+                <span className="text-[20px] tracking-wider text-[#5B5B5B]">
+                  info@chiangas.com
+                </span>
+              </li>
+              <li className="flex items-center gap-x-2">
+                <Image src={PhoneIcon} alt="" />
+                <span className="text-[20px] tracking-wider text-[#5B5B5B]">
+                  +234 901 418 6951
+                </span>
+              </li>
+              <li className="flex items-center gap-x-2">
+                <Image src={LocationIcon} alt="" />
+                <span className="text-[20px] tracking-wider text-[#5B5B5B]">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </span>
+              </li>
+            </ul>
+            <ul className="flex flex-col gap-y-5 w-[25%]">
+              <li>
+                <span className="text-[#0043A7] text-[16px] tracking-wider font-bold">
+                  Recent News
+                </span>
+              </li>
+              <li className="">
+                <span className="text-[20px] text-[#5B5B5B]">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </span>
+                <div className="border-[0.5px] border-[#DBDDE3] w-[200px] mt-4"></div>
+              </li>
+              <li className="">
+                <span className="text-[20px] text-[#5B5B5B]">
+                  Lorem ipsum dolor sit amet.
+                </span>
+                <div className="border-[0.5px] border-[#DBDDE3] w-[200px] mt-4"></div>
+              </li>
+              <li className="">
+                <span className="text-[20px] text-[#5B5B5B]">
+                  Lorem ipsum dolor sit.
+                </span>
+                <div className="border-[0.5px] border-[#DBDDE3] w-[200px] mt-4"></div>
+              </li>
+            </ul>
+            <ul className="flex flex-col gap-y-5 w-[25%]">
+              <li>
+                <span className="text-[#0043A7] text-[16px] tracking-wider font-bold">
+                  Recent News
+                </span>
+              </li>
+              <li className="">
+                <span className="text-[20px] text-[#5B5B5B]">Company</span>
+              </li>
+              <li className="">
+                <span className="text-[20px] text-[#5B5B5B]">Support</span>
+              </li>
+              <li className="">
+                <span className="text-[20px] text-[#5B5B5B]">Safety</span>
+              </li>
+              <li className="">
+                <span className="text-[20px] text-[#5B5B5B]">
+                  Partner with Chian
+                </span>
+              </li>
+              <li className="">
+                <span className="text-[20px] text-[#5B5B5B]">Solution</span>
+              </li>
+            </ul>
+            <div className="flex flex-col gap-y-6">
+              <span className="text-[#0043A7] tracking-wider text-[16px] font-bold">
+                Social
+              </span>
+
+              <div className="flex gap-x-4">
+                <div className="w-[60px] h-[60px] flex items-center justify-center rounded-[16px] border border-[#5B5B5B]">
+                  <Image src={FacebookIcon} alt="" />
+                </div>
+                <div className="w-[60px] h-[60px] flex items-center justify-center rounded-[16px] border border-[#5B5B5B]">
+                  <Image src={TwitterIcon} alt="" />
+                </div>
+                <div className="w-[60px] h-[60px] flex items-center justify-center rounded-[16px] border border-[#5B5B5B]">
+                  <Image src={InstagramIcon} alt="" />
+                </div>
+                <div className="w-[60px] h-[60px] flex items-center justify-center rounded-[16px] border border-[#5B5B5B]">
+                  <Image src={LinkedInIcon} alt="" />
+                </div>
+              </div>
+
+              <span className="text-[#0043A7] tracking-wider text-[16px] font-bold">
+                Get our apps
+              </span>
+
+              <div className="flex gap-x-3">
+                <Image src={DownloadOnAppStoreIcon} alt="" />
+                <Image src={GetOnGooglePlayIcon} alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-20">
+            <div className="w-[49px] h-[49px] border-[1.5px] border-[#A7AEC1] flex items-center justify-center rounded-[10px] cursor-pointer">
+              <Image src={CaretUpIcon} alt="" />
+            </div>
+          </div>
+
+          <div className="text-center mt-4">
+            <span className="text-[#5B5B5B] tracking-wider">
+              © 2023 All rights reserved.
+            </span>
+          </div>
+        </footer>
+      </body>
+    </html>
+  );
+}
