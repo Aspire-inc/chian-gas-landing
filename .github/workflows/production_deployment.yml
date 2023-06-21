@@ -1,23 +1,27 @@
-# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
-# For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
-
 name: Production Deployment
 
 on:
   push:
     branches: [ master ]
-    
+
 jobs:
   build:
+    name: Deploy
     runs-on: production
     
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 20
-      - run: npm ci
-      - run: npm run build --if-present
-      - run: npm test --if-present
-      - run: npm run start:prod
+    strategy:
+      matrix:
+        node-version: [20.x]
 
+    steps:
+    - uses: actions/checkout@v3
+    - name: Executing remote  command
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+    # - name: Add .env 
+    - run: echo "${{secrets.ENV}}" > .env
+    - run: npm i
+    - run: npm run build --if-present
+    - run: npm run start:prod
+   
