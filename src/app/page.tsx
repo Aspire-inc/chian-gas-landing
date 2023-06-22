@@ -1,15 +1,15 @@
-import NextIcon from "@/assets/icons/next-icon.svg";
-import PrevIcon from "@/assets/icons/prev-icon.svg";
 import TransparentLogoIcon from "@/assets/icons/transparent-logo-icon.svg";
 import TelevisionIcon from "@/assets/icons/television-icon.svg";
 import HalfSmartPhoneIcon from "@/assets/icons/half-smartphone-icon.svg";
 import QuestionGirlIcon from "@/assets/icons/question-girl-icon.svg";
 import ThinkingBoyIcon from "@/assets/icons/thinking-boy-icon.svg";
-import Head from "next/head";
 import Image from "next/image";
 import DotDiffText from "./components/ui/dot-diff-text";
 import HowItWorksCard from "./components/ui/how-it-works-card";
 import FaqCard from "./components/ui/faq-card";
+import NextIcon from "@/assets/icons/next-icon.svg";
+import PrevIcon from "@/assets/icons/prev-icon.svg";
+import React from "react";
 
 const howItoWorks = [
   {
@@ -99,26 +99,30 @@ const faqs = [
 
 export default function Home() {
   return (
-    <main className="">
+    <div className="w-full">
       <div
         style={{
           backgroundImage: "url(/woman-feeding-man.png)",
         }}
-        className="h-[800px]"
+        className="h-[calc(100vh-76px)] md:h-[700px] lg:h-[800px] bg-[center_top]"
       >
         <div
           style={{ background: "rgba(0,0,0,0.5)" }}
-          className="w-full h-full flex items-center justify-between px-14 gap-x-16"
+          className="w-full h-full flex items-center justify-between px-5 md:px-14 gap-x-16"
         >
-          <Image src={PrevIcon} alt="" className="cursor-pointer" />
+          <Image
+            src={PrevIcon}
+            alt=""
+            className="cursor-pointer hidden lg:block"
+          />
           <div className="h-full flex justify-center items-start flex-col flex-grow">
-            <p className="font-bold text-white text-[80px] leading-[98px]">
-              Connect. Refill
+            <p className="font-bold text-white text-5xl lg:text-[80px] lg:leading-[98px]">
+              Connect. Refill.
             </p>
-            <p className="font-bold text-white text-[80px] leading-[98px]">
+            <p className="font-bold text-white text-5xl lg:text-[80px] lg:leading-[98px]">
               Cook with ease
             </p>
-            <p className="text-white text-[20px] mb-10 w-[900px] mt-5">
+            <p className="text-white text-[16px] md:text-[20px] mb-10 max-w-[900px] mt-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
               eget felis et felis ultrices tempus at sed eros. Vivamus fringilla
               ipsum metus, ac tincidunt sapien maximus eget. Quisque condimentum
@@ -129,21 +133,18 @@ export default function Home() {
               Download App
             </button>
           </div>
-          <Image src={NextIcon} alt="" className="cursor-pointer" />
+          <Image
+            src={NextIcon}
+            alt=""
+            className="cursor-pointer hidden lg:block"
+          />
         </div>
       </div>
-
-      <div className="bg-white p-7 flex items-center flex-col">
-        <div className="flex gap-x-3">
-          <div className="w-[40px] h-[5px] bg-[#F99617] rounded-[50px]"></div>
-          <div className="w-[40px] h-[5px] bg-[#F99617] opacity-[0.2] rounded-[50px]"></div>
-          <div className="w-[40px] h-[5px] bg-[#F99617] opacity-[0.2] rounded-[50px]"></div>
-        </div>
-
-        <div className="mt-20 flex flex-col items-center">
+      <div className="bg-white p-5 sm:p-7 flex items-center flex-col">
+        <div className="mt-7 md:mt-14 flex flex-col items-center">
           <DotDiffText>How it works</DotDiffText>
 
-          <div className="mt-12 grid grid-cols-3 grid-rows-2 gap-7">
+          <div className="mt-6 md:mt-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-rows-5 md:grid-rows-3 xl:grid-rows-2 gap-7">
             {howItoWorks.map((data, i) => (
               <HowItWorksCard
                 tagVariant=""
@@ -157,17 +158,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div
-        style={{
-          backgroundImage: "url(/as-a-vendor-bg.png)",
-          backgroundSize: "cover",
-          backgroundPosition: "center cennter",
-        }}
-        className="w-[100%] h-[600px] mt-20 p-16 flex items-center"
-      >
-        <div className="w-[calc(100%-700px)]">
+      <div className="w-[100%] mt-10 md:mt-20 flex flex-wrap items-center gap-y-6">
+        <div className="w-full xl:w-[calc(100%-800px)] px-5 sm:px-12 lg:pl-20">
           <DotDiffText>As a vendor?</DotDiffText>
-          <p className="text-[#5B5B5B] text-[18px] mt-1 tracking-wider w-[calc(100%-100px)]">
+          <p className="text-[#5B5B5B] text-[16px] sm:text-[18px] mt-1 tracking-wider lg:w-[calc(100%-100px)]">
             Manage users, riders, and vendors via admin panel. Lorem ipsum dolor
             sit amet, consectetur adipiscing elit. Mauris eget felis et felis
             ultrices tempus at sed eros. Donec pulvinar lacus a augue ultricies
@@ -182,15 +176,26 @@ export default function Home() {
             Enrol Now
           </button>
         </div>
-        <div>
-          <Image src={TelevisionIcon} alt="" />
+        <div className="h-[303px] lg:h-[600px] w-full xl:w-[800px] relative flex items-center justify-center xl:justify-start">
+          <div
+            style={{
+              backgroundImage: "url(/as-a-vendor-bg.png)",
+              backgroundSize: "cover",
+            }}
+            className="h-full w-full absolute top-0 left-0 bg-[right_center] xl:bg-[right_center]"
+          ></div>
+          <div className="relative w-[400px] lg:w-[600px] h-[200px] lg:h-[400px]">
+            <Image src={TelevisionIcon} alt="" className="relative" fill />
+          </div>
         </div>
       </div>
 
-      <div className="flex justify-center py-20 relative">
-        <Image src={TransparentLogoIcon} alt="" />
-        <div className="w-full h-full absolute top-0 left-0 flex items-center justify-center text-[48px]">
-          <p className="text-center max-w-[80%]">
+      <div className="flex justify-center  py-10 md:py-20 relative">
+        <div className="relative h-[200px] lg:w-[500px] w-[200px] lg:h-[500px]">
+          <Image src={TransparentLogoIcon} alt="" fill />
+        </div>
+        <div className="w-full h-full absolute top-0 left-0 flex items-center justify-center text-[18px] sm:text-[26px] lg:text-[48px] px-5">
+          <p className="text-center md:max-w-[80%]">
             <span className="font-bold text-inherit">Chian: </span> Your
             convenient connection to gas vendors for quick and hassle-free
             refills. Never run out of gas again with our easy-to-use app.
@@ -198,22 +203,22 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="max-w-[80%] mx-auto mt-20 relative">
-        <div className="flex gap-x-10">
-          <div className="relative w-[500px] h-[610px] overflow-hidden rounded-[20px] z-[10]">
+      <div className="px-5 sm:max-w-[95%] xl:max-w-[80%] mx-auto md:mt-20 relative">
+        <div className="flex gap-10 flex-wrap lg:flex-nowrap justify-center">
+          <div className="relative w-[300px] sm:w-[500px] h-[400px] sm:h-[610px] overflow-hidden rounded-[20px] z-[10] order-2 lg:order-1">
             <Image src={"/stay-informed.png"} alt="" fill />
           </div>
-          <div className="w-[calc(100%-500px)]">
-            <p className="text-[#CACACA] text-[36px]">
+          <div className="w-full lg:w-[calc(100%-500px)] order-1 lg:order-2">
+            <p className="text-[#CACACA] text-[24px] 2xl:text-[36px]">
               GET ALERT. REFILL. KEEP COOKING
             </p>
             <DotDiffText>
               Stay informed of your gas levels in advance
             </DotDiffText>
-            <span className="text-[#F9F9F9] font-bold text-[170px] leading-[170px] left-[-100px] relative">
+            <span className="text-[#F9F9F9] font-bold text-[100px] 2xl:text-[170px] leading-[170px] left-[-20px] lg:left-[-100px] relative">
               Chian
             </span>
-            <p className="text-[#5B5B5B] text-[18px] tracking-wider">
+            <p className="text-[#5B5B5B] text-[16px] sm:text-[18px] tracking-wider">
               Chian enables customers to monitor their gas cylinder's level
               through seamless integration with a mounted gas level indicator
               device, ensuring you never run out of gas. Stay informed in
@@ -227,15 +232,17 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="max-w-[80%] mx-auto mt-72 relative">
-        <div className="flex gap-x-10">
-          <div className="w-[calc(100%-500px)]">
-            <p className="text-[#CACACA] text-[36px]">LEAKAGE ALERT SYSTEM</p>
+      <div className="px-5 sm:max-w-[95%] xl:max-w-[80%] mx-auto mt-20 md:mt-36 lg:mt-72 relative">
+        <div className="flex gap-10 flex-wrap lg:flex-nowrap justify-center">
+          <div className="w-full lg:w-[calc(100%-500px)]">
+            <p className="text-[#CACACA] text-[24px] 2xl:text-[36px]">
+              LEAKAGE ALERT SYSTEM
+            </p>
             <DotDiffText>Get Instant gas leakage notifications</DotDiffText>
-            <p className="text-[#F9F9F9] font-bold text-[170px] leading-[170px] text-right right-[-100px] relative">
+            <p className="text-[#F9F9F9] font-bold lg:text-right text-[100px] 2xl:text-[170px] leading-[170px] md:right-[-20px] lg:right-[-100px] relative">
               Chian
             </p>
-            <p className="text-[#5B5B5B] text-[18px] tracking-wider">
+            <p className="text-[#5B5B5B] text-[16px] sm:text-[18px] tracking-wider">
               Chian prioritizes safety, and that's why the app seamlessly
               integrates with a gas leakage detector device affixed to the gas
               cylinder. This innovative solution actively monitors and swiftly
@@ -247,19 +254,19 @@ export default function Home() {
               gas leaks.
             </p>
           </div>
-          <div className="relative w-[500px] h-[610px] overflow-hidden rounded-[20px] z-[10]">
+          <div className="relative w-[300px] sm:w-[500px] h-[400px] sm:h-[610px] overflow-hidden rounded-[20px] z-[10]">
             <Image src={"/get-instant-gas.png"} alt="" fill />
           </div>
         </div>
       </div>
 
-      <div className="mt-28 max-w-[80%] mx-auto">
-        <DotDiffText className="justify-center">
+      <div className="mt-28 px-5 sm:max-w-[95%] xl:max-w-[80%] mx-auto">
+        <DotDiffText className="justify-center text-center">
           Frequently asked questions
         </DotDiffText>
 
         <div className="flex mt-10">
-          <div className="w-[50%] h-[350px] flex items-center justify-center">
+          <div className="w-[50%] h-[350px] hidden lg:flex items-center justify-center">
             <div className="flex gap-x-2">
               <Image src={QuestionGirlIcon} alt="" width={170} height={170} />
               <Image
@@ -271,7 +278,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="w-[50%]">
+          <div className="w-full lg:w-[50%]">
             {faqs.map((faq, i) => (
               <FaqCard description={faq.description} name={faq.name} key={i} />
             ))}
@@ -279,23 +286,25 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-32 max-w-[80%] mx-auto">
+      <div className="mt-10 md:mt-32 max-w-[95%] xl:max-w-[80%] mx-auto">
         <DotDiffText className="">News and updates</DotDiffText>
-        <div className="mt-10 grid grid-cols-3 grid-rows-1 gap-7">
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-3 sm:grid-rows-2 lg:grid-rows-1 gap-7">
           {newsAndUpdates.map((data, i) => (
-            <div key={i} className="">
-              <div className="w-full h-[200px] relative overflow-hidden rounded-[12px]">
+            <div key={i} className="flex flex-col items-center md:items-start">
+              <div className="max-w-[350px] w-full h-[200px] relative overflow-hidden rounded-[12px]">
                 <Image src={data.image} alt="" fill />
               </div>
-              <p className="text-[#3F3F3F] text-[24px] font-bold my-5">
+              <p className="text-[#3F3F3F] text-[20px] sm:text-[24px] font-bold my-5">
                 {data.name}
               </p>
-              <p className="text-[16px] text-[#5B5B5B]">{data.description}</p>
+              <p className="text-[14px] sm:text-[16px] text-[#5B5B5B]">
+                {data.description}
+              </p>
 
-              <div className="mt-5 flex justify-between items-center">
+              <div className="mt-5 flex justify-between items-center w-full">
                 <span className="text-[16px] text-[#DBDDE3]">July 5, 2023</span>
                 <div>
-                  <span className="text-[16px] font-semibold text-[#5B5B5B]">
+                  <span className="text-[14px] sm:text-[16px] font-semibold text-[#5B5B5B]">
                     Read More
                   </span>
                   <div className="w-full h-[3px] bg-[#FFDCAE]"></div>
@@ -306,28 +315,28 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-32 max-w-[80%] mx-auto">
+      <div className="mt-32 max-w-[95%] xl:max-w-[80%] mx-auto">
         <DotDiffText className="justify-center">Get our apps now</DotDiffText>
 
-        <div className="flex justify-center gap-5 my-7">
-          <button className="transition-all duration-500 w-[125px] h-[50px] flex items-center justify-center rounded-[100px] border border-[#A7AEC1] hover:bg-[#3F3F3F] hover:text-white hover:border-none">
+        <div className="flex justify-center gap-5 my-7 flex-wrap">
+          <button className="transition-all duration-500 w-[100px] text-[14px] lg:text-[16px] lg:w-[125px] h-[50px] flex items-center justify-center rounded-[100px] border border-[#A7AEC1] hover:bg-[#3F3F3F] hover:text-white hover:border-none">
             User
           </button>
-          <button className="transition-all duration-500 w-[125px] h-[50px] flex items-center justify-center rounded-[100px] border border-[#A7AEC1] hover:bg-[#3F3F3F] hover:text-white hover:border-none">
+          <button className="transition-all duration-500 w-[100px] text-[14px] lg:text-[16px] lg:w-[125px] h-[50px] flex items-center justify-center rounded-[100px] border border-[#A7AEC1] hover:bg-[#3F3F3F] hover:text-white hover:border-none">
             Vendor
           </button>
-          <button className="transition-all duration-500 w-[125px] h-[50px] flex items-center justify-center rounded-[100px] border border-[#A7AEC1] hover:bg-[#3F3F3F] hover:text-white hover:border-none">
+          <button className="transition-all duration-500 w-[100px] text-[14px] lg:text-[16px] lg:w-[125px] h-[50px] flex items-center justify-center rounded-[100px] border border-[#A7AEC1] hover:bg-[#3F3F3F] hover:text-white hover:border-none">
             Delivery
           </button>
         </div>
 
-        <div className="pt-20 px-14 bg-[#0043A7] rounded-[20px] mt-5 flex justify-between items-start">
+        <div className="pt-12 sm:pt-20 px-4 md:px-14 bg-[#0043A7] rounded-[20px] mt-5 flex lg:justify-between items-start flex-wrap lg:flex-nowrap gap-y-7">
           <div>
             <div className="text-white ">
-              <p className="text-inherit text-[50px] font-bold leading-[61px]">
+              <p className="text-inherit text-3xl xl:text-[50px] font-bold xl:leading-[61px]">
                 Order in seconds,
               </p>
-              <p className="text-inherit text-[50px] font-bold leading-[61px]">
+              <p className="text-inherit text-3xl xl:text-[50px] font-bold xl:leading-[61px]">
                 refill in minutes.
               </p>
             </div>
@@ -337,13 +346,13 @@ export default function Home() {
             </p>
           </div>
 
-          <div>
-            <div className="w-[500px] h-[400px] relative">
+          <div className="w-full lg:w-auto flex justify-center">
+            <div className="w-[300px] sm:w-[500px] h-[400px] relative">
               <Image src={HalfSmartPhoneIcon} alt="" fill />
             </div>
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
