@@ -12,7 +12,7 @@ import GetOnGooglePlayIcon from "@/assets/icons/get-on-google-play-icon.svg";
 import CaretUpIcon from "@/assets/icons/caret-up-icon.svg";
 
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 
 import Image from "next/image";
 import DesktopNav from "./components/ui/desktop-nav";
@@ -24,6 +24,10 @@ export const metadata = {
   description: "Connect, Refill, Cook with ease",
 };
 
+const montserrat = Montserrat({
+  subsets: ["latin"],
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -31,7 +35,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="">
+      <body className={montserrat.className}>
         <main className="top-0 left-0 w-full h-full fixed overflow-auto">
           <DesktopNav />
           <MobileNav />
