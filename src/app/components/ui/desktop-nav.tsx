@@ -50,7 +50,7 @@ export default function DesktopNav() {
   const [showCompanyInfo, setShowCompanyInfo] = useState(false);
 
   return (
-    <nav className="hidden lg:block">
+    <nav className="hidden lg:block" id="nav">
       <div className="h-[37px] bg-[#0043A7] flex items-center px-6 xl:px-10 justify-between">
         <div className="flex gap-3">
           <span className="text-white text-[14px] font-semibold">

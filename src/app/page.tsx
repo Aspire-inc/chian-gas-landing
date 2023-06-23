@@ -99,7 +99,7 @@ const faqs = [
 
 export default function Home() {
   return (
-    <div className="w-full">
+    <div className="w-full" id="home">
       <Carousal />
       <div className="bg-white p-5 sm:p-7 flex items-center flex-col">
         <div className="mt-7 md:mt-14 flex flex-col items-center">
