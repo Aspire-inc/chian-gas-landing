@@ -3,7 +3,7 @@
 import Image from "next/image";
 import LogoIcon from "@/assets/icons/logo-icon.svg";
 import CaretDownIcon from "@/assets/icons/caret-down-icon.svg";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import React from "react";
 import DottedDividerIcon from "@/assets/icons/dotted-divider-icon.svg";
@@ -126,83 +126,86 @@ export default function DesktopNav() {
 
 const CompanyInfo = () => {
   return (
-    <motion.div
-      initial={{ scale: 0, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      className="w-[900px] absolute top-[calc(100%+5px)]  bg-white left-0 h-[400px] p-2 rounded-[12px] origin-top-left overflow-hidden flex gap-x-3"
-      onClick={(e) => e.stopPropagation()}
-    >
-      <div className="w-[40%] h-full border border-[#E8E8EA] rounded-[12px]">
-        <div
-          style={{ background: "rgba(5, 15, 24, 0.10)" }}
-          className="w-full h-full border-[6px] border-[#F9F9F9] p-2 rounded-[12px]"
-        >
+    <AnimatePresence>
+      <motion.div
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0, opacity: 0 }}
+        className="w-[900px] absolute z-[1000] top-[calc(100%+5px)]  bg-white left-0 h-[400px] p-2 rounded-[12px] origin-top-left overflow-hidden flex gap-x-3"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="w-[40%] h-full border border-[#E8E8EA] rounded-[12px]">
           <div
-            style={{ background: "rgba(5, 15, 24, 0.699999988079071)" }}
-            className="h-[50px] rounded-[5px] flex items-center px-4 justify-between"
+            style={{ background: "rgba(5, 15, 24, 0.10)" }}
+            className="w-full h-full border-[6px] border-[#F9F9F9] p-2 rounded-[12px]"
           >
-            <Image src={NodesIcon} alt="" />
-            <Image src={ChipIcon} alt="" />
-            <Image src={LeftCloudChipIcom} alt="" />
-            <Image src={RightCloudChipIcon} alt="" />
-            <Image src={MazeNodesIcon} alt="" />
-            <Image src={ServerIcon} alt="" />
-            <Image src={AngleSpannerIcon} alt="" />
+            <div
+              style={{ background: "rgba(5, 15, 24, 0.699999988079071)" }}
+              className="h-[50px] rounded-[5px] flex items-center px-4 justify-between"
+            >
+              <Image src={NodesIcon} alt="" />
+              <Image src={ChipIcon} alt="" />
+              <Image src={LeftCloudChipIcom} alt="" />
+              <Image src={RightCloudChipIcon} alt="" />
+              <Image src={MazeNodesIcon} alt="" />
+              <Image src={ServerIcon} alt="" />
+              <Image src={AngleSpannerIcon} alt="" />
+            </div>
           </div>
         </div>
-      </div>
-      <div className="w-[60%] h-full flex">
-        <div className="flex w-[50%]">
-          <Image src={DottedDividerIcon} alt="" className="" />
-          <div className="mt-12">
-            <span className="text-[#49535C] text-[14px] font-medium px-5">
-              Company
-            </span>
+        <div className="w-[60%] h-full flex">
+          <div className="flex w-[50%]">
+            <Image src={DottedDividerIcon} alt="" className="" />
+            <div className="mt-12">
+              <span className="text-[#49535C] text-[14px] font-medium px-5">
+                Company
+              </span>
 
-            <div className=" mt-4 flex flex-col gap-y-5">
-              {companyInfo.slice(0, 3).map((info, i) => (
-                <motion.div
-                  initial={{ x: "-30%", opacity: 0 }}
-                  animate={{ x: "0%", opacity: 1 }}
-                  transition={{ delay: 0.2 * i + 0.1 }}
-                  key={i}
-                  className="group border-l-2 border-transparent hover:border-[#F99617] px-5 ml-[-2px]"
-                >
-                  <p className="font-medium text-[16px] text-[#49535C] group-hover:text-[#0043A7] ">
-                    {info.name}
-                  </p>
-                  <p className="text-[14px] text-[#8E8E8E]">
-                    {info.description}
-                  </p>
-                </motion.div>
-              ))}
+              <div className=" mt-4 flex flex-col gap-y-5">
+                {companyInfo.slice(0, 3).map((info, i) => (
+                  <motion.div
+                    initial={{ x: "-30%", opacity: 0 }}
+                    animate={{ x: "0%", opacity: 1 }}
+                    transition={{ delay: 0.2 * i + 0.1 }}
+                    key={i}
+                    className="group border-l-2 border-transparent hover:border-[#F99617] px-5 ml-[-2px]"
+                  >
+                    <p className="font-medium text-[16px] text-[#49535C] group-hover:text-[#0043A7] ">
+                      {info.name}
+                    </p>
+                    <p className="text-[14px] text-[#8E8E8E]">
+                      {info.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="flex w-[50%]">
+            <Image src={DottedDividerIcon} alt="" className="" />
+            <div className="mt-16">
+              <div className=" mt-6 flex flex-col gap-y-5">
+                {companyInfo.slice(3, 6).map((info, i) => (
+                  <motion.div
+                    initial={{ x: "-30%", opacity: 0 }}
+                    animate={{ x: "0%", opacity: 1 }}
+                    transition={{ delay: 0.1 * i + 0.8 }}
+                    key={i}
+                    className="group border-l-2 border-transparent hover:border-[#F99617] px-5 ml-[-2px]"
+                  >
+                    <p className="font-medium text-[16px] text-[#49535C] group-hover:text-[#0043A7] ">
+                      {info.name}
+                    </p>
+                    <p className="text-[14px] text-[#8E8E8E]">
+                      {info.description}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-        <div className="flex w-[50%]">
-          <Image src={DottedDividerIcon} alt="" className="" />
-          <div className="mt-16">
-            <div className=" mt-6 flex flex-col gap-y-5">
-              {companyInfo.slice(3, 6).map((info, i) => (
-                <motion.div
-                  initial={{ x: "-30%", opacity: 0 }}
-                  animate={{ x: "0%", opacity: 1 }}
-                  transition={{ delay: 0.1 * i + 0.8 }}
-                  key={i}
-                  className="group border-l-2 border-transparent hover:border-[#F99617] px-5 ml-[-2px]"
-                >
-                  <p className="font-medium text-[16px] text-[#49535C] group-hover:text-[#0043A7] ">
-                    {info.name}
-                  </p>
-                  <p className="text-[14px] text-[#8E8E8E]">
-                    {info.description}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </AnimatePresence>
   );
 };
