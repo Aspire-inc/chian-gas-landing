@@ -154,9 +154,12 @@ export default function RootLayout({
             </div>
 
             <div className="mt-20">
-              <div className="w-[49px] h-[49px] border-[1.5px] border-[#A7AEC1] flex items-center justify-center rounded-[10px] cursor-pointer mx-auto sm:mx-0">
+              <a
+                href="#home"
+                className="w-[49px] h-[49px] border-[1.5px] border-[#A7AEC1] flex items-center justify-center rounded-[10px] cursor-pointer mx-auto sm:mx-0"
+              >
                 <Image src={CaretUpIcon} alt="" />
-              </div>
+              </a>
             </div>
 
             <div className="text-center mt-4">

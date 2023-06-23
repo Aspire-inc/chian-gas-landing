@@ -64,7 +64,10 @@ export default function Carousal() {
 
   return (
     <div>
-      <div className="w-full overflow-hidden relative h-[calc(100vh-76px)] md:h-[700px] lg:h-[800px]">
+      <div
+        id="carousal"
+        className=" w-full overflow-hidden relative h-[calc(100vh-76px)] md:h-[700px] lg:h-[800px]"
+      >
         <AnimatePresence initial={false} custom={direction}>
           <motion.section
             style={{

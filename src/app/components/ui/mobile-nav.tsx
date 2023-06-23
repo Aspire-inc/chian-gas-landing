@@ -16,7 +16,7 @@ export default function MobileNav() {
   const [showCompanyInfo, setShowCompanyInfo] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-[100]">
+    <nav className="sticky top-0 z-[100]" id="nav">
       <div
         style={{ background: showDropdown ? "#0043A7" : "white" }}
         className="w-full h-[76px] flex items-center justify-between px-5 lg:hidden "
@@ -41,12 +41,12 @@ export default function MobileNav() {
           animate={{ height: "calc(100% - 76px)" }}
           className="fixed top-[76px] left-0 h-[calc(100%-76px)] w-full z-[100] bg-[#0043A7]"
         >
-          <div className="w-full h-[calc(100%-41px)] flex flex-col justify-center px-6 gap-y-12 overflow-auto">
+          <div className="w-full h-[calc(100%-41px)] px-6  pb-6 overflow-auto">
             <motion.ul
               initial={{ x: "-30%", opacity: 0 }}
               animate={{ x: "0", opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="flex flex-col gap-y-7"
+              className="flex flex-col gap-y-7 mt-[30%]"
             >
               <li>
                 <div
@@ -123,7 +123,7 @@ export default function MobileNav() {
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="flex items-center justify-center w-[200px] h-[50px] border border-[#CFE1FC] rounded-[30px] text-white font-semibold"
+              className="mt-8 flex items-center justify-center w-[200px] h-[50px] border border-[#CFE1FC] rounded-[30px] text-white font-semibold"
             >
               Download App
             </motion.button>
