@@ -7,9 +7,9 @@ import Image from "next/image";
 import DotDiffText from "./components/ui/dot-diff-text";
 import HowItWorksCard from "./components/ui/how-it-works-card";
 import FaqCard from "./components/ui/faq-card";
-import NextIcon from "@/assets/icons/next-icon.svg";
-import PrevIcon from "@/assets/icons/prev-icon.svg";
+
 import React from "react";
+import Carousal from "./components/ui/carousal";
 
 const howItoWorks = [
   {
@@ -100,46 +100,7 @@ const faqs = [
 export default function Home() {
   return (
     <div className="w-full">
-      <div
-        style={{
-          backgroundImage: "url(/woman-feeding-man.png)",
-        }}
-        className="h-[calc(100vh-76px)] md:h-[700px] lg:h-[800px] bg-[center_top]"
-      >
-        <div
-          style={{ background: "rgba(0,0,0,0.5)" }}
-          className="w-full h-full flex items-center justify-between px-5 md:px-14 gap-x-16"
-        >
-          <Image
-            src={PrevIcon}
-            alt=""
-            className="cursor-pointer hidden lg:block"
-          />
-          <div className="h-full flex justify-center items-start flex-col flex-grow">
-            <p className="font-bold text-white text-5xl lg:text-[80px] lg:leading-[98px]">
-              Connect. Refill.
-            </p>
-            <p className="font-bold text-white text-5xl lg:text-[80px] lg:leading-[98px]">
-              Cook with ease
-            </p>
-            <p className="text-white text-[16px] md:text-[20px] mb-10 max-w-[900px] mt-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              eget felis et felis ultrices tempus at sed eros. Vivamus fringilla
-              ipsum metus, ac tincidunt sapien maximus eget. Quisque condimentum
-              bibendum vestibulum.
-            </p>
-
-            <button className="text-white bg-[#F99617] w-[200px] h-[56px] rounded-[30px] flex items-center justify-center font-semibold">
-              Download App
-            </button>
-          </div>
-          <Image
-            src={NextIcon}
-            alt=""
-            className="cursor-pointer hidden lg:block"
-          />
-        </div>
-      </div>
+      <Carousal />
       <div className="bg-white p-5 sm:p-7 flex items-center flex-col">
         <div className="mt-7 md:mt-14 flex flex-col items-center">
           <DotDiffText>How it works</DotDiffText>
