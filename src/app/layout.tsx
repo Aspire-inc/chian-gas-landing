@@ -46,21 +46,21 @@ export default function RootLayout({
                 <li>
                   <Image src={LogoIcon} alt="" />
                 </li>
-                <li className="flex items-center gap-x-2">
+                <li className="flex items-start gap-x-2">
                   <Image src={SmsIcon} alt="" />
-                  <span className="text-[17px] xl:text-[20px] tracking-wider text-[#5B5B5B]">
+                  <span className="text-[17px] xl:text-[18px] tracking-wider text-[#5B5B5B]">
                     info@chiangas.com
                   </span>
                 </li>
-                <li className="flex items-center gap-x-2">
+                <li className="flex items-start gap-x-2">
                   <Image src={PhoneIcon} alt="" />
-                  <span className="text-[17px] xl:text-[20px] tracking-wider text-[#5B5B5B]">
+                  <span className="text-[17px] xl:text-[18px] tracking-wider text-[#5B5B5B]">
                     +234 901 418 6951
                   </span>
                 </li>
-                <li className="flex items-center gap-x-2">
+                <li className="flex items-start gap-x-2">
                   <Image src={LocationIcon} alt="" />
-                  <span className="text-[17px] xl:text-[20px] tracking-wider text-[#5B5B5B]">
+                  <span className="text-[17px] xl:text-[18px] tracking-wider text-[#5B5B5B]">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </span>
                 </li>
@@ -72,19 +72,19 @@ export default function RootLayout({
                   </span>
                 </li>
                 <li className="">
-                  <span className="text-[17px] xl:text-[20px] text-[#5B5B5B]">
+                  <span className="text-[17px] xl:text-[18px] text-[#5B5B5B]">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </span>
                   <div className="border-[0.5px] border-[#DBDDE3] w-[200px] mt-4"></div>
                 </li>
                 <li className="">
-                  <span className="text-[17px] xl:text-[20px] text-[#5B5B5B]">
+                  <span className="text-[17px] xl:text-[18px] text-[#5B5B5B]">
                     Lorem ipsum dolor sit amet.
                   </span>
                   <div className="border-[0.5px] border-[#DBDDE3] w-[200px] mt-4"></div>
                 </li>
                 <li className="">
-                  <span className="text-[17px] xl:text-[20px] text-[#5B5B5B]">
+                  <span className="text-[17px] xl:text-[18px] text-[#5B5B5B]">
                     Lorem ipsum dolor sit.
                   </span>
                   <div className="border-[0.5px] border-[#DBDDE3] w-[200px] mt-4"></div>
@@ -97,27 +97,27 @@ export default function RootLayout({
                   </span>
                 </li>
                 <li className="">
-                  <span className="text-[17px] xl:text-[20px] text-[#5B5B5B]">
+                  <span className="text-[17px] xl:text-[18px] text-[#5B5B5B]">
                     Company
                   </span>
                 </li>
                 <li className="">
-                  <span className="text-[17px] xl:text-[20px] text-[#5B5B5B]">
+                  <span className="text-[17px] xl:text-[18px] text-[#5B5B5B]">
                     Support
                   </span>
                 </li>
                 <li className="">
-                  <span className="text-[17px] xl:text-[20px] text-[#5B5B5B]">
+                  <span className="text-[17px] xl:text-[18px] text-[#5B5B5B]">
                     Safety
                   </span>
                 </li>
                 <li className="">
-                  <span className="text-[17px] xl:text-[20px] text-[#5B5B5B]">
+                  <span className="text-[17px] xl:text-[18px] text-[#5B5B5B]">
                     Partner with Chian
                   </span>
                 </li>
                 <li className="">
-                  <span className="text-[17px] xl:text-[20px] text-[#5B5B5B]">
+                  <span className="text-[17px] xl:text-[18px] text-[#5B5B5B]">
                     Solution
                   </span>
                 </li>

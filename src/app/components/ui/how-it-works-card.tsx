@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function HowItWorksCard({
@@ -15,55 +16,13 @@ export default function HowItWorksCard({
   image: string;
   tagVariant: string;
 }) {
-  const [pos, setPos] = useState({
-    left: "-8px",
-    top: "-8px",
-    borderRadius: "100%",
-    background: "#0066FF",
-  });
-
-  useEffect(() => {
-    let positions = [
-      {
-        left: "calc(100% - 8px)",
-        top: "-8px",
-        borderRadius: "0%",
-        background: "#F99617",
-      },
-      {
-        left: "calc(100% - 8px)",
-        top: "calc(100% - 8px)",
-        borderRadius: "100%",
-        background: "black",
-      },
-      {
-        left: "-8px",
-        top: "calc(100% - 8px)",
-        borderRadius: "0%",
-        background: "darkred",
-      },
-      {
-        left: "-8px",
-        top: "-8px",
-        borderRadius: "100%",
-        background: "#0066FF",
-      },
-    ];
-    let s = setInterval(() => {
-      let firstPosition = positions[0];
-      setPos(firstPosition);
-
-      positions.shift();
-      positions.push(firstPosition);
-    }, 2000);
-
-    return () => {
-      clearInterval(s);
-    };
-  }, []);
-
   return (
-    <div className="p-6 bg-[#F1EFED] rounded-[10px] relative w-full md:w-[350px] lg:w-[430px] h-[226px]">
+    <div
+      style={{
+        background: "rgba(241, 239, 237, 0.30000001192092896)",
+      }}
+      className="p-6 rounded-[10px] relative w-full md:w-[350px] lg:w-[430px] h-[226px]"
+    >
       <div className="flex flex-col gap-y-3">
         <h3 className="text-[#3F3F3F] text-[18px] sm:text-[24px] font-bold">
           {name}
@@ -75,10 +34,12 @@ export default function HowItWorksCard({
 
       <div className="absolute w-[111px] h-[112px] bottom-[13px] right-[20px] rotate-[15deg]">
         <Image src={image} alt="" fill className="rounded-[14px]" />
-        <div
-          style={{ ...pos }}
-          className=" w-[20px] h-[20px]  opacity-[0.7] absolute transition-all duration-[2s]"
-        ></div>
+        <motion.div
+          initial={{ left: "0%" }}
+          animate={{ left: "calc(100% - 8px)" }}
+          transition={{ duration: 10, repeatType: "reverse", repeat: Infinity }}
+          className="w-[20px] h-[20px] opacity-[0.7] absolute top-[calc(100%-10px)] left-0 bg-[#0066FF]"
+        ></motion.div>
       </div>
     </div>
   );
