@@ -6,7 +6,8 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "start:prod": "pm2 start --name Chian_Gas_Landing_Production",
+    "start:prod": "pm2 startOrReload ecosystem.config.js --env Production",
+    "restart": "pm2 start --name Chian_Gas_Landing_Production",
     "lint": "next lint"
   },
   "dependencies": {
