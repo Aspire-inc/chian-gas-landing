@@ -12,7 +12,7 @@ module.exports = {
       watch: true,
       env_development: {
         APP_ENV: 'Development',
-        PORT: 8000,
+        PORT: '8000',
       },
       env_production: {
         APP_ENV: 'Production',
