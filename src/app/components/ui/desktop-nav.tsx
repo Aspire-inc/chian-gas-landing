@@ -128,8 +128,8 @@ const CompanyInfo = () => {
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
+        initial={{ height: "0px", opacity: 0 }}
+        animate={{ height: "400px", opacity: 1 }}
         exit={{ scale: 0, opacity: 0 }}
         className="w-[900px] absolute z-[1000] top-[calc(100%+5px)]  bg-white left-0 h-[400px] p-2 rounded-[12px] origin-top-left overflow-hidden flex gap-x-3"
         onClick={(e) => e.stopPropagation()}
