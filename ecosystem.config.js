@@ -4,7 +4,7 @@ require('dotenv').config();
 module.exports = {
   apps: [
     {
-      name: `Chian_Gas_Landing_${process.argv[5]}`,
+      name: `Chian_Gas_Landing_Production`,
       // exec_mode: 'cluster',
       instances: 1, // Or 'max'
       script: 'node_modules/next/dist/bin/next',

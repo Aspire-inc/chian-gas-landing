@@ -23,6 +23,5 @@ jobs:
     - run: echo "${{secrets.ENV}}" > .env
     - run: npm i
     - run: npm run build --if-present
-    # - run: npm run start:prod
-    - run: npm run restart
+    - run: npm run start:prod
    
