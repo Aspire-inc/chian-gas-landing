@@ -1,3 +1,4 @@
+"use client";
 import LogoIcon from "@/assets/icons/logo-icon.svg";
 import CaretDownIcon from "@/assets/icons/caret-down-icon.svg";
 import SmsIcon from "@/assets/icons/sms-icon.svg";
@@ -17,12 +18,7 @@ import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import DesktopNav from "./components/ui/desktop-nav";
 import MobileNav from "./components/ui/mobile-nav";
-import React from "react";
-
-export const metadata = {
-  title: "Chian Gas",
-  description: "Connect, Refill, Cook with ease",
-};
+import React, { useRef } from "react";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -33,10 +29,16 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const mainRef = useRef<HTMLDivElement>(null);
+
   return (
     <html lang="en">
       <body className={montserrat.className}>
-        <main className="top-0 left-0 w-full h-full fixed overflow-auto">
+        <main
+          className="top-0 left-0 w-full h-full fixed overflow-auto overflow-x-hidden"
+          id="home-main-wrapper"
+          ref={mainRef}
+        >
           <DesktopNav />
           <MobileNav />
           {children}
@@ -155,7 +157,9 @@ export default function RootLayout({
 
             <div className="mt-20">
               <a
-                href="#home"
+                onClick={() => {
+                  mainRef.current!.scrollTop = 0;
+                }}
                 className="w-[49px] h-[49px] border-[1.5px] border-[#A7AEC1] flex items-center justify-center rounded-[10px] cursor-pointer mx-auto sm:mx-0"
               >
                 <Image src={CaretUpIcon} alt="" />

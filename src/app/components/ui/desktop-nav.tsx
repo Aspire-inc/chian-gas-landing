@@ -164,9 +164,9 @@ const CompanyInfo = () => {
               <div className=" mt-4 flex flex-col gap-y-5">
                 {companyInfo.slice(0, 3).map((info, i) => (
                   <motion.div
-                    initial={{ x: "-30%", opacity: 0 }}
-                    animate={{ x: "0%", opacity: 1 }}
-                    transition={{ delay: 0.2 * i + 0.1 }}
+                    initial={{ y: "-30%", opacity: 0 }}
+                    animate={{ y: "0%", opacity: 1 }}
+                    transition={{ delay: 0.2 }}
                     key={i}
                     className="group border-l-2 border-transparent hover:border-[#F99617] px-5 ml-[-2px]"
                   >
@@ -187,9 +187,9 @@ const CompanyInfo = () => {
               <div className=" mt-6 flex flex-col gap-y-5">
                 {companyInfo.slice(3, 6).map((info, i) => (
                   <motion.div
-                    initial={{ x: "-30%", opacity: 0 }}
-                    animate={{ x: "0%", opacity: 1 }}
-                    transition={{ delay: 0.1 * i + 0.8 }}
+                    initial={{ y: "-30%", opacity: 0 }}
+                    animate={{ y: "0%", opacity: 1 }}
+                    transition={{ delay: 0.2 }}
                     key={i}
                     className="group border-l-2 border-transparent hover:border-[#F99617] px-5 ml-[-2px]"
                   >
