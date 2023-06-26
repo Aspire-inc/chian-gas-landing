@@ -119,8 +119,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-[100%] mt-10 md:mt-20 flex flex-wrap items-center gap-y-6">
-        <div className="w-full xl:w-[calc(100%-800px)] px-5 sm:px-12 lg:pl-20">
+      <div className="bg-[#FBFAFA] w-[100%] mt-10 md:mt-20 flex flex-wrap items-center gap-y-6">
+        <div className=" w-full xl:w-[calc(100%-800px)] px-5 sm:px-12 lg:pl-20">
           <DotDiffText>As a vendor?</DotDiffText>
           <p className="text-[#5B5B5B] text-[16px] sm:text-[18px] mt-1 tracking-wider lg:w-[calc(100%-100px)]">
             Manage users, riders, and vendors via admin panel. Lorem ipsum dolor
@@ -143,9 +143,9 @@ export default function Home() {
               backgroundImage: "url(/as-a-vendor-bg.png)",
               backgroundSize: "cover",
             }}
-            className="h-full w-full absolute top-0 left-0 bg-[right_center] xl:bg-[right_center]"
+            className="h-full w-[calc(100%+30px)] absolute top-0 left-0 bg-[right_center] xl:bg-[right_center]"
           ></div>
-          <div className="relative w-[400px] lg:w-[600px] h-[200px] lg:h-[400px]">
+          <div className="relative w-[400px] lg:w-[600px] h-[200px] lg:h-[400px] left-[30px]">
             <Image src={TelevisionIcon} alt="" className="relative" fill />
           </div>
         </div>
@@ -156,7 +156,7 @@ export default function Home() {
           <Image src={TransparentLogoIcon} alt="" fill />
         </div>
         <div className="w-full h-full absolute top-0 left-0 flex items-center justify-center text-[18px] sm:text-[26px] lg:text-[48px] px-5">
-          <p className="text-center md:max-w-[80%]">
+          <p className="text-center md:max-w-[80%] text-[#3F3F3F]">
             <span className="font-bold text-inherit">Chian: </span> Your
             convenient connection to gas vendors for quick and hassle-free
             refills. Never run out of gas again with our easy-to-use app.
@@ -164,7 +164,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="px-5 sm:max-w-[95%] xl:max-w-[80%] mx-auto md:mt-20 relative">
+      <div className="px-5 sm:max-w-[95%] 2xl:max-w-[80%] mx-auto md:mt-20 relative">
         <div className="flex gap-10 flex-wrap lg:flex-nowrap justify-center">
           <div className="relative w-[300px] sm:w-[500px] h-[400px] sm:h-[610px] overflow-hidden rounded-[20px] z-[10] order-2 lg:order-1">
             <Image src={"/stay-informed.png"} alt="" fill />
@@ -176,7 +176,7 @@ export default function Home() {
             <DotDiffText>
               Stay informed of your gas levels in advance
             </DotDiffText>
-            <span className="text-[#F9F9F9] font-bold text-[100px] 2xl:text-[170px] leading-[170px] left-[-20px] lg:left-[-100px] relative">
+            <span className="text-[#F9F9F9] font-bold text-[100px] xl:text-[170px] leading-[170px] left-[-20px] lg:left-[-100px] relative">
               Chian
             </span>
             <p className="text-[#5B5B5B] text-[16px] sm:text-[18px] tracking-wider">
@@ -193,14 +193,14 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="px-5 sm:max-w-[95%] xl:max-w-[80%] mx-auto mt-20 md:mt-36 lg:mt-72 relative">
+      <div className="px-5 sm:max-w-[95%] 2xl:max-w-[80%] mx-auto mt-20 md:mt-36 lg:mt-72 relative">
         <div className="flex gap-10 flex-wrap lg:flex-nowrap justify-center">
           <div className="w-full lg:w-[calc(100%-500px)]">
             <p className="text-[#CACACA] text-[24px] 2xl:text-[36px]">
               LEAKAGE ALERT SYSTEM
             </p>
             <DotDiffText>Get Instant gas leakage notifications</DotDiffText>
-            <p className="text-[#F9F9F9] font-bold lg:text-right text-[100px] 2xl:text-[170px] leading-[170px] md:right-[-20px] lg:right-[-100px] relative">
+            <p className="text-[#F9F9F9] font-bold lg:text-right text-[100px] xl:text-[170px] leading-[170px] md:right-[-20px] lg:right-[-100px] relative">
               Chian
             </p>
             <p className="text-[#5B5B5B] text-[16px] sm:text-[18px] tracking-wider">
@@ -262,7 +262,7 @@ export default function Home() {
                 {data.description}
               </p>
 
-              <div className="mt-5 flex justify-between items-center w-full">
+              <div className="mt-5 flex justify-between items-center w-full pr-14">
                 <span className="text-[16px] text-[#DBDDE3]">July 5, 2023</span>
                 <div>
                   <span className="text-[14px] sm:text-[16px] font-semibold text-[#5B5B5B]">

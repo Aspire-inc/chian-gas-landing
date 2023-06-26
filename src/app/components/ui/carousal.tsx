@@ -28,9 +28,10 @@ const variants: Variants = {
 
 export default function Carousal() {
   const content = [
-    "Connect. Refill. 1",
-    "Connect. Refill. 2",
-    "Connect. Refill. 3",
+    "/woman-feeding-man.png",
+    "/gas-cooker.png",
+    "/kitchen-utensils.png",
+    "/woman-cooking.png",
   ];
 
   const [index, setIndex] = useState(0);
@@ -55,7 +56,7 @@ export default function Carousal() {
   useEffect(() => {
     let s = setInterval(() => {
       handleNext();
-    }, 4000);
+    }, 7000);
 
     return () => {
       clearInterval(s);
@@ -71,7 +72,7 @@ export default function Carousal() {
         <AnimatePresence initial={false} custom={direction}>
           <motion.section
             style={{
-              backgroundImage: "url(/woman-feeding-man.png)",
+              backgroundImage: `url(${content[index]})`,
             }}
             key={content[index]}
             variants={variants}
@@ -84,41 +85,43 @@ export default function Carousal() {
           >
             <div
               style={{ background: "rgba(0,0,0,0.5)" }}
-              className="w-full h-full flex items-center justify-between px-5 md:px-14 gap-x-16"
+              className="h-full flex justify-center items-start flex-col flex-grow px-5 md:pl-[50px] lg:pl-[160px] xl:pl-[200px]"
             >
-              <Image
-                src={PrevIcon}
-                alt=""
-                onClick={handlePrevious}
-                className="cursor-pointer hidden lg:block"
-              />
-              <div className="h-full flex justify-center items-start flex-col flex-grow">
-                <p className="font-bold text-white text-5xl lg:text-[80px] lg:leading-[98px]">
-                  {content[index]}
-                </p>
-                <p className="font-bold text-white text-5xl lg:text-[80px] lg:leading-[98px]">
-                  Cook with ease
-                </p>
-                <p className="text-white text-[16px] md:text-[20px] mb-10 max-w-[900px] mt-5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Mauris eget felis et felis ultrices tempus at sed eros.
-                  Vivamus fringilla ipsum metus, ac tincidunt sapien maximus
-                  eget. Quisque condimentum bibendum vestibulum.
-                </p>
+              <p className="font-bold text-white text-5xl lg:text-[80px] lg:leading-[98px]">
+                Connect. Refill.
+              </p>
+              <p className="font-bold text-white text-5xl lg:text-[80px] lg:leading-[98px]">
+                Cook with ease
+              </p>
+              <p className="text-white text-[16px] md:text-[20px] mb-10 max-w-[900px] mt-5">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+                eget felis et felis ultrices tempus at sed eros. Vivamus
+                fringilla ipsum metus, ac tincidunt sapien maximus eget. Quisque
+                condimentum bibendum vestibulum.
+              </p>
 
-                <button className="text-white bg-[#F99617] w-[200px] h-[56px] rounded-[30px] flex items-center justify-center font-semibold">
-                  Download App
-                </button>
-              </div>
-              <Image
-                src={NextIcon}
-                alt=""
-                onClick={handleNext}
-                className="cursor-pointer hidden lg:block"
-              />
+              <button className="text-white bg-[#F99617] w-[200px] h-[56px] rounded-[30px] flex items-center justify-center font-semibold">
+                Download App
+              </button>
             </div>
           </motion.section>
         </AnimatePresence>
+
+        <div className="w-full h-full flex items-center justify-between px-5 md:px-14 gap-x-16 absolute top-0 left-0">
+          <Image
+            src={PrevIcon}
+            alt=""
+            onClick={handlePrevious}
+            className="cursor-pointer hidden lg:block"
+          />
+
+          <Image
+            src={NextIcon}
+            alt=""
+            onClick={handleNext}
+            className="cursor-pointer hidden lg:block"
+          />
+        </div>
       </div>
       <div className="flex gap-x-4 justify-center mt-5">
         <div
@@ -143,6 +146,15 @@ export default function Carousal() {
           style={{
             background:
               index === 2
+                ? "#F99617"
+                : "rgba(249, 150, 23,  0.20000000298023224)",
+          }}
+          className="w-[40px] h-[5px] rounded-[50px]"
+        ></div>
+        <div
+          style={{
+            background:
+              index === 3
                 ? "#F99617"
                 : "rgba(249, 150, 23,  0.20000000298023224)",
           }}
