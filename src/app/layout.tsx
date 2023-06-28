@@ -31,6 +31,17 @@ export default function RootLayout({
 }) {
   const mainRef = useRef<HTMLDivElement>(null);
 
+  function handleScrollToTop() {
+    console.log(mainRef.current?.scrollTop);
+
+    let s = setInterval(() => {
+      if (mainRef.current!.scrollTop < 2) {
+        clearInterval(s);
+      }
+      mainRef.current!.scrollTop = mainRef.current!.scrollTop - 70;
+    }, 0);
+  }
+
   return (
     <html lang="en">
       <body className={montserrat.className}>
@@ -158,7 +169,7 @@ export default function RootLayout({
             <div className="mt-20">
               <a
                 onClick={() => {
-                  mainRef.current!.scrollTop = 0;
+                  handleScrollToTop();
                 }}
                 className="w-[49px] h-[49px] border-[1.5px] border-[#A7AEC1] flex items-center justify-center rounded-[10px] cursor-pointer mx-auto sm:mx-0"
               >

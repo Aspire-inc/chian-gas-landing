@@ -280,7 +280,7 @@ export default function Home() {
         <DotDiffText className="justify-center">Get our apps now</DotDiffText>
 
         <div className="flex justify-center gap-5 my-7 flex-wrap">
-          <button className="transition-all duration-500 w-[100px] text-[14px] lg:text-[16px] lg:w-[125px] h-[50px] flex items-center justify-center rounded-[100px] border border-[#A7AEC1] hover:bg-[#3F3F3F] hover:text-white hover:border-none">
+          <button className="transition-all duration-500 w-[100px] text-[14px] lg:text-[16px] lg:w-[125px] h-[50px] flex items-center justify-center rounded-[100px] bg-[#3F3F3F] text-white hover:border-none">
             User
           </button>
           <button className="transition-all duration-500 w-[100px] text-[14px] lg:text-[16px] lg:w-[125px] h-[50px] flex items-center justify-center rounded-[100px] border border-[#A7AEC1] hover:bg-[#3F3F3F] hover:text-white hover:border-none">

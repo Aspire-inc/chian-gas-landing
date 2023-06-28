@@ -3,8 +3,9 @@
 import MinusSquareIcon from "@/assets/icons/minus-square-icon.svg";
 import AddSquareIcon from "@/assets/icons/add-square-icon.svg";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import React from "react";
+import { motion } from "framer-motion";
 
 type FaqCardProps = {
   name: string;
@@ -13,6 +14,18 @@ type FaqCardProps = {
 
 export default function FaqCard({ name, description }: FaqCardProps) {
   const [showDropdown, setShowDropdown] = useState(false);
+
+  const [icon, setIcon] = useState(AddSquareIcon);
+
+  useEffect(() => {
+    let s = setTimeout(() => {
+      setIcon(showDropdown ? MinusSquareIcon : AddSquareIcon);
+    }, 300);
+
+    return () => {
+      clearTimeout(s);
+    };
+  }, [showDropdown]);
 
   return (
     <div className="w-full border-b-[0.5px]">
@@ -24,17 +37,21 @@ export default function FaqCard({ name, description }: FaqCardProps) {
           {name}
         </span>
         <Image
-          src={showDropdown ? MinusSquareIcon : AddSquareIcon}
+          src={icon}
           alt=""
-          className={`transition-all duration-700 ${
-            showDropdown ? "rotate-0" : "rotate-[360deg]"
+          className={`transition-all duration-500 ${
+            showDropdown ? "rotate-0" : "rotate-[90deg]"
           }`}
         />
       </div>
       {showDropdown ? (
-        <div className="py-3 text-[14px] md:text-[18px] text-[#5B5B5B]">
+        <motion.div
+          initial={{ y: "10%", opacity: 0 }}
+          animate={{ y: "0", opacity: 1 }}
+          className="py-3 text-[14px] md:text-[18px] text-[#5B5B5B]"
+        >
           {description}
-        </div>
+        </motion.div>
       ) : (
         ""
       )}

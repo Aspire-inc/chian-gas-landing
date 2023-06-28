@@ -35,8 +35,14 @@ export default function HowItWorksCard({
       <div className="absolute w-[111px] h-[112px] bottom-[13px] right-[20px] rotate-[15deg]">
         <Image src={image} alt="" fill className="rounded-[14px]" />
         <motion.div
-          initial={{ left: "0%" }}
-          animate={{ left: "calc(100% - 8px)" }}
+          initial={{
+            left: "0%",
+            borderRadius: "0",
+          }}
+          animate={{
+            left: "calc(100% - 8px)",
+            borderRadius: "100%",
+          }}
           transition={{ duration: 10, repeatType: "reverse", repeat: Infinity }}
           className="w-[20px] h-[20px] opacity-[0.7] absolute top-[calc(100%-10px)] left-0 bg-[#0066FF]"
         ></motion.div>

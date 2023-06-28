@@ -4,7 +4,7 @@ import Image from "next/image";
 import LogoIcon from "@/assets/icons/logo-icon.svg";
 import CaretDownIcon from "@/assets/icons/caret-down-icon.svg";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import React from "react";
 import DottedDividerIcon from "@/assets/icons/dotted-divider-icon.svg";
 import MazeNodesIcon from "@/assets/icons/maze-nodes-icon.svg";
@@ -81,13 +81,26 @@ export default function DesktopNav() {
           <ul className="flex items-center gap-12 h-full">
             <li
               className="flex items-center gap-x-1 px-4 h-full hover:bg-blue-50/70 border-b-2 border-transparent hover:border-[#F99617] cursor-pointer relative"
-              onClick={() => setShowCompanyInfo(!showCompanyInfo)}
+              onClick={(e) => {
+                e.stopPropagation();
+                setShowCompanyInfo(!showCompanyInfo);
+              }}
             >
               <span className="text-[15px] xl:text-[20px] text-[#5B5B5B]">
                 Company
               </span>
-              <Image src={CaretDownIcon} alt="" />
-              {showCompanyInfo ? <CompanyInfo /> : ""}
+              <Image
+                src={CaretDownIcon}
+                className={`transition-all ${
+                  showCompanyInfo ? "rotate-180" : "rotate-0"
+                }`}
+                alt=""
+              />
+              {showCompanyInfo ? (
+                <CompanyInfo setShowCompanyInfo={setShowCompanyInfo} />
+              ) : (
+                ""
+              )}
             </li>
             <li>
               <span className="text-[15px] xl:text-[20px] text-[#5B5B5B]">
@@ -124,7 +137,22 @@ export default function DesktopNav() {
   );
 }
 
-const CompanyInfo = () => {
+const CompanyInfo = ({
+  setShowCompanyInfo,
+}: {
+  setShowCompanyInfo: Dispatch<SetStateAction<boolean>>;
+}) => {
+  useEffect(() => {
+    function clickHandler() {
+      setShowCompanyInfo(false);
+    }
+
+    window.addEventListener("click", clickHandler);
+
+    return () => {
+      window.removeEventListener("click", clickHandler);
+    };
+  }, []);
   return (
     <AnimatePresence>
       <motion.div
@@ -168,7 +196,7 @@ const CompanyInfo = () => {
                     animate={{ y: "0%", opacity: 1 }}
                     transition={{ delay: 0.2 }}
                     key={i}
-                    className="group border-l-2 border-transparent hover:border-[#F99617] px-5 ml-[-2px]"
+                    className="group border-l-2 border-transparent hover:border-[#F99617] hover:bg-white px-5 ml-[-2.5px]"
                   >
                     <p className="font-medium text-[16px] text-[#49535C] group-hover:text-[#0043A7] ">
                       {info.name}
@@ -191,7 +219,7 @@ const CompanyInfo = () => {
                     animate={{ y: "0%", opacity: 1 }}
                     transition={{ delay: 0.2 }}
                     key={i}
-                    className="group border-l-2 border-transparent hover:border-[#F99617] px-5 ml-[-2px]"
+                    className="group border-l-2 border-transparent hover:border-[#F99617] ml-[-2.5px] px-5"
                   >
                     <p className="font-medium text-[16px] text-[#49535C] group-hover:text-[#0043A7] ">
                       {info.name}
