@@ -12,16 +12,24 @@ const variants: Variants = {
     return {
       x: direction > 0 ? "100%" : "-100%",
       opacity: 0,
+      scale: 0,
+      skewY: direction > 0 ? "90deg" : "-90deg",
     };
   },
   animate: {
     x: "0%",
     opacity: 1,
+    scale: 1,
+    transitionDuration: "0.1s",
+    skewY: "0deg",
   },
   exit: (direction) => {
     return {
       x: direction > 0 ? "-100%" : "100%",
-      opacity: 0,
+      opacity: 1,
+      transitionDuration: "0.8s",
+      scale: 0,
+      // skewY: direction > 0 ? "-90deg" : "90deg",
     };
   },
 };
