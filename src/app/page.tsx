@@ -1,6 +1,6 @@
 import TransparentLogoIcon from "@/assets/icons/transparent-logo-icon.svg";
 import TelevisionIcon from "@/assets/icons/television-icon.svg";
-import HalfSmartPhoneIcon from "@/assets/icons/half-smartphone-icon.svg";
+
 import QuestionGirlIcon from "@/assets/icons/question-girl-icon.svg";
 import ThinkingBoyIcon from "@/assets/icons/thinking-boy-icon.svg";
 import Image from "next/image";
@@ -10,6 +10,7 @@ import FaqCard from "./components/ui/faq-card";
 
 import React from "react";
 import Carousal from "./components/ui/carousal";
+import AppTypes from "./components/ui/app-types";
 
 const howItoWorks = [
   {
@@ -278,41 +279,7 @@ export default function Home() {
 
       <div className="mt-32 max-w-[95%] xl:max-w-[80%] mx-auto">
         <DotDiffText className="justify-center">Get our apps now</DotDiffText>
-
-        <div className="flex justify-center gap-5 my-7 flex-wrap">
-          <button className="transition-all duration-500 w-[100px] text-[14px] lg:text-[16px] lg:w-[125px] h-[50px] flex items-center justify-center rounded-[100px] bg-[#3F3F3F] text-white hover:border-none">
-            User
-          </button>
-          <button className="transition-all duration-500 w-[100px] text-[14px] lg:text-[16px] lg:w-[125px] h-[50px] flex items-center justify-center rounded-[100px] border border-[#A7AEC1] hover:bg-[#3F3F3F] hover:text-white hover:border-none">
-            Vendor
-          </button>
-          <button className="transition-all duration-500 w-[100px] text-[14px] lg:text-[16px] lg:w-[125px] h-[50px] flex items-center justify-center rounded-[100px] border border-[#A7AEC1] hover:bg-[#3F3F3F] hover:text-white hover:border-none">
-            Delivery
-          </button>
-        </div>
-
-        <div className="pt-12 sm:pt-20 px-4 md:px-14 bg-[#0043A7] rounded-[20px] mt-5 flex lg:justify-between items-start flex-wrap lg:flex-nowrap gap-y-7">
-          <div>
-            <div className="text-white ">
-              <p className="text-inherit text-3xl xl:text-[50px] font-bold xl:leading-[61px]">
-                Order in seconds,
-              </p>
-              <p className="text-inherit text-3xl xl:text-[50px] font-bold xl:leading-[61px]">
-                refill in minutes.
-              </p>
-            </div>
-            <p className="max-w-[500px] mt-6 text-white text-[16px]">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              eget felis et felis ultrices tempus at sed eros.
-            </p>
-          </div>
-
-          <div className="w-full lg:w-auto flex justify-center">
-            <div className="w-[300px] sm:w-[500px] h-[400px] relative">
-              <Image src={HalfSmartPhoneIcon} alt="" fill />
-            </div>
-          </div>
-        </div>
+        <AppTypes />
       </div>
     </div>
   );

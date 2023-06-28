@@ -1,6 +1,7 @@
 "use client";
 
 import MinusSquareIcon from "@/assets/icons/minus-square-icon.svg";
+import TransparentMinusSquareIcon from "@/assets/icons/transparent-minus-square-icon.svg";
 import AddSquareIcon from "@/assets/icons/add-square-icon.svg";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -36,13 +37,18 @@ export default function FaqCard({ name, description }: FaqCardProps) {
         <span className="text-[#5B5B5B] font-semibold text-[16px] md:text-[18px] tracking-wider max-w-[calc(100%-100px)]">
           {name}
         </span>
-        <Image
-          src={icon}
-          alt=""
-          className={`transition-all duration-500 ${
-            showDropdown ? "rotate-0" : "rotate-[90deg]"
-          }`}
-        />
+
+        <div className="w-[24px] h-[24px] relative">
+          <Image
+            src={MinusSquareIcon}
+            alt=""
+            fill
+            className={`transition-all duration-300 ${
+              showDropdown ? "rotate-180" : "rotate-90"
+            }`}
+          />
+          <Image src={TransparentMinusSquareIcon} alt="" fill />
+        </div>
       </div>
       {showDropdown ? (
         <motion.div
