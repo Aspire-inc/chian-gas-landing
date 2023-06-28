@@ -7,6 +7,7 @@ module.exports = {
       name: `Chian_Gas_Landing_${process.argv[5]}`,
       script: 'node_modules/next/dist/bin/next',
       args: 'start',
+		  wait_ready: true,
       env_development: {
         APP_ENV: 'Development',
         PORT: '8000',
