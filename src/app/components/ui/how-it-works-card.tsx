@@ -17,12 +17,7 @@ export default function HowItWorksCard({
   tagVariant: string;
 }) {
   return (
-    <div
-      style={{
-        background: "rgba(241, 239, 237, 0.30000001192092896)",
-      }}
-      className="p-6 rounded-[10px] relative w-full md:w-[350px] lg:w-[430px] h-[226px]"
-    >
+    <div className="transition-all bg-[#f1efed4d] hover:bg-[#f996174d] duration-500 p-6 rounded-[10px] relative w-full md:w-[350px] lg:w-[430px] h-[226px]">
       <div className="flex flex-col gap-y-3">
         <h3 className="text-[#3F3F3F] text-[18px] sm:text-[24px] font-bold">
           {name}
