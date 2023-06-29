@@ -13,7 +13,7 @@ const variants: Variants = {
       x: direction > 0 ? "100%" : "-100%",
       opacity: 0,
       scale: 0,
-      skewY: direction > 0 ? "90deg" : "-90deg",
+      // skewY: direction > 0 ? "90deg" : "-90deg",
     };
   },
   animate: {
@@ -21,7 +21,7 @@ const variants: Variants = {
     opacity: 1,
     scale: 1,
     transitionDuration: "0.1s",
-    skewY: "0deg",
+    // skewY: "0deg",
   },
   exit: (direction) => {
     return {
