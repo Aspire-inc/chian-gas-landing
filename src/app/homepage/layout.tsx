@@ -12,7 +12,7 @@ import DownloadOnAppStoreIcon from '@/assets/icons/download-on-app-store-icon.sv
 import GetOnGooglePlayIcon from '@/assets/icons/get-on-google-play-icon.svg'
 import CaretUpIcon from '@/assets/icons/caret-up-icon.svg'
 
-import './globals.css'
+import '../globals.css'
 
 import Image from 'next/image'
 import DesktopNav from '../components/ui/desktop-nav'
