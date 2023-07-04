@@ -68,23 +68,23 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-y-4 sm:gap-y-6">
             <div className="flex flex-col gap-y-6">
-              <div className="text text-center text-blue-800 text-3xl font-bold">
+              <div className="text text-center text-blue-800 text-[20px] sm:text-3xl font-bold">
                 Coming Soon
               </div>
               <div className="text-center">
-                <div className="text-center text-neutral-700 text-[2.6rem] md:text-7xl font-bold sm:mb-4">
+                <div className="text-center text-neutral-700 text-[30px] sm:text-[2.6rem] md:text-7xl font-bold sm:mb-4">
                   Get Notified
                 </div>
-                <span className="text-neutral-700 text-[2.6rem] md:text-7xl font-bold">
+                <span className="text-neutral-700 text-[30px] sm:text-[2.6rem] md:text-7xl font-bold">
                   When We Launch
                 </span>
-                <span className="text-amber-500 text-[2.6rem] md:text-7xl font-bold">
+                <span className="text-amber-500 text-[30px] sm:text-[2.6rem] md:text-7xl font-bold">
                   .
                 </span>
               </div>
             </div>
             <div className="flex flex-col items-center gap-3 w-full mt-7">
-              <div className="w-full max-w-xl py-2 flex gap-2 items-center border border-gray-200 bg-white rounded-3xl overflow-hidden pr-2 pl-4 h-[72px]">
+              <div className="w-full max-w-xl py-2 flex gap-2 items-center border border-gray-200 bg-white rounded-3xl overflow-hidden pr-2 pl-4 h-[60px] sm:h-[72px]">
                 <input
                   type="text"
                   className="grow h-full outline-none"
