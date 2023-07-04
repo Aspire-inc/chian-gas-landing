@@ -51,14 +51,19 @@ export default function Home() {
         <Image src={LogoIcon} alt="" width={166} height={118} />
       </div>
       <div className="flex-grow flex justify-center gap-5 items-center flex-wrap xl:flex-nowrap h-full xl:h-auto">
-        <div className="relative order-2 xl:order-1 top-[-70px] left-[-30px] xl:top-0 xl:left-0">
-          <div className="relative w-[400px] h-[500px]">
+        <div className="relative order-2 xl:order-1 ">
+          <div className="relative w-[400px] h-[500px] top-[-70px] left-[-30px] xl:top-0 xl:left-0">
             <Image src={TruckWithCenterCircleIcon} alt="" fill />
+          </div>
+          <div className="w-full block xl:hidden">
+            <p className="text-center text-zinc-600 text-lg font-normal tracking-wider grow pb-10 xl:pb-0 w-full">
+              © 2023 All rights reserved.
+            </p>
           </div>
         </div>
 
-        <div className="flex items-center  flex-col justify-between xl:justify-center h-full  pt-8 pb-20 xl:py-0 xl:h-auto order-1 xl:order-2">
-          <div className="flex xl:hidden justify-center">
+        <div className="flex items-center  flex-col justify-between xl:justify-center h-full pt-8 pb-20 xl:py-0 xl:h-auto order-1 xl:order-2">
+          <div className="flex xl:hidden justify-center mb-5">
             <Image src={LogoIcon} alt="" width={106} height={76} />
           </div>
           <div className="flex flex-col gap-y-4 sm:gap-y-6">
@@ -134,7 +139,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div>
+      <div className=" hidden xl:block">
         <p className="text-center text-zinc-600 text-lg font-normal tracking-wider grow pb-10 xl:pb-0">
           © 2023 All rights reserved.
         </p>
