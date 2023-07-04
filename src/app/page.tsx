@@ -50,9 +50,9 @@ export default function Home() {
       <div className="hidden xl:flex justify-center relative ">
         <Image src={LogoIcon} alt="" width={166} height={118} />
       </div>
-      <div className="flex-grow flex justify-center gap-5 items-center flex-wrap xl:flex-nowrap h-full xl:h-auto">
-        <div className="relative order-2 xl:order-1 ">
-          <div className="relative w-[400px] h-[500px] top-[-70px] left-[-30px] xl:top-0 xl:left-0">
+      <div className="flex-grow flex justify-center gap-5 items-center flex-wrap xl:flex-nowrap h-full xl:h-auto relative">
+        <div className="absolute xl:relative order-2 xl:order-1 top-[calc(100%-40px)] left-[-50px] xl:left-0 xl:top-0">
+          <div className="relative w-[400px] h-[500px]">
             <Image src={TruckWithCenterCircleIcon} alt="" fill />
           </div>
           <div className="w-full block xl:hidden">
