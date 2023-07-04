@@ -46,18 +46,18 @@ export default function Home() {
     }
   }
   return (
-    <section className="h-[100vh] fixed top-0 left-0 w-full px-5 xl:py-8 flex flex-col overflow-auto overflow-x-hidden">
+    <section className="h-full fixed top-0 left-0 w-full px-5 xl:py-8 flex flex-col overflow-auto overflow-x-hidden">
       <div className="hidden xl:flex justify-center relative ">
         <Image src={LogoIcon} alt="" width={166} height={118} />
       </div>
-      <div className="flex-grow flex justify-center gap-5 items-center flex-wrap xl:flex-nowrap">
+      <div className="flex-grow flex justify-center gap-5 items-center flex-wrap xl:flex-nowrap h-full xl:h-auto">
         <div className="relative order-2 xl:order-1 top-[-70px] left-[-30px] xl:top-0 xl:left-0">
           <div className="relative w-[400px] h-[500px]">
             <Image src={TruckWithCenterCircleIcon} alt="" fill />
           </div>
         </div>
 
-        <div className="flex items-center  flex-col justify-between xl:justify-center h-[100vh] pt-8 pb-20 xl:py-0 xl:h-auto order-1 xl:order-2">
+        <div className="flex items-center  flex-col justify-between xl:justify-center h-full  pt-8 pb-20 xl:py-0 xl:h-auto order-1 xl:order-2">
           <div className="flex xl:hidden justify-center">
             <Image src={LogoIcon} alt="" width={106} height={76} />
           </div>
