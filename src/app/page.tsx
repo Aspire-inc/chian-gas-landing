@@ -55,7 +55,7 @@ export default function Home() {
           <div className="relative w-[400px] h-[500px]">
             <Image src={TruckWithCenterCircleIcon} alt="" fill />
           </div>
-          <div className="w-full block xl:hidden">
+          <div className="w-full block xl:hidden mt-3">
             <p className="text-center text-zinc-600 text-lg font-normal tracking-wider grow pb-10 xl:pb-0 w-full">
               © 2023 All rights reserved.
             </p>
@@ -67,10 +67,8 @@ export default function Home() {
             <Image src={LogoIcon} alt="" width={100} height={70} />
           </div>
           <div className="flex flex-col gap-y-4 sm:gap-y-6">
-
             <div className="flex flex-col gap-y-6">
               <div className="text text-center text-blue-800 text-[20px] sm:text-3xl font-bold">
-
                 Coming Soon
               </div>
               <div className="text-center">
