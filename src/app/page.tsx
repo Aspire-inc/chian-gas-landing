@@ -50,9 +50,9 @@ export default function Home() {
       <div className="hidden xl:flex justify-center relative ">
         <Image src={LogoIcon} alt="" width={166} height={118} />
       </div>
-      <div className="flex-grow flex justify-center gap-5 items-center flex-wrap xl:flex-nowrap h-full xl:h-auto">
-        <div className="relative order-2 xl:order-1 ">
-          <div className="relative w-[400px] h-[500px] top-[-70px] left-[-30px] xl:top-0 xl:left-0">
+      <div className="flex-grow flex justify-center xl:gap-5 items-center flex-wrap xl:flex-nowrap h-full xl:h-auto relative">
+        <div className="absolute xl:relative order-2 xl:order-1 top-[calc(100%-40px)] left-[-50px] xl:left-0 xl:top-0">
+          <div className="relative w-[400px] h-[500px]">
             <Image src={TruckWithCenterCircleIcon} alt="" fill />
           </div>
           <div className="w-full block xl:hidden">
@@ -62,13 +62,15 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex items-center  flex-col justify-between xl:justify-center h-full pt-8 pb-20 xl:py-0 xl:h-auto order-1 xl:order-2">
-          <div className="flex xl:hidden justify-center mb-5">
-            <Image src={LogoIcon} alt="" width={106} height={76} />
+        <div className="flex items-center flex-col gap-y-5 justify-start xl:justify-center h-full pt-8 pb-20 xl:py-0 xl:h-auto order-1 xl:order-2">
+          <div className="flex xl:hidden justify-center mb-4">
+            <Image src={LogoIcon} alt="" width={100} height={70} />
           </div>
           <div className="flex flex-col gap-y-4 sm:gap-y-6">
+
             <div className="flex flex-col gap-y-6">
               <div className="text text-center text-blue-800 text-[20px] sm:text-3xl font-bold">
+
                 Coming Soon
               </div>
               <div className="text-center">
@@ -116,7 +118,7 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <div className="flex ">
+          <div className="flex">
             <div className=" justify-center items-center gap-[47px] flex mt-10">
               {[FacebookIcon, TwitterIcon, InstagramIcon, LinkedInIcon].map(
                 (src, idx) => (
