@@ -50,8 +50,8 @@ export default function Home() {
       <div className="hidden xl:flex justify-center relative ">
         <Image src={LogoIcon} alt="" width={166} height={118} />
       </div>
-      <div className="flex-grow flex justify-center xl:gap-5 items-center flex-wrap xl:flex-nowrap h-full xl:h-auto relative">
-        <div className="w-full absolute xl:relative order-2 xl:order-1 top-[calc(100%-40px)] xl:left-0 xl:top-0">
+      <div className="xl:pl-20 flex-grow flex justify-center xl:justify-between xl:gap-5 items-center flex-wrap xl:flex-nowrap h-full xl:h-auto relative">
+        <div className="w-full xl:w-auto absolute xl:relative order-2 xl:order-1 top-[calc(100%-40px)] xl:left-0 xl:top-0">
           <div className="relative w-[400px] h-[500px] left-[-50px]">
             <Image src={TruckWithCenterCircleIcon} alt="" fill />
           </div>
@@ -72,13 +72,13 @@ export default function Home() {
                 Coming Soon
               </div>
               <div className="text-center">
-                <div className="text-center text-neutral-700 text-[30px] sm:text-[2.6rem] md:text-7xl font-bold sm:mb-4">
+                <div className="text-center text-neutral-700 text-[30px] sm:text-[2.6rem] md:text-6xl font-bold sm:mb-4">
                   Get Notified
                 </div>
-                <span className="text-neutral-700 text-[30px] sm:text-[2.6rem] md:text-7xl font-bold">
+                <span className="text-neutral-700 text-[30px] sm:text-[2.6rem] md:text-6xl font-bold">
                   When We Launch
                 </span>
-                <span className="text-amber-500 text-[30px] sm:text-[2.6rem] md:text-7xl font-bold">
+                <span className="text-amber-500 text-[30px] sm:text-[2.6rem] md:text-6xl font-bold">
                   .
                 </span>
               </div>
@@ -132,8 +132,8 @@ export default function Home() {
           </div>
         </div>
         <div className="relative hidden xl:block order-3">
-          <div className="relative w-[400px] h-[500px]">
-            <div className="relative w-full h-full left-[50px]">
+          <div className="relative w-[400px] h-[500px] ">
+            <div className="relative w-full h-full ">
               <Image src={GirlHoldingPhoneIcon} alt="" fill />
             </div>
           </div>
