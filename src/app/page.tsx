@@ -39,8 +39,8 @@ export default function Home() {
         toast.success("You've successfully joined the waitlist");
         setEmail("");
       }
-    } catch (e) {
-      toast.error("Something went wrong");
+    } catch (e: any) {
+      toast.error(e.response?.data?.error);
     } finally {
       setIsLoading(false);
     }
@@ -118,16 +118,34 @@ export default function Home() {
           </div>
           <div className="flex">
             <div className=" justify-center items-center gap-[47px] flex mt-10">
-              {[FacebookIcon, TwitterIcon, InstagramIcon, LinkedInIcon].map(
-                (src, idx) => (
-                  <div
-                    className="w-10 h-10 grid place-content-center  bg-neutral-50 rounded-2xl border border-zinc-600"
-                    key={idx}
-                  >
-                    <Image className="w-5" src={src} alt="kk" />
-                  </div>
-                )
-              )}
+              <div
+                onClick={() =>
+                  window.open(
+                    "https://www.facebook.com/profile.php?id=100067667208082&mibextid=ZbWKwL",
+                    "_blank"
+                  )
+                }
+                className="cursor-pointer w-10 h-10 grid place-content-center bg-neutral-50 rounded-2xl border border-zinc-600"
+              >
+                <Image className="w-5" src={FacebookIcon} alt="kk" />
+              </div>
+              <div className="cursor-pointer w-10 h-10 grid place-content-center bg-neutral-50 rounded-2xl border border-zinc-600">
+                <Image className="w-5" src={TwitterIcon} alt="kk" />
+              </div>
+              <div
+                onClick={() =>
+                  window.open(
+                    "https://instagram.com/chian.gas?igshid=MzNlNGNkZWQ4Mg==",
+                    "_blank"
+                  )
+                }
+                className="cursor-pointer w-10 h-10 grid place-content-center bg-neutral-50 rounded-2xl border border-zinc-600"
+              >
+                <Image className="w-5" src={InstagramIcon} alt="kk" />
+              </div>
+              <div className="cursor-pointer w-10 h-10 grid place-content-center bg-neutral-50 rounded-2xl border border-zinc-600">
+                <Image className="w-5" src={LinkedInIcon} alt="kk" />
+              </div>
             </div>
           </div>
         </div>
