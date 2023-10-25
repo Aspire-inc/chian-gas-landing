@@ -9,6 +9,7 @@ import FaqCard from "../components/ui/faq-card";
 import React from "react";
 import Carousal from "../components/ui/carousal";
 import AppTypes from "../components/ui/app-types";
+import Link from "next/link";
 
 const howItoWorks = [
   {
@@ -133,7 +134,9 @@ export default function Home() {
           <p className="text-[#0066FF] font-semibold my-8">Learn more...</p>
 
           <button className="w-[200px] h-[50px] grid place-content-center rounded-[30px] border border-[#A7AEC1]">
-            Enrol Now
+            <Link href={"https://portal.chiangas.com/"} target="_blank">
+              Enrol Now
+            </Link>
           </button>
         </div>
         <div className="h-[303px] lg:h-[600px] w-full xl:w-[800px] relative flex items-center justify-center xl:justify-start">

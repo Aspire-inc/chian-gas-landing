@@ -67,9 +67,11 @@ export default function DesktopNav() {
           <span className="text-white text-[14px] font-normal">
             Partner with Chian as a:
           </span>
-          <span className="text-white text-[14px] font-semibold cursor-pointer">
-            Vendor
-          </span>
+          <Link href={"https://portal.chiangas.com/"} target="_blank">
+            <span className="text-white text-[14px] font-semibold cursor-pointer">
+              Vendor
+            </span>
+          </Link>
           <span className="text-white text-[14px] font-semibold cursor-pointer">
             Sponsor
           </span>
