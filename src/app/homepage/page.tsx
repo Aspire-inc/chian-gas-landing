@@ -100,7 +100,7 @@ export default function Home() {
   return (
     <div className="w-full" id="home">
       <Carousal />
-      <div className="flex flex-col items-center p-5 bg-white sm:p-7 border-2">
+      <div className="flex flex-col items-center p-5 bg-white sm:p-7 ">
         <div className="flex flex-col items-center mt-7 md:mt-14">
           <DotDiffText>How it works</DotDiffText>
 
