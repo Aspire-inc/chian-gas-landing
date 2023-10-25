@@ -13,6 +13,7 @@ import LinkedInIcon from "@/assets/icons/linkedin-icon.svg";
 import DownloadOnAppStoreIcon from "@/assets/icons/download-on-app-store-icon.svg";
 import GetOnGooglePlayIcon from "@/assets/icons/get-on-google-play-icon.svg";
 import CaretUpIcon from "@/assets/icons/caret-up-icon.svg";
+import Link from "next/link";
 function Footer({ handleScrollToTop }: any) {
   return (
     <footer className="bg-[#FBFAFA] py-24 px-6 xl:px-28 mt-20">
@@ -104,13 +105,25 @@ function Footer({ handleScrollToTop }: any) {
 
           <div className="flex gap-x-4">
             <div className="w-[60px] h-[60px] flex items-center justify-center rounded-[16px] border border-[#5B5B5B]">
-              <Image src={FacebookIcon} alt="" />
+              <Link
+                href={
+                  "https://www.facebook.com/profile.php?id=100067667208082&mibextid=ZbWKwL"
+                }
+                target="_blank"
+              >
+                <Image src={FacebookIcon} alt="" />
+              </Link>
             </div>
             <div className="w-[60px] h-[60px] flex items-center justify-center rounded-[16px] border border-[#5B5B5B]">
               <Image src={TwitterIcon} alt="" />
             </div>
             <div className="w-[60px] h-[60px] flex items-center justify-center rounded-[16px] border border-[#5B5B5B]">
-              <Image src={InstagramIcon} alt="" />
+              <Link
+                href={"https://instagram.com/chian.gas?igshid=MzNlNGNkZWQ4Mg=="}
+                target="_blanks"
+              >
+                <Image src={InstagramIcon} alt="" />
+              </Link>
             </div>
             <div className="w-[60px] h-[60px] flex items-center justify-center rounded-[16px] border border-[#5B5B5B]">
               <Image src={LinkedInIcon} alt="" />

@@ -2,6 +2,7 @@ import React from "react";
 import DotDiffText from "../components/ui/dot-diff-text";
 import OurValuesCard from "../components/ui/our-values-card";
 import Directors from "../components/ui/directors";
+import AssuranceTypes from "../components/ui/assurance-types";
 const howItoWorks = [
   {
     name: "Lorem ipsum dolor.",
@@ -109,6 +110,9 @@ function About() {
               dignissim. Vivamus velit lacus, cursus ut purus a, vehicula
               egestas quam. In quis vestibulum tellus.
             </p>
+            <div className="mt-5">
+              <AssuranceTypes />
+            </div>
           </div>
         </div>
       </div>

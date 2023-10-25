@@ -15,6 +15,7 @@ import ChipIcon from "@/assets/icons/chip-icon.svg";
 import AngleSpannerIcon from "@/assets/icons/angle-spanner-icon.svg";
 import NodesIcon from "@/assets/icons/nodes-icon.svg";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const companyInfo = [
   {
@@ -118,9 +119,11 @@ export default function DesktopNav() {
 
           <ul className="flex items-center gap-12">
             <li className="flex items-center cursor-pointer gap-x-1">
-              <span className="text-[15px] xl:text-[20px] text-[#5B5B5B]">
-                Become a Vendor
-              </span>
+              <Link href={"https://portal.chiangas.com/"} target="_blank">
+                <span className="text-[15px] xl:text-[20px] text-[#5B5B5B]">
+                  Become a Vendor
+                </span>
+              </Link>
             </li>
             {/* <li>
               <span className="text-[15px] xl:text-[20px] text-[#5B5B5B]">
