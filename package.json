@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next -p 3006",
+
     "build": "next build",
     "start": "next start",
     "start:prod": "pm2 startOrReload ecosystem.config.js --env Production",

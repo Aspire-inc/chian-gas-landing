@@ -12,7 +12,7 @@ import { toast } from "react-hot-toast";
 import { useState } from "react";
 import Button from "./components/ui/button";
 
-export default function Home() {
+export default function WaitlistPage() {
   const [email, setEmail] = useState("");
 
   const [isLoading, setIsLoading] = useState(false);
@@ -46,24 +46,24 @@ export default function Home() {
     }
   }
   return (
-    <section className="h-full fixed top-0 left-0 w-full px-5 xl:py-8 flex flex-col overflow-auto overflow-x-hidden">
-      <div className="hidden xl:flex justify-center relative ">
+    <section className="fixed top-0 left-0 flex flex-col w-full h-full px-5 overflow-auto overflow-x-hidden xl:py-8">
+      <div className="relative justify-center hidden xl:flex ">
         <Image src={LogoIcon} alt="" width={166} height={118} />
       </div>
-      <div className=" flex-grow flex justify-center xl:justify-between xl:gap-5 items-center flex-wrap xl:flex-nowrap h-full xl:h-auto relative">
+      <div className="relative flex flex-wrap items-center justify-center flex-grow h-full xl:justify-between xl:gap-5 xl:flex-nowrap xl:h-auto">
         <div className="w-full xl:w-auto absolute xl:relative order-2 xl:order-1 top-[calc(100%-40px)] xl:left-0 xl:top-0">
           <div className="relative w-[400px] h-[500px] left-[-50px] xl:left-0">
             <Image src={TruckWithCenterCircleIcon} alt="" fill />
           </div>
-          <div className="w-full block xl:hidden mt-5">
-            <p className="text-center text-zinc-600 text-lg font-normal tracking-wider grow pb-10 xl:pb-0 w-full">
+          <div className="block w-full mt-5 xl:hidden">
+            <p className="w-full pb-10 text-lg font-normal tracking-wider text-center text-zinc-600 grow xl:pb-0">
               © 2023 All rights reserved.
             </p>
           </div>
         </div>
 
-        <div className="flex items-center flex-col gap-y-5 justify-start xl:justify-center h-full pt-8 pb-20 xl:py-0 xl:h-auto order-1 xl:order-2">
-          <div className="flex xl:hidden justify-center mb-4">
+        <div className="flex flex-col items-center justify-start order-1 h-full pt-8 pb-20 gap-y-5 xl:justify-center xl:py-0 xl:h-auto xl:order-2">
+          <div className="flex justify-center mb-4 xl:hidden">
             <Image src={LogoIcon} alt="" width={100} height={70} />
           </div>
           <div className="flex flex-col gap-y-4 sm:gap-y-6">
@@ -83,11 +83,11 @@ export default function Home() {
                 </span>
               </div>
             </div>
-            <div className="flex flex-col items-center gap-3 w-full mt-7">
+            <div className="flex flex-col items-center w-full gap-3 mt-7">
               <div className="w-full max-w-xl py-2 flex gap-2 items-center border border-gray-200 bg-white rounded-3xl overflow-hidden pr-2 pl-4 h-[60px] sm:h-[72px]">
                 <input
                   type="text"
-                  className="grow h-full outline-none"
+                  className="h-full outline-none grow"
                   placeholder="Enter your email"
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -125,11 +125,11 @@ export default function Home() {
                     "_blank"
                   )
                 }
-                className="cursor-pointer w-10 h-10 grid place-content-center bg-neutral-50 rounded-2xl border border-zinc-600"
+                className="grid w-10 h-10 border cursor-pointer place-content-center bg-neutral-50 rounded-2xl border-zinc-600"
               >
                 <Image className="w-5" src={FacebookIcon} alt="kk" />
               </div>
-              <div className="cursor-pointer w-10 h-10 grid place-content-center bg-neutral-50 rounded-2xl border border-zinc-600">
+              <div className="grid w-10 h-10 border cursor-pointer place-content-center bg-neutral-50 rounded-2xl border-zinc-600">
                 <Image className="w-5" src={TwitterIcon} alt="kk" />
               </div>
               <div
@@ -139,17 +139,17 @@ export default function Home() {
                     "_blank"
                   )
                 }
-                className="cursor-pointer w-10 h-10 grid place-content-center bg-neutral-50 rounded-2xl border border-zinc-600"
+                className="grid w-10 h-10 border cursor-pointer place-content-center bg-neutral-50 rounded-2xl border-zinc-600"
               >
                 <Image className="w-5" src={InstagramIcon} alt="kk" />
               </div>
-              <div className="cursor-pointer w-10 h-10 grid place-content-center bg-neutral-50 rounded-2xl border border-zinc-600">
+              <div className="grid w-10 h-10 border cursor-pointer place-content-center bg-neutral-50 rounded-2xl border-zinc-600">
                 <Image className="w-5" src={LinkedInIcon} alt="kk" />
               </div>
             </div>
           </div>
         </div>
-        <div className="relative hidden xl:block order-3">
+        <div className="relative order-3 hidden xl:block">
           <div className="relative w-[400px] h-[500px] ">
             <div className="relative w-full h-full left-[50px]">
               <Image src={GirlHoldingPhoneIcon} alt="" fill />
@@ -157,8 +157,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className=" hidden xl:block">
-        <p className="text-center text-zinc-600 text-lg font-normal tracking-wider grow pb-10 xl:pb-0">
+      <div className="hidden xl:block">
+        <p className="pb-10 text-lg font-normal tracking-wider text-center text-zinc-600 grow xl:pb-0">
           © 2023 All rights reserved.
         </p>
       </div>

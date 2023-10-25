@@ -7,7 +7,7 @@ export default function AppTypes() {
   const [appId, setAppId] = useState(0);
   return (
     <div>
-      <div className="flex justify-center gap-5 my-7 flex-wrap">
+      <div className="flex flex-wrap justify-center gap-5 my-7">
         <button
           onClick={() => setAppId(0)}
           className={`border border-[#A7AEC1] ${
@@ -28,7 +28,7 @@ export default function AppTypes() {
         >
           Vendor
         </button>
-        <button
+        {/* <button
           onClick={() => setAppId(2)}
           className={`border border-[#A7AEC1] ${
             appId === 2
@@ -37,7 +37,7 @@ export default function AppTypes() {
           } hover:bg-[#3F3F3F] hover:text-white hover:border-none transition-all duration-500 w-[100px] text-[14px] lg:text-[16px] lg:w-[125px] h-[50px] flex items-center justify-center rounded-[100px] `}
         >
           Delivery
-        </button>
+        </button> */}
       </div>
 
       <div className="w-full overflow-hidden">
@@ -47,7 +47,7 @@ export default function AppTypes() {
         >
           <UserApp />
           <VendorApp />
-          <DeliveryApp />
+          {/* <DeliveryApp /> */}
         </div>
       </div>
     </div>
@@ -72,7 +72,7 @@ const UserApp = () => {
         </p>
       </div>
 
-      <div className="w-full lg:w-auto flex justify-center">
+      <div className="flex justify-center w-full lg:w-auto">
         <div className="w-[300px] sm:w-[500px] h-[400px] relative">
           <Image src={HalfSmartPhoneIcon} alt="" fill />
         </div>
@@ -99,7 +99,7 @@ const VendorApp = () => {
         </p>
       </div>
 
-      <div className="w-full lg:w-auto flex justify-center">
+      <div className="flex justify-center w-full lg:w-auto">
         <div className="w-[300px] sm:w-[500px] h-[400px] relative">
           <Image src={HalfSmartPhoneIcon} alt="" fill />
         </div>
@@ -126,7 +126,7 @@ const DeliveryApp = () => {
         </p>
       </div>
 
-      <div className="w-full lg:w-auto flex justify-center">
+      <div className="flex justify-center w-full lg:w-auto">
         <div className="w-[300px] sm:w-[500px] h-[400px] relative">
           <Image src={HalfSmartPhoneIcon} alt="" fill />
         </div>

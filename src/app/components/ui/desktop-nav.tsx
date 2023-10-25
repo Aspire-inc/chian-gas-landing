@@ -14,10 +14,12 @@ import LeftCloudChipIcom from "@/assets/icons/left-cloud-chip-icon.svg";
 import ChipIcon from "@/assets/icons/chip-icon.svg";
 import AngleSpannerIcon from "@/assets/icons/angle-spanner-icon.svg";
 import NodesIcon from "@/assets/icons/nodes-icon.svg";
+import { useRouter } from "next/navigation";
 
 const companyInfo = [
   {
     name: "About Us",
+    // link:`about`,
     description: `Lorem ipsum dolor sit amet,
     consectetur adipiscing elit.
     Mauris eget felis et felis.`,
@@ -78,7 +80,7 @@ export default function DesktopNav() {
       <div className="h-[80px] bg-white px-10 flex justify-between">
         <Image src={LogoIcon} alt="" />
         <div className="w-[calc(100%-150px)] h-full flex justify-between items-center">
-          <ul className="flex items-center gap-12 h-full">
+          <ul className="flex items-center h-full gap-12">
             <li
               className="flex items-center gap-x-1 px-4 h-full hover:bg-blue-50/70 border-b-2 border-transparent hover:border-[#F99617] cursor-pointer relative"
               onClick={(e) => {
@@ -115,16 +117,16 @@ export default function DesktopNav() {
           </ul>
 
           <ul className="flex items-center gap-12">
-            <li className="flex items-center gap-x-1">
+            <li className="flex items-center cursor-pointer gap-x-1">
               <span className="text-[15px] xl:text-[20px] text-[#5B5B5B]">
-                Partner with Chian
+                Become a Vendor
               </span>
             </li>
-            <li>
+            {/* <li>
               <span className="text-[15px] xl:text-[20px] text-[#5B5B5B]">
                 Solutions
               </span>
-            </li>
+            </li> */}
             <li>
               <button className="text-[#5B5B5B] font-semibold text-[13px] xl:text-[16px] w-[150px] xl:w-[200px] h-[50px] rounded-[30px] border border-[#A7AEC1]">
                 Download App
@@ -153,6 +155,8 @@ const CompanyInfo = ({
       window.removeEventListener("click", clickHandler);
     };
   }, []);
+  const router = useRouter();
+
   return (
     <AnimatePresence>
       <motion.div
@@ -189,7 +193,7 @@ const CompanyInfo = ({
                 Company
               </span>
 
-              <div className=" mt-4 flex flex-col gap-y-5">
+              <div className="flex flex-col mt-4 gap-y-5">
                 {companyInfo.slice(0, 3).map((info, i) => (
                   <motion.div
                     initial={{ y: "-30%", opacity: 0 }}
@@ -198,7 +202,14 @@ const CompanyInfo = ({
                     key={i}
                     className="group border-l-2 border-transparent hover:border-[#F99617] hover:bg-white px-5 ml-[-2.5px]"
                   >
-                    <p className="font-medium text-[16px] text-[#49535C] group-hover:text-[#0043A7] ">
+                    <p
+                      className="font-medium text-[16px] text-[#49535C] group-hover:text-[#0043A7] "
+                      onClick={() => {
+                        if (info.name === "About Us") {
+                          router.push("/about");
+                        }
+                      }}
+                    >
                       {info.name}
                     </p>
                     <p className="text-[14px] text-[#8E8E8E]">
@@ -212,7 +223,7 @@ const CompanyInfo = ({
           <div className="flex w-[50%]">
             <Image src={DottedDividerIcon} alt="" className="" />
             <div className="mt-16">
-              <div className=" mt-6 flex flex-col gap-y-5">
+              <div className="flex flex-col mt-6 gap-y-5">
                 {companyInfo.slice(3, 6).map((info, i) => (
                   <motion.div
                     initial={{ y: "-30%", opacity: 0 }}
