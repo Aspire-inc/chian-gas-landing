@@ -3,6 +3,7 @@ import DotDiffText from "../components/ui/dot-diff-text";
 import OurValuesCard from "../components/ui/our-values-card";
 import Directors from "../components/ui/directors";
 import AssuranceTypes from "../components/ui/assurance-types";
+import { UserApp } from "../components/ui/app-types";
 const howItoWorks = [
   {
     name: "Lorem ipsum dolor.",
@@ -35,13 +36,13 @@ const howItoWorks = [
 ];
 function About() {
   return (
-    <div className="px-6 xl:px-10 w-full">
-      <div className="w-full humans-bg  flex items-center justify-start">
+    <div className="w-full px-6 xl:px-10">
+      <div className="flex items-center justify-start w-full humans-bg">
         <div className="flex items-start px-28">
           <DotDiffText className="text-white">About Us</DotDiffText>
         </div>
       </div>
-      <div className="flex flex-col items-center p-5 bg-white sm:p-7  ">
+      <div className="flex flex-col items-center p-5 bg-white sm:p-7 ">
         <div className="flex flex-col mt-7 md:mt-14 w-[90%] ">
           <div className="w-full mb-[5rem]">
             <DotDiffText>
@@ -81,7 +82,7 @@ function About() {
               We leverages technology to streamline the gas supply chain and
               enhance the overall customer experience.
             </p>
-            <div className="grid grid-cols-1  md:grid-cols-2 xl:grid-cols-4 gap-7">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-7">
               {howItoWorks.map((data, i) => (
                 <OurValuesCard
                   tagVariant=""
@@ -94,16 +95,16 @@ function About() {
             </div>
           </div>
           <div className="flex flex-col items-center justify-center mb-[5rem]">
-            <DotDiffText className="text-center mb-10">
+            <DotDiffText className="mb-10 text-center">
               Our Directors
             </DotDiffText>
             <Directors />
           </div>
           <div className="flex flex-col items-center justify-center ">
-            <DotDiffText className="text-center mb-10">
+            <DotDiffText className="mb-10 text-center">
               Our Assurance to You.
             </DotDiffText>
-            <p className="text-center text-zinc-600 text-lg font-normal  tracking-tight">
+            <p className="text-lg font-normal tracking-tight text-center text-zinc-600">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mi
               turpis, venenatis tristique sapien quis, vestibulum dapibus magna.
               Ut semper a purus sit amet vulputate. Nunc tristique ornare
@@ -112,6 +113,16 @@ function About() {
             </p>
             <div className="mt-5">
               <AssuranceTypes />
+            </div>
+            <div className="w-full overflow-hidden">
+              <div
+                // style={{ marginLeft: `-${appId * 100}%` }}
+                className="w-[300%] flex mt-5 gap-x-3 "
+              >
+                <UserApp />
+                {/* <VendorApp /> */}
+                {/* <DeliveryApp /> */}
+              </div>
             </div>
           </div>
         </div>

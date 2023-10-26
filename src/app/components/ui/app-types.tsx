@@ -54,7 +54,7 @@ export default function AppTypes() {
   );
 }
 
-const UserApp = () => {
+export const UserApp = () => {
   return (
     <div className="w-[33.3%] pt-12 sm:pt-20 px-4 md:px-14 bg-[#0043A7] rounded-[20px] mt-5 flex lg:justify-between items-start flex-wrap lg:flex-nowrap gap-y-7">
       <div>
