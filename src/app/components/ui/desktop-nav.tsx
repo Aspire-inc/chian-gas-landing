@@ -14,7 +14,7 @@ import LeftCloudChipIcom from "@/assets/icons/left-cloud-chip-icon.svg";
 import ChipIcon from "@/assets/icons/chip-icon.svg";
 import AngleSpannerIcon from "@/assets/icons/angle-spanner-icon.svg";
 import NodesIcon from "@/assets/icons/nodes-icon.svg";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 
 const companyInfo = [
@@ -51,6 +51,9 @@ const companyInfo = [
 
 export default function DesktopNav() {
   const [showCompanyInfo, setShowCompanyInfo] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
+  console.log(pathname, "Pathname");
 
   return (
     <nav className="hidden lg:block" id="nav">
@@ -81,7 +84,12 @@ export default function DesktopNav() {
         </div>
       </div>
       <div className="h-[80px] bg-white px-10 flex justify-between">
-        <Image src={LogoIcon} alt="" />
+        <Image
+          src={LogoIcon}
+          alt=""
+          onClick={() => router.push("/")}
+          className="cursor-pointer"
+        />
         <div className="w-[calc(100%-150px)] h-full flex justify-between items-center">
           <ul className="flex items-center h-full gap-12">
             <li
@@ -107,8 +115,17 @@ export default function DesktopNav() {
                 ""
               )}
             </li>
-            <li>
-              <span className="text-[15px] xl:text-[20px] text-[#5B5B5B]">
+            <li
+              className={` h-full flex items-center px-4 hover:bg-blue-50/70 border-b-2 border-transparent hover:border-[#F99617] cursor-pointer ${
+                pathname === "/support"
+                  ? "border-b-2 border-transparent border-[#F99617] bg-blue-50/70"
+                  : ""
+              }`}
+            >
+              <span
+                className="text-[15px] xl:text-[20px] text-[#5B5B5B] "
+                onClick={() => router.push("/support")}
+              >
                 Support
               </span>
             </li>

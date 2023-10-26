@@ -15,6 +15,10 @@ import GetOnGooglePlayIcon from "@/assets/icons/get-on-google-play-icon.svg";
 import CaretUpIcon from "@/assets/icons/caret-up-icon.svg";
 import Link from "next/link";
 function Footer({ handleScrollToTop }: any) {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <footer className="bg-[#FBFAFA] py-24 px-6 xl:px-28 mt-20">
       <div className="grid grid-cols-1 grid-rows-4 gap-5 md:grid-cols-2 lg:grid-cols-4 md:grid-rows-2 lg:grid-rows-1">
@@ -144,7 +148,7 @@ function Footer({ handleScrollToTop }: any) {
       <div className="mt-20">
         <a
           onClick={() => {
-            handleScrollToTop();
+            scrollToTop();
           }}
           className="w-[49px] h-[49px] border-[1.5px] border-[#A7AEC1] flex items-center justify-center rounded-[10px] cursor-pointer mx-auto sm:mx-0"
         >
