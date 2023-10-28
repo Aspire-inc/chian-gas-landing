@@ -66,7 +66,7 @@ export default function DesktopNav() {
           <span className="text-white text-[14px] font-semibold">7 Days</span>
         </div>
 
-        <div className="flex gap-5">
+        <div className="flex items-center justify-center gap-5">
           <span className="text-white text-[14px] font-normal">
             Partner with Chian as a:
           </span>
