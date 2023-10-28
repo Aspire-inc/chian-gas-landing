@@ -7,7 +7,7 @@ import SmsIcon from "@/assets/icons/sms-icon.svg";
 import PhoneIcon from "@/assets/icons/phone-icon.svg";
 import LocationIcon from "@/assets/icons/location-icon.svg";
 import FacebookIcon from "@/assets/icons/facebook-icon.svg";
-import TwitterIcon from "@/assets/icons/twitter-icon.svg";
+import TwitterIcon from "@/assets/icons/X.svg";
 import InstagramIcon from "@/assets/icons/instagram-icon.svg";
 import LinkedInIcon from "@/assets/icons/linkedin-icon.svg";
 import DownloadOnAppStoreIcon from "@/assets/icons/download-on-app-store-icon.svg";
@@ -29,13 +29,27 @@ function Footer({ handleScrollToTop }: any) {
           <li className="flex items-start gap-x-2">
             <Image src={SmsIcon} alt="" />
             <span className="text-[17px] xl:text-[18px] tracking-wider text-[#5B5B5B]">
+              <Link
+                href="mailto:
               info@chiangas.com
+              
+              "
+              >
+                info@chiangas.com
+              </Link>
             </span>
           </li>
           <li className="flex items-start gap-x-2">
             <Image src={PhoneIcon} alt="" />
             <span className="text-[17px] xl:text-[18px] tracking-wider text-[#5B5B5B]">
+              <Link
+                href="tel:
               +234 901 418 6951
+              
+              "
+              >
+                +234 901 418 6951
+              </Link>
             </span>
           </li>
           <li className="flex items-start gap-x-2">

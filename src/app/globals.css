@@ -29,3 +29,9 @@ html,body{
   height: 507px;
   border-radius: 30px;
 }
+
+
+
+.headerBg{
+  background-image: url('../assets/headerBg.png');
+}

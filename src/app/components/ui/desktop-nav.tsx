@@ -16,36 +16,36 @@ import AngleSpannerIcon from "@/assets/icons/angle-spanner-icon.svg";
 import NodesIcon from "@/assets/icons/nodes-icon.svg";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
+import HeaderBg from "@/assets/headerBg.png";
 
 const companyInfo = [
   {
     name: "About Us",
     // link:`about`,
-    description: `Lorem ipsum dolor sit amet,
-    consectetur adipiscing elit.
-    Mauris eget felis et felis.`,
+    description: `Chian Gas Limited is an e-gas
+platform that aims to
+connect gas users and gas...`,
   },
   {
-    name: "Our Offerings",
-    description: `Lorem ipsum dolor sit amet.`,
+    name: "Our Value",
+    description: `Quality service is the right...`,
   },
+  // {
+  //   name: "How Chian Works",
+  //   description: `Quality service is the right...`,
+  // },
   {
-    name: "How Chian Works",
-    description: `Lorem ipsum dolor sit amet,
-    consectetur adipiscing elit.`,
+    name: "Our Assurance To You",
+    description: `Chian gas assures Convenience
+and Flexibility to all users...`,
   },
   {
     name: "News and Updates",
-    description: `Lorem ipsum dolor sit amet.`,
+    description: `We are launching soon 🚀`,
   },
   {
     name: "Careers",
-    description: `Lorem ipsum dolor sit amet.`,
-  },
-  {
-    name: "Blog",
-    description: `Lorem ipsum dolor sit amet,
-    consectetur adipiscing elit.`,
+    description: `We are not hiring for now.`,
   },
 ];
 
@@ -53,7 +53,7 @@ export default function DesktopNav() {
   const [showCompanyInfo, setShowCompanyInfo] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
-  console.log(pathname, "Pathname");
+  // console.log(pathname, "Pathname");
 
   return (
     <nav className="hidden lg:block" id="nav">
@@ -79,7 +79,7 @@ export default function DesktopNav() {
             Sponsor
           </span>
           <span className="text-white text-[14px] font-semibold cursor-pointer">
-            Delivery
+            Marketer
           </span>
         </div>
       </div>
@@ -130,7 +130,10 @@ export default function DesktopNav() {
               </span>
             </li>
             <li>
-              <span className="text-[15px] xl:text-[20px] text-[#5B5B5B]">
+              <span
+                className="text-[15px] xl:text-[20px] text-[#5B5B5B]"
+                onClick={() => router.push("/privacy-policy")}
+              >
                 Safety
               </span>
             </li>
@@ -190,8 +193,8 @@ const CompanyInfo = ({
       >
         <div className="w-[40%] h-full border border-[#E8E8EA] rounded-[12px]">
           <div
-            style={{ background: "rgba(5, 15, 24, 0.10)" }}
-            className="w-full h-full border-[6px] border-[#F9F9F9] p-2 rounded-[12px]"
+            // style={{ background: `url(${HeaderBg})` }}
+            className="w-full h-full border-[6px] border-[#F9F9F9] p-2 rounded-[12px] headerBg"
           >
             <div
               style={{ background: "rgba(5, 15, 24, 0.699999988079071)" }}
@@ -226,9 +229,10 @@ const CompanyInfo = ({
                   >
                     <p
                       className="font-medium text-[16px] text-[#49535C] group-hover:text-[#0043A7] "
-                      onClick={() => {
+                      onClick={(e) => {
                         if (info.name === "About Us") {
                           router.push("/about");
+                          setShowCompanyInfo(false);
                         }
                       }}
                     >
