@@ -14,37 +14,43 @@ import Link from "next/link";
 const howItoWorks = [
   {
     name: "Sign Up/Sign In",
-    description: `Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit. Mauris eget felis et felis
-    ultrices tempus at sed eros.`,
+    description: `Join the future of effortless gas management.`,
+    slogan: "Sign up to connect with vendors.",
+    feat: "Track your gas levels, and simplify refills.",
     image: "/sign-in.png",
   },
   {
     name: "Place Order",
-    description: `Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit. Mauris eget felis et felis
-    ultrices tempus at sed eros.`,
+    description: `Choose the gas cylinder size you need.`,
+    slogan: "Select from list of verified gas vendors.",
+    feat: " Review your order and confirm.",
     image: "/place-order.png",
   },
   {
     name: "Order Processing",
-    description: `Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit. Mauris eget felis et felis
-    ultrices tempus at sed eros.`,
+    description: `Your vendor will accept your order.
+You'll get notified.`,
+    slogan: `Your vendor will prepare your order
+for delivery.`,
+    feat: ``,
     image: "/order-processing.png",
   },
   {
     name: "Order Delivery",
-    description: `Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit. Mauris eget felis et felis
-    ultrices tempus at sed eros.`,
+    description: `Get an estimated delivery time.`,
+    slogan: `Track real-time location of your gas
+delivery.`,
+    feat: `Vendor arrives at your location with
+your gas.`,
     image: "/order-delivery.png",
   },
   {
     name: "Order fulfilled",
-    description: `Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit. Mauris eget felis et felis
-    ultrices tempus at sed eros.`,
+    description: `Make payment with our in-app wallet.`,
+    slogan: `Rate your experience and provide
+feedback on the vendor's service.`,
+    feat: `Enjoy reliable, uninterrupted gas
+supply.`,
     image: "/order-fulfilled.png",
   },
 ];
@@ -52,23 +58,23 @@ const howItoWorks = [
 const newsAndUpdates = [
   {
     name: "Our launch date is here",
-    description: `Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit. Mauris eget felis et felis
-    ultrices tempus at sed eros.`,
+    description: `It's been an incredible journey to get to
+this point, filled with hard work,
+dedication, and unwavering...`,
     image: "/our-launch-date.png",
   },
   {
     name: "How to use accessories",
-    description: `Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit. Mauris eget felis et felis
-    ultrices tempus at sed eros.`,
+    description: `Using your Chian Gas level checker device
+is a breeze. It's easier than you think. We
+listed some steps...`,
     image: "/how-to-use-accessories.png",
   },
   {
     name: "Tips on safety",
-    description: `Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit. Mauris eget felis et felis
-    ultrices tempus at sed eros.`,
+    description: `Your safety is our top concern. We want to
+ensure you use gas in your home with
+confidence and peace of mind...`,
     image: "/tips-on-safety.png",
   },
 ];
@@ -113,6 +119,8 @@ export default function Home() {
                 description={data.description}
                 image={data.image}
                 name={data.name}
+                slogan={data.slogan}
+                feat={data?.feat}
               />
             ))}
           </div>
@@ -123,12 +131,12 @@ export default function Home() {
         <div className=" w-full xl:w-[calc(100%-800px)] px-5 sm:px-12 lg:pl-20">
           <DotDiffText>As a vendor?</DotDiffText>
           <p className="text-[#5B5B5B] text-[16px] sm:text-[18px] mt-1 tracking-wider lg:w-[calc(100%-100px)]">
-            Manage users, riders, and vendors via admin panel. Lorem ipsum dolor
-            sit amet, consectetur adipiscing elit. Mauris eget felis et felis
-            ultrices tempus at sed eros. Donec pulvinar lacus a augue ultricies
-            lacinia. Phasellus cursus elementum commodo. Curabitur quam sapien,
-            pretium sed tellus at, condimentum ultricies enim. In cursus
-            scelerisque nisl vitae condimentum.
+            Are you a gas vendor looking to streamline your operations and reach
+            more customers? Chian Gas is here to help. By joining our platform,
+            you gain access to a world of benefits. On our platform, you create
+            a digital storefront, expand your customer base, manage your orders,
+            stay updated with instant alerts for new orders, and enjoy swift and
+            secure payment options.
           </p>
 
           <p className="text-[#0066FF] font-semibold my-8">Learn more...</p>

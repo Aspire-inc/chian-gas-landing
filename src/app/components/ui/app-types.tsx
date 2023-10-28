@@ -60,15 +60,15 @@ export const UserApp = () => {
       <div>
         <div className="text-white ">
           <p className="text-inherit text-3xl xl:text-[50px] font-bold xl:leading-[61px]">
-            Order in seconds,
+            Experience Ultimate
           </p>
           <p className="text-inherit text-3xl xl:text-[50px] font-bold xl:leading-[61px]">
-            refill in minutes.
+            Convenience!
           </p>
         </div>
         <p className="max-w-[500px] mt-6 text-white text-[16px]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget
-          felis et felis ultrices tempus at sed eros.
+          Never run out of gas unexpectedly! Track your gas levels effortlessly
+          with real-time updates.
         </p>
       </div>
 
@@ -87,15 +87,15 @@ const VendorApp = () => {
       <div>
         <div className="text-white ">
           <p className="text-inherit text-3xl xl:text-[50px] font-bold xl:leading-[61px]">
-            Order in seconds 2,
+            Manage Orders
           </p>
           <p className="text-inherit text-3xl xl:text-[50px] font-bold xl:leading-[61px]">
-            refill in minutes.
+            Seamlessly
           </p>
         </div>
         <p className="max-w-[500px] mt-6 text-white text-[16px]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget
-          felis et felis ultrices tempus at sed eros.
+          We've redefined the way you manage your customers and gas supply just
+          from one app.
         </p>
       </div>
 

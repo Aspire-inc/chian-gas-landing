@@ -10,11 +10,15 @@ export default function HowItWorksCard({
   description,
   image,
   tagVariant,
+  slogan,
+  feat,
 }: {
   name: string;
   description: string;
   image: string;
   tagVariant: string;
+  slogan: string;
+  feat: string | null;
 }) {
   return (
     <div className="transition-all bg-[#f1efed4d] hover:bg-[#f996174d] duration-500 p-6 rounded-[10px] relative w-full md:w-[350px] lg:w-[430px] h-[226px]">
@@ -23,7 +27,13 @@ export default function HowItWorksCard({
           {name}
         </h3>
         <p className="text-[#5B5B5B] text-[14px] max-w-[calc(100%-110px)] lg:max-w-[calc(100%-70px)]">
-          {description}
+          . {description}
+        </p>
+        <p className="text-[#5B5B5B] text-[14px] max-w-[calc(100%-110px)] lg:max-w-[calc(100%-70px)]">
+          . {slogan}
+        </p>
+        <p className="text-[#5B5B5B] text-[14px] max-w-[calc(100%-110px)] lg:max-w-[calc(100%-110px)]">
+          . {feat}
         </p>
       </div>
 

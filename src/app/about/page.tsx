@@ -6,37 +6,45 @@ import AssuranceTypes from "../components/ui/assurance-types";
 import { UserApp } from "../components/ui/app-types";
 const howItoWorks = [
   {
-    name: "Lorem ipsum dolor.",
-    description: `Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit. Mauris eget felis et felis
-    ultrices tempus at sed eros.`,
-    image: "/document-text.png",
+    name: " Customer-Centricity",
+    description: `You, our valued customers, are at the heart
+of our mission. Your satisfaction and safety
+are our top priorities. We are committed to
+delivering the best gas supply experience
+for your home and business.`,
+    image: "/user.png",
   },
   {
-    name: "Lorem ipsum dolor.",
-    description: `Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit. Mauris eget felis et felis
-    ultrices tempus at sed eros.`,
-    image: "/document-text.png",
+    name: "Sustainability",
+    description: `We are dedicated to creating a sustainable
+and greener future. By embracing
+innovative technology, we reduce waste
+and promote eco-friendly practices
+throughout our operations.`,
+    image: "/security.png",
   },
   {
-    name: "Lorem ipsum dolor.",
-    description: `Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit. Mauris eget felis et felis
-    ultrices tempus at sed eros.`,
-    image: "/document-text.png",
+    name: " Innovation",
+    description: `Technology is at the core of our service.
+We continuously innovate to make the
+gas supply process more efficient,
+transparent, and user-friendly for our
+customers and vendors.`,
+    image: "/cpu.png",
   },
   {
-    name: "Lorem ipsum dolor.",
-    description: `Lorem ipsum dolor sit amet, consectetur
-    adipiscing elit. Mauris eget felis et felis
-    ultrices tempus at sed eros.`,
-    image: "/document-text.png",
+    name: "Transparency",
+    description: `Trust is paramount. We believe in open
+communication, honesty, and providing
+clear information to both our customers
+and vendors. Your confidence in Chian
+Gas is our most valuable asset.`,
+    image: "/search-normal.png",
   },
 ];
 function About() {
   return (
-    <div className="w-full px-6 xl:px-10">
+    <div className="w-full lg:px-6 xl:px-10">
       <div className="flex items-center justify-start w-full humans-bg">
         <div className="flex items-start px-28">
           <DotDiffText className="text-white">About Us</DotDiffText>
@@ -76,13 +84,14 @@ function About() {
           <div className="w-full  mb-[5rem]">
             <DotDiffText>Our Values</DotDiffText>
             <p className="text-[#5B5B5B] text-lg md:text-[20px] mb-5  mt-5">
-              Chian Gas Limited is a registered e-gas platform that aims to
-              connect gas users and gas vendors using technology, providing a
-              convenient and efficient way to purchase and deliver gas supplies.
-              We leverages technology to streamline the gas supply chain and
-              enhance the overall customer experience.
+              <b>Fueling Trust, Convenience, and Sustainability.</b> At Chian
+              Gas, our journey is guided by a set of unwavering values that
+              underpin everything we do. These values are more than just words;
+              they're the driving force behind our mission to revolutionize the
+              gas supply industry and ensure everyone has access to safe and
+              reliable energy.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-7">
+            <div className="grid grid-cols-1 mt-[3.5rem]  md:grid-cols-2 xl:grid-cols-4 gap-7">
               {howItoWorks.map((data, i) => (
                 <OurValuesCard
                   tagVariant=""
@@ -105,13 +114,12 @@ function About() {
               Our Assurance to You.
             </DotDiffText>
             <p className="text-lg font-normal tracking-tight text-center text-zinc-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mi
-              turpis, venenatis tristique sapien quis, vestibulum dapibus magna.
-              Ut semper a purus sit amet vulputate. Nunc tristique ornare
-              dignissim. Vivamus velit lacus, cursus ut purus a, vehicula
-              egestas quam. In quis vestibulum tellus.
+              At Chian Gas, we understand the importance of trust and
+              reliability when it comes to your gas supply. That's why we've
+              developed a set of core assurances to ensure you experience the
+              best in gas delivery and service:
             </p>
-            <div className="mt-5">
+            <div className="mt-5 ">
               <AssuranceTypes />
             </div>
             <div className="w-full overflow-hidden">

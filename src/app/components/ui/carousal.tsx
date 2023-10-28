@@ -102,10 +102,9 @@ export default function Carousal() {
                 Cook with ease
               </p>
               <p className="text-white text-[16px] md:text-[20px] mb-10 max-w-[900px] mt-5">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-                eget felis et felis ultrices tempus at sed eros. Vivamus
-                fringilla ipsum metus, ac tincidunt sapien maximus eget. Quisque
-                condimentum bibendum vestibulum.
+                We've designed our platform with your convenience in mind. We
+                connect you to your trusted gas vendor, ensuring that you refill
+                your cylinders with just a few taps on your device.
               </p>
 
               <button className="text-white bg-[#F99617] w-[200px] h-[56px] rounded-[30px] flex items-center justify-center font-semibold">

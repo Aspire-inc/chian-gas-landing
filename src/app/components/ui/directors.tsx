@@ -13,41 +13,55 @@ import { AnimatePresence, motion } from "framer-motion";
 const DirectorsInfo = [
   {
     name: `Victor Anicho`,
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget felis
-et felis ultrices tempus at sed eros. Lorem ipsum dolor sit amet, consectet
-ur adipiscing elit. Mauris eget felis et felis ultrices tempus at sed eros.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget felis
-et felis ultrices tempus at sed eros.`,
+    description: `What remains crucial for us in Chian is our commitment to our value
+creation, which is taking the fore in this economic crisis and challenging
+business times. We tend to solve the right problem with the right people.
+As i look forward to the journey ahead, I have no doubt in my mind that
+the next 10 years will see us living out and transcending our version of a
+truly great and exceptional organization with a great team and the right
+customer base.`,
     image: "/Pics.png",
+    semi: `With Chian gas, the intention is simple: build something that is simple
+and better, as well as meet the Customer demands.`,
   },
   {
-    name: `Smokey Okon`,
-    description: `bobo`,
+    name: `Victor Anicho`,
+    description: `What remains crucial for us in Chian is our commitment to our value
+creation, which is taking the fore in this economic crisis and challenging
+business times. We tend to solve the right problem with the right people.
+As i look forward to the journey ahead, I have no doubt in my mind that
+the next 10 years will see us living out and transcending our version of a
+truly great and exceptional organization with a great team and the right
+customer base.`,
     image: "/Pics.png",
+    semi: `With Chian gas, the intention is simple: build something that is simple
+and better, as well as meet the Customer demands.`,
   },
   {
-    name: `Ashawo Ajie`,
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget felis
-et felis ultrices tempus at sed eros. Lorem ipsum dolor sit amet, consectet
-ur adipiscing elit. Mauris eget felis et felis ultrices tempus at sed eros.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget felis
-et felis ultrices tempus at sed eros.`,
+    name: `Victor Anicho`,
+    description: `What remains crucial for us in Chian is our commitment to our value
+creation, which is taking the fore in this economic crisis and challenging
+business times. We tend to solve the right problem with the right people.
+As i look forward to the journey ahead, I have no doubt in my mind that
+the next 10 years will see us living out and transcending our version of a
+truly great and exceptional organization with a great team and the right
+customer base.`,
     image: "/Pics.png",
-    semi: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              eget felis et felis ultrices tempus at sed eros. Lorem ipsum dolor
-              sit amet, consectet ur adipiscing elit. Mauris eget.`,
+    semi: `With Chian gas, the intention is simple: build something that is simple
+and better, as well as meet the Customer demands.`,
   },
   {
-    name: `Jaguda Wiper`,
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget felis
-et felis ultrices tempus at sed eros. Lorem ipsum dolor sit amet, consectet
-ur adipiscing elit. Mauris eget felis et felis ultrices tempus at sed eros.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget felis
-et felis ultrices tempus at sed eros.`,
+    name: `Victor Anicho`,
+    description: `What remains crucial for us in Chian is our commitment to our value
+creation, which is taking the fore in this economic crisis and challenging
+business times. We tend to solve the right problem with the right people.
+As i look forward to the journey ahead, I have no doubt in my mind that
+the next 10 years will see us living out and transcending our version of a
+truly great and exceptional organization with a great team and the right
+customer base.`,
     image: "/Pics.png",
-    semi: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-              eget felis et felis ultrices tempus at sed eros. Lorem ipsum dolor
-              sit amet, consectet ur adipiscing elit. Mauris eget.`,
+    semi: `With Chian gas, the intention is simple: build something that is simple
+and better, as well as meet the Customer demands.`,
   },
 ];
 
@@ -86,7 +100,7 @@ const FirstDirector = () => {
   const isFirstDirector = currentDirectorIndex === 0;
 
   return (
-    <div className=" w-full flex items-center relative overflow-hidden">
+    <div className="relative flex items-center w-full overflow-hidden ">
       <div className="w-[calc(100%-429px)]  h-[667px] bg-[#FBFAFA] p-16">
         <div>
           <p className="text-blue-800 text-[19px] font-semibold  tracking-tight">
@@ -112,7 +126,7 @@ const FirstDirector = () => {
             </p>
           </motion.div>
         </AnimatePresence>
-        <div className="flex justify-between items-center mt-10">
+        <div className="flex items-center justify-between mt-10">
           <div className="flex gap-x-4">
             <div className="w-[50px] h-[50px] flex items-center justify-center rounded-[16px] border border-[#5B5B5B]">
               <Image src={FacebookIcon} alt="" />
