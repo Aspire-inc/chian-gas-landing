@@ -16,7 +16,8 @@ import AngleSpannerIcon from "@/assets/icons/angle-spanner-icon.svg";
 import NodesIcon from "@/assets/icons/nodes-icon.svg";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
-import HeaderBg from "@/assets/headerBg.png";
+// import HeaderBg from "@/assets/headerBg.png";
+import { flushSync } from "react-dom";
 
 const companyInfo = [
   {
@@ -226,16 +227,16 @@ const CompanyInfo = ({
                     transition={{ delay: 0.2 }}
                     key={i}
                     className="group border-l-2 border-transparent hover:border-[#F99617] hover:bg-white px-5 ml-[-2.5px]"
-                  >
-                    <p
-                      className="font-medium text-[16px] text-[#49535C] group-hover:text-[#0043A7] "
-                      onClick={(e) => {
-                        if (info.name === "About Us") {
+                    onClick={(e) => {
+                      if (info.name === "About Us") {
+                        flushSync(() => {
                           router.push("/about");
                           setShowCompanyInfo(false);
-                        }
-                      }}
-                    >
+                        });
+                      }
+                    }}
+                  >
+                    <p className="font-medium text-[16px] text-[#49535C] group-hover:text-[#0043A7] ">
                       {info.name}
                     </p>
                     <p className="text-[14px] text-[#8E8E8E]">
