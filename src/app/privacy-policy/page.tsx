@@ -7,7 +7,7 @@ import { UserApp } from "../components/ui/app-types";
 
 function PrivacyPolicy() {
   return (
-    <div className="w-full lg:px-6 xl:px-10">
+    <div className="w-full lg:px-[5rem] xl:px-[5rem] mt-[3rem]">
       <div className="flex items-center justify-between w-full ">
         <div>
           <DotDiffText>Chian Gas Privacy Policy</DotDiffText>

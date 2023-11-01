@@ -57,7 +57,7 @@ function Support() {
   console.log(selectedOption, "this is option");
 
   return (
-    <div className="w-full px-6 mt-5 xl:px-10">
+    <div className="w-full px-6  xl:px-[5rem] mt-[3rem]">
       <DotDiffText className="text-center">
         Answers to our most frequently asked questions
       </DotDiffText>

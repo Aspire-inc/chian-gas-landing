@@ -44,7 +44,7 @@ Gas is our most valuable asset.`,
 ];
 function About() {
   return (
-    <div className="w-full lg:px-6 xl:px-10">
+    <div className="w-full lg:px-6 xl:px-[5rem] mt-[3rem]">
       <div className="flex items-center justify-start w-full humans-bg">
         <div className="flex items-start px-28">
           <DotDiffText className="text-white">About Us</DotDiffText>

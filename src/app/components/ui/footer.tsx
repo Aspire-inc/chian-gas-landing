@@ -14,10 +14,12 @@ import DownloadOnAppStoreIcon from "@/assets/icons/download-on-app-store-icon.sv
 import GetOnGooglePlayIcon from "@/assets/icons/get-on-google-play-icon.svg";
 import CaretUpIcon from "@/assets/icons/caret-up-icon.svg";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 function Footer({ handleScrollToTop }: any) {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+  const router = useRouter();
 
   return (
     <footer className="bg-[#FBFAFA] py-24 px-6 xl:px-28 mt-20">
@@ -111,9 +113,14 @@ function Footer({ handleScrollToTop }: any) {
               Partner with Chian
             </span>
           </li>
-          <li className="">
+          <li
+            className="cursor-pointer"
+            onClick={() => {
+              router.push("/privacy-policy");
+            }}
+          >
             <span className="text-[17px] xl:text-[18px] text-[#5B5B5B]">
-              Solution
+              Privacy Policy
             </span>
           </li>
         </ul>

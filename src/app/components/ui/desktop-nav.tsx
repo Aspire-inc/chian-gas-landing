@@ -133,7 +133,7 @@ export default function DesktopNav() {
             <li>
               <span
                 className="text-[15px] xl:text-[20px] text-[#5B5B5B]"
-                onClick={() => router.push("/privacy-policy")}
+                // onClick={() => router.push("/privacy-policy")}
               >
                 Safety
               </span>
@@ -258,6 +258,15 @@ const CompanyInfo = ({
                     transition={{ delay: 0.2 }}
                     key={i}
                     className="group border-l-2 border-transparent hover:border-[#F99617] ml-[-2.5px] px-5"
+                    onClick={() => {
+                      if (info.name === "News and Updates") {
+                        flushSync(() => {
+                          router.push("/news");
+                          setShowCompanyInfo(false);
+                        });
+                        // console.log(info?.name);
+                      }
+                    }}
                   >
                     <p className="font-medium text-[16px] text-[#49535C] group-hover:text-[#0043A7] ">
                       {info.name}
