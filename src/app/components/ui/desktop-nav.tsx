@@ -130,11 +130,15 @@ export default function DesktopNav() {
                 Support
               </span>
             </li>
-            <li>
-              <span
-                className="text-[15px] xl:text-[20px] text-[#5B5B5B]"
-                // onClick={() => router.push("/privacy-policy")}
-              >
+            <li
+              className={` h-full flex items-center px-4 hover:bg-blue-50/70 border-b-2 border-transparent hover:border-[#F99617] cursor-pointer ${
+                pathname === "/safety-tips"
+                  ? "border-b-2 border-transparent border-[#F99617] bg-blue-50/70"
+                  : ""
+              }`}
+              onClick={() => router.push("/safety-tips")}
+            >
+              <span className="text-[15px] xl:text-[20px] text-[#5B5B5B] ">
                 Safety
               </span>
             </li>

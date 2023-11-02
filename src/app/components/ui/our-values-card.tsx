@@ -28,7 +28,7 @@ export default function OurValuesCard({
         />
       </div>
       <div className="flex flex-col mt-8 gap-y-3">
-        <h3 className="text-[#3F3F3F] text-base sm:text-[24px] font-semibold tracking-tight">
+        <h3 className="text-[#3F3F3F] text-base lg:text-[18px] font-semibold tracking-tight">
           {name}
         </h3>
         <p className="text-[#5B5B5B] text-[14px] ">{description}</p>
