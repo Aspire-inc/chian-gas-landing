@@ -112,16 +112,22 @@ function SafetyTips() {
           <div className="relative ">
             <div className="flex space-x-8">
               <div className="w-[341px] h-[333px] bg-sky-50 rounded-[20px]"></div>
-              <div className="relative flex py-5 ">
-                <p
-                  className="text-blue-800 text-[40px] font-bold  tracking-tight
-                "
-                >
-                  Upcoming Safety Posts{" "}
-                  <span className="">
-                    <Image src={EditIcon} width={25} height={25} alt="Edit" />
-                  </span>
+              <div className="py-5 ">
+                <p className="text-blue-800 text-[36px] font-bold  tracking-tight w-full ">
+                  Upcoming Safety{" "}
                 </p>
+                <div className="text-blue-800 text-[36px] font-bold  tracking-tight flex items-center space-x-4">
+                  <p
+                    className="text-blue-800 text-[36px] font-bold  tracking-tight 
+                  "
+                  >
+                    Posts
+                  </p>
+                  <p>
+                    <Image src={EditIcon} width={25} height={25} alt="Edit" />
+                  </p>
+                </div>
+                {/* <div className="absolute top-[6.3rem] left-[7.5rem]"></div> */}
               </div>
             </div>
             <div className="w-[688px] h-[185px] bg-white rounded-[15px] absolute p-8 bottom-[-4rem] left-8 z-[999]">
