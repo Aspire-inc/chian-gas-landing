@@ -186,6 +186,26 @@ const CompanyInfo = ({
     };
   }, []);
   const router = useRouter();
+  const scrollToSection = (sectionId: any) => {
+    const element = document.getElementById(sectionId);
+
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // If the element doesn't exist on the current page, navigate to the other page with the hash
+      router.push(`/about#${sectionId}`);
+    }
+  };
+  const scrollToAssurance = (sectionId: any) => {
+    const element = document.getElementById(sectionId);
+
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // If the element doesn't exist on the current page, navigate to the other page with the hash
+      router.push(`/about#${sectionId}`);
+    }
+  };
 
   return (
     <AnimatePresence>
@@ -237,6 +257,10 @@ const CompanyInfo = ({
                           router.push("/about");
                           setShowCompanyInfo(false);
                         });
+                      } else if (info.name === "Our Value") {
+                        scrollToSection("our-value");
+                      } else if (info.name === "Our Assurance To You") {
+                        scrollToAssurance("assurance");
                       }
                     }}
                   >

@@ -81,7 +81,7 @@ function About() {
             </p>
           </div>
           {/* Second Section */}
-          <div className="w-full  mb-[5rem]">
+          <div className="w-full  mb-[5rem]" id="our-value">
             <DotDiffText>Our Values</DotDiffText>
             <p className="text-[#5B5B5B] text-lg md:text-[20px] mb-5  mt-5">
               <b>Fueling Trust, Convenience, and Sustainability.</b> At Chian
@@ -109,7 +109,10 @@ function About() {
             </DotDiffText>
             <Directors />
           </div>
-          <div className="flex flex-col items-center justify-center ">
+          <div
+            className="flex flex-col items-center justify-center "
+            id="assurance"
+          >
             <DotDiffText className="mb-10 text-center">
               Our Assurance to You.
             </DotDiffText>
