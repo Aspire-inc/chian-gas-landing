@@ -80,6 +80,7 @@ export default function MobileNav() {
                     <li
                       onClick={() => {
                         router.push("/about");
+                        setShowDropdown(false);
                       }}
                     >
                       <span className="text-[18px] text-white">About Us</span>
@@ -94,7 +95,12 @@ export default function MobileNav() {
                         How Chian Works
                       </span>
                     </li>
-                    <li>
+                    <li
+                      onClick={() => {
+                        router.push("/news");
+                        setShowDropdown(false);
+                      }}
+                    >
                       <span className="text-[18px] text-white">
                         News and Updates
                       </span>
@@ -110,12 +116,22 @@ export default function MobileNav() {
                   ""
                 )}
               </li>
-              <li onClick={() => router.push("/support")}>
+              <li
+                onClick={() => {
+                  router.push("/support");
+                  setShowDropdown(false);
+                }}
+              >
                 <span className="text-[26px] text-white font-bold">
                   Support
                 </span>
               </li>
-              <li onClick={() => router.push("/safety-tips")}>
+              <li
+                onClick={() => {
+                  router.push("/safety-tips");
+                  setShowDropdown(false);
+                }}
+              >
                 <span className="text-[26px] text-white font-bold">Safety</span>
               </li>
               <li>
