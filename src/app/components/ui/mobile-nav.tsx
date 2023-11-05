@@ -9,10 +9,11 @@ import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 export default function MobileNav() {
   const [showDropdown, setShowDropdown] = useState(false);
-
+  const router = useRouter();
   const [showCompanyInfo, setShowCompanyInfo] = useState(false);
 
   return (
@@ -21,7 +22,13 @@ export default function MobileNav() {
         style={{ background: showDropdown ? "#0043A7" : "white" }}
         className="w-full h-[76px] flex items-center justify-between px-5 lg:hidden "
       >
-        <Image src={showDropdown ? WhiteLogoIcon : LogoIcon} alt="" />
+        <Image
+          src={showDropdown ? WhiteLogoIcon : LogoIcon}
+          alt=""
+          onClick={() => {
+            router.push("/");
+          }}
+        />
 
         <div
           style={{
@@ -51,7 +58,7 @@ export default function MobileNav() {
               <li>
                 <div
                   onClick={() => setShowCompanyInfo(!showCompanyInfo)}
-                  className="flex gap-x-2 items-center"
+                  className="flex items-center gap-x-2"
                 >
                   <span className="text-[26px] text-white font-bold">
                     Company
@@ -68,9 +75,13 @@ export default function MobileNav() {
                   <motion.ul
                     initial={{ x: "-30%", opacity: 0 }}
                     animate={{ x: "0%", opacity: 1 }}
-                    className="flex flex-col gap-y-5 mt-5"
+                    className="flex flex-col mt-5 gap-y-5"
                   >
-                    <li>
+                    <li
+                      onClick={() => {
+                        router.push("/about");
+                      }}
+                    >
                       <span className="text-[18px] text-white">About Us</span>
                     </li>
                     <li>
@@ -99,12 +110,12 @@ export default function MobileNav() {
                   ""
                 )}
               </li>
-              <li>
+              <li onClick={() => router.push("/support")}>
                 <span className="text-[26px] text-white font-bold">
                   Support
                 </span>
               </li>
-              <li>
+              <li onClick={() => router.push("/safety-tips")}>
                 <span className="text-[26px] text-white font-bold">Safety</span>
               </li>
               <li>

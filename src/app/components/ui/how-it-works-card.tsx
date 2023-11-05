@@ -29,10 +29,10 @@ export default function HowItWorksCard({
         <p className="text-[#5B5B5B] text-[14px] max-w-[calc(100%-110px)] lg:max-w-[calc(100%-70px)]">
           . {description}
         </p>
-        <p className="text-[#5B5B5B] text-[14px] max-w-[calc(100%-110px)] lg:max-w-[calc(100%-70px)]">
+        <p className="text-[#5B5B5B] text-[14px] max-w-[calc(100%-110px)] lg:max-w-[calc(100%-70px)] hidden lg:block">
           . {slogan}
         </p>
-        <p className="text-[#5B5B5B] text-[14px] max-w-[calc(100%-110px)] lg:max-w-[calc(100%-110px)]">
+        <p className="text-[#5B5B5B] text-[14px] max-w-[calc(100%-110px)] lg:max-w-[calc(100%-110px)] hidden lg:block">
           . {feat}
         </p>
       </div>

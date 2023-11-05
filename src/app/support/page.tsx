@@ -57,16 +57,16 @@ function Support() {
   console.log(selectedOption, "this is option");
 
   return (
-    <div className="w-full px-6  xl:px-[5rem] mt-[3rem]">
+    <div className="w-full px-2  xl:px-[5rem] mt-[3rem]">
       <DotDiffText className="text-center">
         Answers to our most frequently asked questions
       </DotDiffText>
 
-      <div className="grid w-full grid-cols-2 gap-4 mt-[4rem] ">
+      <div className="grid w-full grid-cols-1 lg:grid-cols-2 gap-4 mt-[4rem] ">
         <div
-          className={`cursor-pointer  flex items-center justify-center h-[109px]  ${
+          className={`cursor-pointer  flex items-center justify-center h-[52px] lg:h-[109px] border-2 lg:border-none ${
             selectedOption === "user"
-              ? "text-blue-600 bg-slate-50"
+              ? "text-blue-600 bg-slate-50 border-none"
               : "text-zinc-600"
           }`}
           onClick={() => setSelectedOption("user")}
@@ -77,9 +77,9 @@ function Support() {
         </div>
         <div
           onClick={() => setSelectedOption("vendor")}
-          className={`cursor-pointer flex items-center justify-center h-[109px] ${
+          className={`cursor-pointer flex items-center justify-center h-[52px] lg:h-[109px] border-2 lg:border-none ${
             selectedOption === "vendor"
-              ? "text-blue-600 bg-slate-50"
+              ? "text-blue-600 bg-slate-50 border-none"
               : "text-zinc-600"
           }`}
         >
@@ -91,7 +91,7 @@ function Support() {
       <div className="flex items-center justify-center mt-[4rem] ">
         <div className="relative">
           <input
-            className="w-[742px] h-[50px] bg-slate-50 rounded-[50px] focus:outline-none pl-8  "
+            className="w-[329px] lg:w-[742px] h-[50px] bg-slate-50 rounded-[50px] focus:outline-none pl-8  "
             placeholder="Ask your question"
           />
           <Image

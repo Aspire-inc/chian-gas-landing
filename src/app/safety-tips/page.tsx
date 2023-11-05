@@ -108,17 +108,17 @@ function SafetyTips() {
         </div>
       </div>
       <div className="w-full px-6  xl:px-[5rem] mt-[3rem]  overflow-x-hidden">
-        <div className="mt-[10rem] p-10 w-full  grid grid-cols-2 gap-10">
+        <div className="lg:mt-[10rem] mt-[5rem] lg:p-10 w-full  grid grid-cols-1 lg:grid-cols-2 lg:gap-10">
           <div className="relative ">
-            <div className="flex space-x-8">
-              <div className="w-[341px] h-[333px] bg-sky-50 rounded-[20px]"></div>
-              <div className="py-5 ">
-                <p className="text-blue-800 text-[36px] font-bold  tracking-tight w-full ">
+            <div className="relative flex flex-col items-center lg:space-x-8 lg:items-start lg:flex-row">
+              <div className="w-[156.43px] h-[152.76px] lg:w-[341px] lg:h-[333px] bg-sky-50 rounded-[20px] absolute lg:relative top-0 "></div>
+              <div className="hidden py-5 lg:block">
+                <p className="text-blue-800 lg:text-[36px] font-bold  tracking-tight w-full text-xl">
                   Upcoming Safety{" "}
                 </p>
-                <div className="text-blue-800 text-[36px] font-bold  tracking-tight flex items-center space-x-4">
+                <div className="text-blue-800 lg:text-[36px] text-xl font-bold  tracking-tight flex items-center space-x-4 mt-2">
                   <p
-                    className="text-blue-800 text-[36px] font-bold  tracking-tight 
+                    className="text-blue-800 lg:text-[36px] text-xl font-bold  tracking-tight 
                   "
                   >
                     Posts
@@ -129,8 +129,21 @@ function SafetyTips() {
                 </div>
                 {/* <div className="absolute top-[6.3rem] left-[7.5rem]"></div> */}
               </div>
+              <div className="h-[213px] bg-white rounded-[10px] flex flex-col  justify-center   lg:hidden px-4 w-full m-0 p-0 z-[999] mt-[7rem]">
+                <p className="text-xl font-bold tracking-tight text-center text-blue-800">
+                  Upcoming Safety Posts{" "}
+                </p>
+                <p className="mt-3 text-sm font-normal tracking-tight text-zinc-600">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Mauris eget felis et felis ultrices tempus at sed eros. Lorem
+                  ipsum dolor sit amet, consectet ur adipiscing elit.
+                </p>
+                <p className="mt-3 text-base font-semibold tracking-tight text-amber-500">
+                  Kennedy Danjuma{" "}
+                </p>
+              </div>
             </div>
-            <div className="w-[688px] h-[185px] bg-white rounded-[15px] absolute p-8 bottom-[-4rem] left-8 z-[999]">
+            <div className="w-[688px] h-[185px] bg-white rounded-[15px] absolute p-8 bottom-[-4rem] left-8 z-[999] hidden lg:block">
               <p className="text-2xl font-semibold tracking-tight text-amber-500">
                 Kennedy Danjuma{" "}
               </p>
@@ -145,19 +158,19 @@ function SafetyTips() {
               </p>
             </div>
           </div>
-          <div className="p-8 space-y-5 ">
+          <div className="mt-5 space-y-5 lg:p-8 lg:mt-0">
             <div className="flex space-x-5 ">
-              <div className="w-[239px] h-[159px] bg-zinc-300 rounded-[15px]"></div>
+              <div className="w-[239px] h-[132px] lg:h-[159px] bg-zinc-300 rounded-[15px]"></div>
               <div>
-                <p className="text-2xl font-semibold tracking-tight text-blue-800">
+                <p className="text-base font-semibold tracking-tight text-blue-800 lg:text-2xl">
                   Safe Gas Usage in
                   <br />
                   the Kitchen
                 </p>
-                <span className="text-base font-medium tracking-tight text-amber-500">
+                <span className="mt-2 text-base font-medium tracking-tight text-amber-500">
                   Victor Anicho
                 </span>
-                <p className="text-base font-normal tracking-tight text-zinc-600">
+                <p className="mt-2 text-base font-normal tracking-tight text-zinc-600">
                   Ensure your kitchen is well-ventilated.
                   <br />
                   Open windows or use an exhaust fan...
@@ -165,17 +178,17 @@ function SafetyTips() {
               </div>
             </div>
             <div className="flex space-x-5 ">
-              <div className="w-[239px] h-[159px] bg-zinc-300 rounded-[15px]"></div>
+              <div className="w-[239px] h-[132px] lg:h-[159px] bg-zinc-300 rounded-[15px]"></div>
               <div>
-                <p className="text-2xl font-semibold tracking-tight text-blue-800">
+                <p className="text-base font-semibold tracking-tight text-blue-800 lg:text-2xl">
                   Emergency Gas Leak
                   <br />
                   Response
                 </p>
-                <span className="text-base font-medium tracking-tight text-amber-500">
+                <span className="mt-2 text-base font-medium tracking-tight text-amber-500">
                   Kennedy Danjuma
                 </span>
-                <p className="text-base font-normal tracking-tight text-zinc-600">
+                <p className="mt-2 text-base font-normal tracking-tight text-zinc-600">
                   Knowing how to react during a gas
                   <br />
                   leak is crucial...
