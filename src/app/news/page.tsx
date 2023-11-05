@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import HeaderBg from "@/assets/icons/header.svg";
+import MobileBg from "@/assets/icons/mobileLaunch.svg";
 import DotDiffText from "../components/ui/dot-diff-text";
 import { UserApp } from "../components/ui/app-types";
 const newsAndUpdates = [
@@ -35,11 +36,18 @@ function News() {
           alt=""
           width={100}
           height={100}
-          className="w-full bg-center bg-cover"
+          className="hidden w-full bg-center bg-cover lg:block"
+        />
+        <Image
+          src={MobileBg}
+          alt=""
+          width={100}
+          height={100}
+          className="w-full bg-center bg-cover lg:hidden"
         />
       </div>
-      <div className="w-full  mt-[5rem] grid grid-cols-2 gap-10">
-        <div className="p-[5rem] border-t-2">
+      <div className="w-full  mt-[5rem] grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className=" p-4 lg:p-[5rem] lg:border-t-2">
           <DotDiffText>Our Launch Date Is Here</DotDiffText>
           <p className="mt-3 text-xl font-normal tracking-tight text-zinc-600">
             It's been an incredible journey to get to this point, filled with
@@ -53,7 +61,7 @@ function News() {
             souls into.
           </p>
         </div>
-        <div className="flex pt-5 space-x-10">
+        <div className="hidden pt-5 space-x-10 lg:flex">
           <div className="flex flex-col items-start justify-start ">
             <div className=" w-[300px] h-[100px] rounded-tr-[30px] rounded-tl-[30px] rounded-bl-[30px] bg-[#0043A7] flex items-center px-5">
               <p className="text-xs font-normal tracking-tight text-white">
