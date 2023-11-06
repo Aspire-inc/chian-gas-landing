@@ -4,6 +4,8 @@ import OurValuesCard from "../components/ui/our-values-card";
 import Directors from "../components/ui/directors";
 import AssuranceTypes from "../components/ui/assurance-types";
 import { UserApp } from "../components/ui/app-types";
+import AboutMob from "@/assets/icons/aboutMob.svg";
+import Image from "next/image";
 const howItoWorks = [
   {
     name: " Customer-Centricity",
@@ -45,11 +47,19 @@ Gas is our most valuable asset.`,
 function About() {
   return (
     <div className="w-full lg:px-6 xl:px-[5rem] mt-[3rem]">
-      <div className="flex items-center justify-start w-full humans-bg">
-        <div className="flex items-start px-28">
+      <div className="flex items-center justify-start w-full lg:humans-bg">
+        <div className="items-start hidden lg:flex px-28 ">
           <DotDiffText className="text-white">About Us</DotDiffText>
         </div>
+        <Image
+          src={AboutMob}
+          alt=""
+          width={100}
+          className="w-full"
+          height={100}
+        />
       </div>
+      {/* <div></div> */}
       <div className="flex flex-col items-center p-5 bg-white sm:p-7 ">
         <div className="flex flex-col mt-7 md:mt-14 w-[90%] ">
           <div className="w-full mb-[5rem]">
@@ -114,7 +124,7 @@ function About() {
             id="assurance"
           >
             <DotDiffText className="mb-10 text-center">
-              Our Assurance to You.
+              Our Assurance to You
             </DotDiffText>
             <p className="text-lg font-normal tracking-tight text-center text-zinc-600">
               At Chian Gas, we understand the importance of trust and
@@ -122,7 +132,7 @@ function About() {
               developed a set of core assurances to ensure you experience the
               best in gas delivery and service:
             </p>
-            <div className="mt-5 ">
+            <div className="w-full mt-5 ">
               <AssuranceTypes />
             </div>
             <div className="w-full overflow-hidden">

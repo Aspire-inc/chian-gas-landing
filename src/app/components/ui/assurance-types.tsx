@@ -88,14 +88,14 @@ always have a clear view of your gas supply status.
   // console.log(width, "This is width");
   // console.log("====================================");
   return (
-    <div className="flex flex-col items-center justify-center w-full">
+    <div className="flex flex-col items-center justify-center w-full ">
       <div className="flex items-center justify-center w-full mt-5 ">
-        <div className="relative ">
+        <div className="relative overflow-x-scroll border-2">
           <div className="flex items-center justify-between w-full gap-8 ">
             {labels.map((label, index) => (
               <p
                 key={index}
-                className={`text-xl font-medium tracking-tight text-center cursor-pointer text-zinc-600 w-[94px] h-[47px] flex items-center justify-center border-2 rounded-full mb-3`}
+                className={`text-xl font-medium tracking-tight text-center cursor-pointer text-zinc-600 lg:w-[94px] h-[47px] flex items-center justify-center border-2 rounded-full mb-3`}
                 onClick={() => handleLabelClick(label)}
               >
                 {label.name}
@@ -108,39 +108,32 @@ always have a clear view of your gas supply status.
           ></div>
         </div>
       </div>
-      <AnimatePresence>
-        <motion.div
-          className="flex justify-between h-full mt-5 ml-5 space-x-10 "
-          initial={{ x: 300 * d, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          exit={{ x: -300 * d, opacity: 0 }}
-          transition={{ stiffness: 0 }}
-        >
-          {currentContent && (
-            <>
-              <div>
-                <div className="w-[558px] h-[372px] bg-zinc-300 rounded-[30px] hidden lg:block xl:block"></div>
-              </div>
-              {/* <div className="border-2"> */}
-              <div className="h-full p-5 ">
-                <p className="text-xl font-semibold tracking-tight text-blue-800">
-                  {currentContent.contentTitle}
-                </p>
-                <p className="my-5">{currentContent.contentDes}</p>
-                <p>{currentContent.contentSlug}</p>
-                {/* </div> */}
-              </div>
-            </>
-          )}
-          {/* {labels?.find((label) => label.active) && (
+
+      <div className="flex justify-between h-full mt-5 ml-5 space-x-10 ">
+        {currentContent && (
+          <>
+            <div className="hidden lg:block">
+              <div className="w-[558px] h-[372px] bg-zinc-300 rounded-[30px] hidden lg:block xl:block"></div>
+            </div>
+            {/* <div className="border-2"> */}
+            <div className="h-full pl-0 m-0 lg:p-5">
+              <p className="text-xl font-semibold tracking-tight text-blue-800">
+                {currentContent.contentTitle}
+              </p>
+              <p className="my-5">{currentContent.contentDes}</p>
+              <p>{currentContent.contentSlug}</p>
+              {/* </div> */}
+            </div>
+          </>
+        )}
+        {/* {labels?.find((label) => label.active) && (
             <div>
               <h2>{labels?.find((label) => label?.active).contentTitle}</h2>
               <p>{labels?.find((label) => label?.active).contentDes}</p>
               <p>{labels?.find((label) => label?.active).contentSlug}</p>
             </div>
           )} */}
-        </motion.div>
-      </AnimatePresence>
+      </div>
     </div>
   );
 }

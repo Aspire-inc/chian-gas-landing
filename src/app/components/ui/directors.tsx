@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import FacebookIcon from "@/assets/icons/facebook-icon.svg";
-import TwitterIcon from "@/assets/icons/twitter-icon.svg";
+import TwitterIcon from "@/assets/icons/X.svg";
 import InstagramIcon from "@/assets/icons/instagram-icon.svg";
 import LinkedInIcon from "@/assets/icons/linkedin-icon.svg";
 import { flushSync } from "react-dom";
@@ -9,6 +9,7 @@ import ArrowLeft from "@/assets/icons/arrow-right.svg";
 import ArrowRight from "@/assets/icons/arrow-right2.svg";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import MobileDirectors from "./mobileDirectors";
 
 const DirectorsInfo = [
   {
@@ -101,7 +102,7 @@ const FirstDirector = () => {
 
   return (
     <div className="relative flex items-center w-full overflow-hidden ">
-      <div className="w-[calc(100%-429px)]  h-[667px] bg-[#FBFAFA] p-16">
+      <div className="lg:w-[calc(100%-429px)]  lg:h-[667px] bg-[#FBFAFA] lg:p-16">
         <div>
           <p className="text-blue-800 text-[19px] font-semibold  tracking-tight">
             Director
@@ -113,7 +114,7 @@ const FirstDirector = () => {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -300 * d, opacity: 0 }}
             transition={{ stiffness: 0 }}
-            className="mt-5 h-[300px]"
+            className="mt-5 lg:h-[300px] "
           >
             <p className="text-neutral-700 text-[27px] font-bold  tracking-tight ">
               {DirectorsInfo[currentDirectorIndex]?.name}
@@ -126,7 +127,13 @@ const FirstDirector = () => {
             </p>
           </motion.div>
         </AnimatePresence>
-        <div className="flex items-center justify-between mt-10">
+        <MobileDirectors
+          previousDirector={previousDirector}
+          nextDirector={nextDirector}
+          DirectorsInfo={DirectorsInfo}
+          currentDirectorIndex={currentDirectorIndex}
+        />
+        <div className="flex-col items-center justify-between hidden mt-10 lg:flex lg:flex-row">
           <div className="flex gap-x-4">
             <div className="w-[50px] h-[50px] flex items-center justify-center rounded-[16px] border border-[#5B5B5B]">
               <Image src={FacebookIcon} alt="" />
@@ -134,9 +141,9 @@ const FirstDirector = () => {
             <div className="w-[50px] h-[50px] flex items-center justify-center rounded-[16px] border border-[#5B5B5B]">
               <Image src={TwitterIcon} alt="" />
             </div>
-            <div className="w-[50px] h-[50px] flex items-center justify-center rounded-[16px] border border-[#5B5B5B]">
+            {/* <div className="w-[50px] h-[50px] flex items-center justify-center rounded-[16px] border border-[#5B5B5B]">
               <Image src={InstagramIcon} alt="" />
-            </div>
+            </div> */}
             <div className="w-[50px] h-[50px] flex items-center justify-center rounded-[16px] border border-[#5B5B5B]">
               <Image src={LinkedInIcon} alt="" />
             </div>
@@ -159,7 +166,7 @@ const FirstDirector = () => {
           </div>
         </div>
       </div>
-      <div className="w-[429px] h-[638px]  rounded-t-[12rem] absolute top-[4rem] right-[1.5rem]">
+      <div className=" hidden lg:block lg:w-[429px] lg:h-[638px]  rounded-t-[12rem] absolute bottom-0 lg:top-[4rem] right-[1.5rem]">
         <Image src={DirectorsInfo[currentDirectorIndex]?.image} fill alt="" />
       </div>
     </div>

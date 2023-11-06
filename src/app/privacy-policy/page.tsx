@@ -7,7 +7,7 @@ import { UserApp } from "../components/ui/app-types";
 
 function PrivacyPolicy() {
   return (
-    <div className="w-full lg:px-[5rem] xl:px-[5rem] mt-[3rem]">
+    <div className="w-full lg:px-[5rem] xl:px-[5rem] mt-[3rem] px-5">
       <div className="flex items-center justify-between w-full ">
         <div>
           <DotDiffText>Chian Gas Privacy Policy</DotDiffText>
@@ -19,7 +19,7 @@ function PrivacyPolicy() {
           <div className="flex items-start justify-start mt-[4rem] ">
             <div className="relative">
               <input
-                className="w-[509px] h-[50px] bg-slate-50 rounded-[50px] focus:outline-none pl-8  "
+                className="w-[345px] lg:w-[509px] h-[50px] bg-slate-50 rounded-[50px] focus:outline-none pl-8  "
                 placeholder="Ask your question"
               />
               <Image
@@ -32,7 +32,7 @@ function PrivacyPolicy() {
             </div>
           </div>
         </div>
-        <div>
+        <div className="hidden lg:block">
           <Image src={PrivacyImage} alt="" />
         </div>
       </div>
