@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { QRCode } from "react-qrcode-logo";
 import LogoIcon from "@/assets/icons/Cancel.svg";
+import Logo from "@/assets/icons/logo-icon.svg";
 
 interface ModalProps {
   isOpen: boolean;
@@ -60,14 +61,15 @@ const CustomModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                   <QRCode
                     value="https://github.com/gcoro/react-qrcode-logo"
                     logoPaddingStyle="square"
-                    logoPadding={30}
-                    logoImage="../../../assets/icons/logo-icon.svg"
+                    // logoPadding={30}
+                    logoImage="https://images.unsplash.com/photo-1695653420624-4a23b2ffc77c?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     // qrStyle="dots"
                     size={250}
                     // eyeRadius={50}
-                    logoHeight={100}
+                    logoHeight={50}
                     quietZone={0}
-                    logoWidth={100}
+                    logoWidth={50}
+                    logoOpacity={5}
                   />
                 </div>
                 <div className="text-center">
