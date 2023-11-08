@@ -47,15 +47,17 @@ Gas is our most valuable asset.`,
 function About() {
   return (
     <div className="w-full lg:px-6 xl:px-[5rem] mt-[3rem]">
-      <div className="flex items-center justify-start w-full lg:humans-bg">
+      <div className="items-center justify-start hidden w-full lg:flex humans-bg">
         <div className="items-start hidden lg:flex px-28 ">
           <DotDiffText className="text-white">About Us</DotDiffText>
         </div>
+      </div>
+      <div className="flex items-center justify-start w-full">
         <Image
           src={AboutMob}
           alt=""
           width={100}
-          className="w-full"
+          className="w-full lg:hidden"
           height={100}
         />
       </div>

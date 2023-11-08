@@ -18,6 +18,7 @@ import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 // import HeaderBg from "@/assets/headerBg.png";
 import { flushSync } from "react-dom";
+import CustomModal from "./modal";
 
 const companyInfo = [
   {
@@ -55,6 +56,7 @@ export default function DesktopNav() {
   const router = useRouter();
   const pathname = usePathname();
   // console.log(pathname, "Pathname");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <nav className="hidden lg:block" id="nav">
@@ -157,12 +159,16 @@ export default function DesktopNav() {
                 Solutions
               </span>
             </li> */}
-            <li>
+            <li onClick={() => setIsModalOpen(true)}>
               <button className="text-[#5B5B5B] font-semibold text-[13px] xl:text-[16px] w-[150px] xl:w-[200px] h-[50px] rounded-[30px] border border-[#A7AEC1]">
                 Download App
               </button>
             </li>
           </ul>
+          <CustomModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+          />
         </div>
       </div>
     </nav>

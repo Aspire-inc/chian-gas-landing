@@ -98,7 +98,7 @@ function SafetyTips() {
             <div className="w-3.5 h-3.5 bg-emerald-500 rounded-full" />
           </div>
         </div>
-        <div className="z-[99999] relative">
+        <div className="relative z-30">
           <div className="w-full ">
             <Image src={RightHead} alt="Left" className="w-full " />
           </div>
@@ -129,7 +129,7 @@ function SafetyTips() {
                 </div>
                 {/* <div className="absolute top-[6.3rem] left-[7.5rem]"></div> */}
               </div>
-              <div className="h-[213px] bg-white rounded-[10px] flex flex-col  justify-center   lg:hidden px-4 w-full m-0 p-0 z-[999] mt-[7rem]">
+              <div className="h-[213px] bg-white rounded-[10px] flex flex-col  justify-center   lg:hidden px-4 w-full m-0 p-0 z-30 mt-[7rem]">
                 <p className="text-xl font-bold tracking-tight text-center text-blue-800">
                   Upcoming Safety Posts{" "}
                 </p>
@@ -143,7 +143,7 @@ function SafetyTips() {
                 </p>
               </div>
             </div>
-            <div className="w-[688px] h-[185px] bg-white rounded-[15px] absolute p-8 bottom-[-4rem] left-8 z-[999] hidden lg:block">
+            <div className="w-[688px] h-[185px] bg-white rounded-[15px] absolute p-8 bottom-[-4rem] left-8 z-30 hidden lg:block">
               <p className="text-2xl font-semibold tracking-tight text-amber-500">
                 Kennedy Danjuma{" "}
               </p>

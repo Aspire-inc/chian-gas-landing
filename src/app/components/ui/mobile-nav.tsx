@@ -15,7 +15,26 @@ export default function MobileNav() {
   const [showDropdown, setShowDropdown] = useState(false);
   const router = useRouter();
   const [showCompanyInfo, setShowCompanyInfo] = useState(false);
+  const scrollToAssurance = (sectionId: any) => {
+    const element = document.getElementById(sectionId);
 
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // If the element doesn't exist on the current page, navigate to the other page with the hash
+      router.push(`/about#${sectionId}`);
+    }
+  };
+  const scrollToSection = (sectionId: any) => {
+    const element = document.getElementById(sectionId);
+
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // If the element doesn't exist on the current page, navigate to the other page with the hash
+      router.push(`/about#${sectionId}`);
+    }
+  };
   return (
     <nav className="sticky top-0 z-[100]" id="nav">
       <div
@@ -85,14 +104,22 @@ export default function MobileNav() {
                     >
                       <span className="text-[18px] text-white">About Us</span>
                     </li>
-                    <li>
-                      <span className="text-[18px] text-white">
-                        Our Offerings
-                      </span>
+                    <li
+                      onClick={() => {
+                        scrollToSection("our-value");
+                        setShowDropdown(false);
+                      }}
+                    >
+                      <span className="text-[18px] text-white">Our Values</span>
                     </li>
-                    <li>
+                    <li
+                      onClick={() => {
+                        scrollToAssurance("assurance");
+                        setShowDropdown(false);
+                      }}
+                    >
                       <span className="text-[18px] text-white">
-                        How Chian Works
+                        Our Assurance To You
                       </span>
                     </li>
                     <li
@@ -108,9 +135,9 @@ export default function MobileNav() {
                     <li>
                       <span className="text-[18px] text-white">Careers</span>
                     </li>
-                    <li>
+                    {/* <li>
                       <span className="text-[18px] text-white">Blog</span>
-                    </li>
+                    </li> */}
                   </motion.ul>
                 ) : (
                   ""

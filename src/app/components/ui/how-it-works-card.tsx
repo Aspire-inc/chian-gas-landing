@@ -26,13 +26,13 @@ export default function HowItWorksCard({
         <h3 className="text-[#3F3F3F] text-[18px] sm:text-[24px] font-bold">
           {name}
         </h3>
-        <p className="text-[#5B5B5B] text-[14px] max-w-[calc(100%-110px)] lg:max-w-[calc(100%-70px)]">
+        <p className="text-[#5B5B5B] text-[14px] max-w-[calc(100%-110px)] lg:max-w-[calc(100%-70px)] truncate">
           . {description}
         </p>
-        <p className="text-[#5B5B5B] text-[14px] max-w-[calc(100%-110px)] lg:max-w-[calc(100%-70px)] hidden lg:block">
+        <p className="text-[#5B5B5B] text-[14px] max-w-[calc(100%-110px)] lg:max-w-[calc(100%-70px)] truncate ">
           . {slogan}
         </p>
-        <p className="text-[#5B5B5B] text-[14px] max-w-[calc(100%-110px)] lg:max-w-[calc(100%-110px)] hidden lg:block">
+        <p className="text-[#5B5B5B] text-[14px] max-w-[calc(100%-110px)] lg:max-w-[calc(100%-110px)] truncate ">
           . {feat}
         </p>
       </div>

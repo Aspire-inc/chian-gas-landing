@@ -98,12 +98,22 @@ function Footer({ handleScrollToTop }: any) {
               Company
             </span>
           </li>
-          <li className="">
+          <li
+            className="cursor-pointer"
+            onClick={() => {
+              router.push("/support");
+            }}
+          >
             <span className="text-[17px] xl:text-[18px] text-[#5B5B5B]">
               Support
             </span>
           </li>
-          <li className="">
+          <li
+            className="cursor-pointer"
+            onClick={() => {
+              router.push("/safety-tips");
+            }}
+          >
             <span className="text-[17px] xl:text-[18px] text-[#5B5B5B]">
               Safety
             </span>

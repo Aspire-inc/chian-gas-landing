@@ -104,8 +104,10 @@ const faqs = [
 ];
 
 export default function Home() {
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
-    <div className="w-full" id="home">
+    <div className="w-full overflow-x-hidden" id="home">
       <Carousal />
       <div className="flex flex-col items-center p-5 bg-white sm:p-7 ">
         <div className="flex flex-col items-center mt-7 md:mt-14">

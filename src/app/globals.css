@@ -35,3 +35,14 @@ html,body{
 .headerBg{
   background-image: url('../assets/headerBg.png');
 }
+
+/* @media (min-width: 1024px) {
+  .humans-bg{
+    display: none;
+  }
+}
+@media (min-width: 640px) {
+.humans-bg {
+    display: flex;
+  }
+} */
