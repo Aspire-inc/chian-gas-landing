@@ -10,9 +10,12 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import React from "react";
 import { useRouter } from "next/navigation";
+import CustomModal from "./modal";
 
 export default function MobileNav() {
   const [showDropdown, setShowDropdown] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const router = useRouter();
   const [showCompanyInfo, setShowCompanyInfo] = useState(false);
   const scrollToAssurance = (sectionId: any) => {
@@ -178,6 +181,10 @@ export default function MobileNav() {
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.3 }}
               className="mt-8 flex items-center justify-center w-[200px] h-[50px] border border-[#CFE1FC] rounded-[30px] text-white font-semibold"
+              onClick={() => {
+                setIsModalOpen(true);
+                setShowDropdown(false);
+              }}
             >
               Download App
             </motion.button>
@@ -192,6 +199,7 @@ export default function MobileNav() {
       ) : (
         ""
       )}
+      <CustomModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </nav>
   );
 }

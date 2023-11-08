@@ -32,7 +32,7 @@ const CustomModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             transition={{ duration: 0.2 }}
           >
             <motion.div
-              className="w-[321px] h-[450px] absolute top-12 rounded-[12px] shadow-xl lg:w-[722px] lg:h-[671px] bg-[#0043A7] px-4 py-4"
+              className="w-[400px] h-[671px] absolute top-12 rounded-[12px] shadow-xl lg:w-[722px] lg:h-[671px] bg-[#0043A7] px-4 py-4"
               initial={{ y: -50 }}
               animate={{ y: 0 }}
               exit={{ y: -50 }}
