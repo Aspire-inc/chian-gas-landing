@@ -3,7 +3,7 @@ import React from "react";
 import NotFound from "@/assets/icons/404.svg";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-function PageNotFoun() {
+function NotFoundPage() {
   const router = useRouter();
   return (
     <div className="w-full h-full flex flex-col items-center justify-center space-y-10">
@@ -28,4 +28,4 @@ function PageNotFoun() {
   );
 }
 
-export default PageNotFoun;
+export default NotFoundPage;
