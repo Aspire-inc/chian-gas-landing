@@ -13,6 +13,7 @@ import MobileDirectors from "./mobileDirectors";
 
 const DirectorsInfo = [
   {
+    title: `Founder/CEO`,
     name: `Victor Anicho`,
     description: `What remains crucial for us in Chian is our commitment to our value
 creation, which is taking the fore in this economic crisis and challenging
@@ -21,12 +22,13 @@ As i look forward to the journey ahead, I have no doubt in my mind that
 the next 10 years will see us living out and transcending our version of a
 truly great and exceptional organization with a great team and the right
 customer base.`,
-    image: "/Pics.png",
+    image: "/victor.png",
     semi: `With Chian gas, the intention is simple: build something that is simple
 and better, as well as meet the Customer demands.`,
   },
   {
-    name: `Victor Anicho`,
+    title: `Chief Operation Officer`,
+    name: `Kennedy Danjuma`,
     description: `What remains crucial for us in Chian is our commitment to our value
 creation, which is taking the fore in this economic crisis and challenging
 business times. We tend to solve the right problem with the right people.
@@ -34,33 +36,7 @@ As i look forward to the journey ahead, I have no doubt in my mind that
 the next 10 years will see us living out and transcending our version of a
 truly great and exceptional organization with a great team and the right
 customer base.`,
-    image: "/Pics.png",
-    semi: `With Chian gas, the intention is simple: build something that is simple
-and better, as well as meet the Customer demands.`,
-  },
-  {
-    name: `Victor Anicho`,
-    description: `What remains crucial for us in Chian is our commitment to our value
-creation, which is taking the fore in this economic crisis and challenging
-business times. We tend to solve the right problem with the right people.
-As i look forward to the journey ahead, I have no doubt in my mind that
-the next 10 years will see us living out and transcending our version of a
-truly great and exceptional organization with a great team and the right
-customer base.`,
-    image: "/Pics.png",
-    semi: `With Chian gas, the intention is simple: build something that is simple
-and better, as well as meet the Customer demands.`,
-  },
-  {
-    name: `Victor Anicho`,
-    description: `What remains crucial for us in Chian is our commitment to our value
-creation, which is taking the fore in this economic crisis and challenging
-business times. We tend to solve the right problem with the right people.
-As i look forward to the journey ahead, I have no doubt in my mind that
-the next 10 years will see us living out and transcending our version of a
-truly great and exceptional organization with a great team and the right
-customer base.`,
-    image: "/Pics.png",
+    image: "/ken.png",
     semi: `With Chian gas, the intention is simple: build something that is simple
 and better, as well as meet the Customer demands.`,
   },
@@ -105,7 +81,7 @@ const FirstDirector = () => {
       <div className="lg:w-[calc(100%-429px)]  lg:h-[667px] bg-[#FBFAFA] lg:p-16">
         <div>
           <p className="text-blue-800 text-[19px] font-semibold  tracking-tight">
-            Director
+            {DirectorsInfo[currentDirectorIndex]?.title}
           </p>
         </div>
         <AnimatePresence key={currentDirectorIndex}>
@@ -166,8 +142,13 @@ const FirstDirector = () => {
           </div>
         </div>
       </div>
-      <div className=" hidden lg:block lg:w-[429px] lg:h-[638px]  rounded-t-[12rem] absolute bottom-0 lg:top-[4rem] right-[1.5rem]">
-        <Image src={DirectorsInfo[currentDirectorIndex]?.image} fill alt="" />
+      <div className=" hidden lg:block lg:w-[429px] lg:h-[638px]  rounded-t-[12rem] rounded-b-[3rem] absolute bottom-0 lg:top-[4rem] right-[1.5rem]">
+        <Image
+          src={DirectorsInfo[currentDirectorIndex]?.image}
+          fill
+          className="rounded-t-[12rem] rounded-b-[3rem]"
+          alt=""
+        />
       </div>
     </div>
   );

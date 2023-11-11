@@ -7,6 +7,9 @@ import HeadLocation from "@/assets/icons/head-location.svg";
 import Image from "next/image";
 import BallonArrow from "@/assets/icons/balloonArrow.svg";
 import EditIcon from "@/assets/icons/edit.svg";
+import KenSafe from "@/assets/KenSafe.svg";
+import SafeGas from "@/assets/safeGas.png";
+import EmgGas from "@/assets/emgGas.png";
 import DotDiffText from "../components/ui/dot-diff-text";
 import OurValuesCard from "../components/ui/our-values-card";
 import { UserApp } from "../components/ui/app-types";
@@ -108,10 +111,14 @@ function SafetyTips() {
         </div>
       </div>
       <div className="w-full px-6  xl:px-[5rem] mt-[3rem]  overflow-x-hidden">
-        <div className="lg:mt-[10rem] mt-[5rem] lg:p-10 w-full  grid grid-cols-1 lg:grid-cols-2 lg:gap-10">
+        <div className="lg:mt-[10rem] mt-[5rem] lg:p-10 w-full  grid grid-cols-1 lg:grid-cols-2 lg:gap-10  relative">
           <div className="relative ">
             <div className="relative flex flex-col items-center lg:space-x-8 lg:items-start lg:flex-row">
-              <div className="w-[156.43px] h-[152.76px] lg:w-[341px] lg:h-[333px] bg-sky-50 rounded-[20px] absolute lg:relative top-0 "></div>
+              <div className="w-[156.43px] h-[152.76px] lg:w-[341px] lg:h-[333px] bg-sky-50 rounded-[20px] absolute lg:relative top-0 ">
+                <div className=" absolute   -top-14">
+                  <Image src={KenSafe} height={1000} alt="kensafe" />
+                </div>
+              </div>
               <div className="hidden py-5 lg:block">
                 <p className="text-blue-800 lg:text-[36px] font-bold  tracking-tight w-full text-xl">
                   Upcoming Safety{" "}
@@ -160,7 +167,13 @@ function SafetyTips() {
           </div>
           <div className="mt-5 space-y-5 lg:p-8 lg:mt-0">
             <div className="flex space-x-5 ">
-              <div className="w-[239px] h-[132px] lg:h-[159px] bg-zinc-300 rounded-[15px]"></div>
+              <div className="w-[239px] h-[132px] lg:h-[159px] bg-zinc-300 rounded-[15px]">
+                <Image
+                  src={SafeGas}
+                  className="w-full h-full rounded-[15px]"
+                  alt="safe-gas"
+                />
+              </div>
               <div>
                 <p className="text-base font-semibold tracking-tight text-blue-800 lg:text-2xl">
                   Safe Gas Usage in
@@ -178,7 +191,13 @@ function SafetyTips() {
               </div>
             </div>
             <div className="flex space-x-5 ">
-              <div className="w-[239px] h-[132px] lg:h-[159px] bg-zinc-300 rounded-[15px]"></div>
+              <div className="w-[239px] h-[132px] lg:h-[159px] bg-zinc-300 rounded-[15px]">
+                <Image
+                  src={EmgGas}
+                  className="w-full h-full rounded-[15px]"
+                  alt="safe-gas"
+                />
+              </div>
               <div>
                 <p className="text-base font-semibold tracking-tight text-blue-800 lg:text-2xl">
                   Emergency Gas Leak
