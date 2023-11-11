@@ -28,11 +28,9 @@ const howItoWorks = [
   },
   {
     name: "Order Processing",
-    description: `Your vendor will accept your order.
-You'll get notified.`,
-    slogan: `Your vendor will prepare your order
-for delivery.`,
-    feat: ``,
+    description: `Your vendor will accept your order, You'll get notified.`,
+    slogan: `Your vendor will prepare your order for delivery.`,
+    // feat: ``,
     image: "/order-processing.png",
   },
   {
@@ -122,7 +120,7 @@ export default function Home() {
                 image={data.image}
                 name={data.name}
                 slogan={data.slogan}
-                feat={data?.feat}
+                feat={data?.feat || null}
               />
             ))}
           </div>
