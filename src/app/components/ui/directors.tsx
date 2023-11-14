@@ -10,6 +10,7 @@ import ArrowRight from "@/assets/icons/arrow-right2.svg";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import MobileDirectors from "./mobileDirectors";
+import Link from "next/link";
 
 const DirectorsInfo = [
   {
@@ -90,7 +91,7 @@ const FirstDirector = () => {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -300 * d, opacity: 0 }}
             transition={{ stiffness: 0 }}
-            className="mt-5 lg:h-[300px] "
+            className="mt-5 2xl:h-[300px] "
           >
             <p className="text-neutral-700 text-[27px] font-bold  tracking-tight ">
               {DirectorsInfo[currentDirectorIndex]?.name}
@@ -109,20 +110,34 @@ const FirstDirector = () => {
           DirectorsInfo={DirectorsInfo}
           currentDirectorIndex={currentDirectorIndex}
         />
-        <div className="flex-col items-center justify-between hidden mt-10 lg:flex lg:flex-row">
+        <div className="flex-col items-center justify-between hidden mt-2 2xl:mt-10 lg:flex lg:flex-row">
           <div className="flex gap-x-4">
-            <div className="w-[50px] h-[50px] flex items-center justify-center rounded-[16px] border border-[#5B5B5B]">
+            <Link
+              href={"https://www.facebook.com/Chenche4real?mibextid=ZbWKwL"}
+              target="_blank"
+              className="w-[50px] h-[50px] flex items-center justify-center rounded-[16px] border border-[#5B5B5B]"
+            >
               <Image src={FacebookIcon} alt="" />
-            </div>
-            <div className="w-[50px] h-[50px] flex items-center justify-center rounded-[16px] border border-[#5B5B5B]">
+            </Link>
+            <Link
+              href={"https://x.com/Vic_Anicho?t=fSQfad1YHNhjA6Ga8UD8yg&s=09"}
+              target="_blank"
+              className="w-[50px] h-[50px] flex items-center justify-center rounded-[16px] border border-[#5B5B5B]"
+            >
               <Image src={TwitterIcon} alt="" />
-            </div>
-            {/* <div className="w-[50px] h-[50px] flex items-center justify-center rounded-[16px] border border-[#5B5B5B]">
+            </Link>
+            <Link
+              href={
+                "https://instagram.com/anichovictor?igshid=OGQ5ZDc2ODk2ZA=="
+              }
+              target="_blank"
+              className="w-[50px] h-[50px] flex items-center justify-center rounded-[16px] border border-[#5B5B5B]"
+            >
               <Image src={InstagramIcon} alt="" />
-            </div> */}
-            <div className="w-[50px] h-[50px] flex items-center justify-center rounded-[16px] border border-[#5B5B5B]">
+            </Link>
+            {/* <div className="w-[50px] h-[50px] flex items-center justify-center rounded-[16px] border border-[#5B5B5B]">
               <Image src={LinkedInIcon} alt="" />
-            </div>
+            </div> */}
           </div>
 
           <div className="flex gap-x-10">
@@ -142,7 +157,7 @@ const FirstDirector = () => {
           </div>
         </div>
       </div>
-      <div className=" hidden lg:block lg:w-[429px] lg:h-[638px]  rounded-t-[12rem] rounded-b-[3rem] absolute bottom-0 lg:top-[4rem] right-[1.5rem]">
+      <div className=" hidden lg:block lg:w-[429px] lg:h-[638px]  rounded-t-[12rem] rounded-b-[3rem] absolute bottom-0 lg:top-[1.8rem] right-[1.5rem]">
         <Image
           src={DirectorsInfo[currentDirectorIndex]?.image}
           fill

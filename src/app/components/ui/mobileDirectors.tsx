@@ -68,11 +68,12 @@ function MobileDirectors({
             </div>
           </div>
         </div>
-        <div className=" w-[120px] h-[150px] rounded-t-[12rem] absolute right-0">
+        <div className=" w-[120px] h-[150px] rounded-t-[12rem] rounded-b-[1rem] absolute right-0">
           <Image
             src={DirectorsInfo[currentDirectorIndex]?.image}
             fill
             alt=""
+            className="rounded-t-[12rem] rounded-b-[1rem]"
             // width={80}
             // height={80}
           />

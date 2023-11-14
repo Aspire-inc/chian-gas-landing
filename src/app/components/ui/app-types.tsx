@@ -1,5 +1,6 @@
 "use client";
 import HalfSmartPhoneIcon from "@/assets/icons/half-smartphone-icon.svg";
+import HalfSmartPhoneIcon2 from "@/assets/icons/VendorPhone.svg";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -70,6 +71,11 @@ export const UserApp = () => {
           Never run out of gas unexpectedly! Track your gas levels effortlessly
           with real-time updates.
         </p>
+        <button className=" h-14 px-[123px] py-[15px] mt-6 rounded-[30px] border border-white justify-center items-center  flex hover:bg-amber-500 hover:border-none">
+          <p className="text-center text-white 2xl:text-lg font-semibold  leading-normal text-base">
+            Download App
+          </p>
+        </button>
       </div>
 
       <div className="flex justify-center w-full lg:w-auto">
@@ -97,11 +103,16 @@ const VendorApp = () => {
           We've redefined the way you manage your customers and gas supply just
           from one app.
         </p>
+        <button className=" h-14 px-[123px] py-[15px] mt-6 rounded-[30px] border border-white justify-center items-center  flex hover:bg-amber-500 hover:border-none">
+          <p className="text-center text-white 2xl:text-lg font-semibold  leading-normal text-base">
+            Download App
+          </p>
+        </button>
       </div>
 
       <div className="flex justify-center w-full lg:w-auto">
         <div className="w-[300px] sm:w-[500px] h-[400px] relative">
-          <Image src={HalfSmartPhoneIcon} alt="" fill />
+          <Image src={HalfSmartPhoneIcon2} alt="" fill />
         </div>
       </div>
     </div>

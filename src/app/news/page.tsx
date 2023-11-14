@@ -75,7 +75,7 @@ function News() {
             <div className="flex items-end justify-end w-full mt-2">
               <div className=" h-[50px] w-[50px] rounded-full">
                 <Image
-                  src={"/comments.png"}
+                  src={"/q1.png"}
                   alt=""
                   width={50}
                   height={50}
@@ -97,7 +97,7 @@ function News() {
             <div className="flex items-end justify-end w-full ">
               <div className=" h-[50px] w-[50px] rounded-full mt-2">
                 <Image
-                  src={"/comments.png"}
+                  src={"/q2.png"}
                   alt=""
                   width={50}
                   height={50}
@@ -119,7 +119,7 @@ function News() {
             <div className="flex items-end justify-end w-full ">
               <div className=" h-[50px] w-[50px] rounded-full mt-2">
                 <Image
-                  src={"/comments.png"}
+                  src={"/q3.png"}
                   alt=""
                   width={50}
                   height={50}

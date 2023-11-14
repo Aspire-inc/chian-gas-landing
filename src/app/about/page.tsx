@@ -63,7 +63,7 @@ function About() {
       </div>
       {/* <div></div> */}
       <div className="flex flex-col items-center p-5 bg-white sm:p-7 ">
-        <div className="flex flex-col mt-7 md:mt-14 w-[90%] ">
+        <div className="flex flex-col mt-7 md:mt-14 2xl:w-[90%] ">
           <div className="w-full mb-[5rem]">
             <DotDiffText>
               Transforming Gas Supply with Technology: Your Trusted Partner in

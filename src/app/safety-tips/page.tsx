@@ -5,7 +5,8 @@ import LeftHead from "@/assets/icons/left-head.svg";
 import Safe from "@/assets/icons/Safe.svg";
 import HeadLocation from "@/assets/icons/head-location.svg";
 import Image from "next/image";
-import BallonArrow from "@/assets/icons/balloonArrow.svg";
+import BallonArrow from "@/assets/icons/bub1.svg";
+import Bub2 from "@/assets/icons/bub2.svg";
 import EditIcon from "@/assets/icons/edit.svg";
 import KenSafe from "@/assets/KenSafe.svg";
 import SafeGas from "@/assets/safeGas.png";
@@ -71,19 +72,19 @@ function SafetyTips() {
       <div className="relative w-full sm:hidden text-side max-h-96">
         <Image src={HeadLocation} alt="text-bubble" className="w-full" />
       </div>
-      <div className="container hidden grid-cols-2 gap-10 mx-auto sm:grid">
+      <div className="hidden grid-cols-2 gap-10 mx-auto xl:container sm:grid">
         {/* <Image src={LeftHead} alt="left-header-section" />
         <Image src={RightHead} alt="right-header-section" /> */}
 
         <div className="relative flex items-center justify-center p-10 ">
           <div className="">
-            <span className="text-blue-800 text-[1rem] lg:text-[5rem] sm:text-[2rem] font-bold  ">
+            <span className="text-blue-800 text-[1rem] 2xl:text-[5rem] sm:text-[2rem] font-bold xl:text-[3rem] ">
               Safety Isn’t a<br />
               Costly Endeavor;
               <br />
               It's{" "}
             </span>
-            <span className="font-medium  text-amber-500 lg:text-[5rem] sm:text-[2rem]">
+            <span className="font-medium  text-amber-500 2xl:text-[5rem] sm:text-[2rem] xl:text-[3rem]">
               Invaluable
             </span>
             <div className="absolute top-0 left-[6rem]  ">
@@ -101,31 +102,39 @@ function SafetyTips() {
             <div className="w-3.5 h-3.5 bg-emerald-500 rounded-full" />
           </div>
         </div>
-        <div className="relative z-30">
-          <div className="w-full ">
-            <Image src={RightHead} alt="Left" className="w-full " />
-          </div>
-          <div className="absolute top-[-1rem] left-[-8rem] w-full">
-            <Image src={BallonArrow} alt="bubble" className="w-full" />
-          </div>
+        <div className="relative ">
+          <Image src={RightHead} alt="Left" className="w-full " />
+
+          {/* <div className="absolute right-0 w-full -top-11 -z-30"> */}
+          <Image
+            src={Bub2}
+            alt="bubble"
+            className="-z-30 absolute -top-[6rem] right-[10rem]"
+          />
+          <Image
+            src={BallonArrow}
+            alt="bubble"
+            className="-z-30 absolute 2xl:-left-[23rem] 2xl:top-[15rem] xl:-left-[19rem] xl:top-[8rem] 2xl:h-[654px]"
+          />
+          {/* </div> */}
         </div>
       </div>
-      <div className="w-full px-6  xl:px-[5rem] mt-[3rem]  overflow-x-hidden">
-        <div className="lg:mt-[10rem] mt-[5rem] lg:p-10 w-full  grid grid-cols-1 lg:grid-cols-2 lg:gap-10  relative">
+      <div className="w-full px-6  2xl:px-[5rem] mt-[3rem]  overflow-x-hidden">
+        <div className="2xl:mt-[6rem] mt-[5rem] lg:p-10 w-full  grid grid-cols-1 lg:grid-cols-2 lg:gap-10  relative xl:mt-[2rem]">
           <div className="relative ">
             <div className="relative flex flex-col items-center lg:space-x-8 lg:items-start lg:flex-row">
               <div className="w-[156.43px] h-[152.76px] lg:w-[341px] lg:h-[333px] bg-sky-50 rounded-[20px] absolute lg:relative top-0 ">
-                <div className=" absolute   -top-14">
+                <div className="absolute -top-14">
                   <Image src={KenSafe} height={1000} alt="kensafe" />
                 </div>
               </div>
-              <div className="hidden py-5 lg:block">
-                <p className="text-blue-800 lg:text-[36px] font-bold  tracking-tight w-full text-xl">
+              <div className="hidden py-5 lg:block 2xl:mt-[3rem]">
+                <p className="text-blue-800 2xl:text-[36px] font-bold  tracking-tight w-full text-xl xl:text-xl">
                   Upcoming Safety{" "}
                 </p>
-                <div className="text-blue-800 lg:text-[36px] text-xl font-bold  tracking-tight flex items-center space-x-4 mt-2">
+                <div className="text-blue-800 lg:text-[36px] text-xl font-bold  tracking-tight flex items-center space-x-4 mt-4">
                   <p
-                    className="text-blue-800 lg:text-[36px] text-xl font-bold  tracking-tight 
+                    className="text-blue-800 2xl:text-[36px] text-xl font-bold xl:text-xl tracking-tight 
                   "
                   >
                     Posts
@@ -150,7 +159,7 @@ function SafetyTips() {
                 </p>
               </div>
             </div>
-            <div className="w-[688px] h-[185px] bg-white rounded-[15px] absolute p-8 bottom-[-4rem] left-8 z-30 hidden lg:block">
+            <div className="2xl:w-[688px] h-[185px] bg-white rounded-[15px] absolute 2xl:p-8 p-4 bottom-[-4rem] left-8 z-30 hidden lg:block  xl:left-0 xl:-bottom-0 shadow">
               <p className="text-2xl font-semibold tracking-tight text-amber-500">
                 Kennedy Danjuma{" "}
               </p>

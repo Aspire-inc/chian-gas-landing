@@ -17,7 +17,7 @@ export default function OurValuesCard({
   tagVariant: string;
 }) {
   return (
-    <div className="transition-all bg-white shadow  p-5 rounded-[10px] relative w-full md:w-[350px] lg:w-[300px] ">
+    <div className="transition-all bg-white shadow-lg  p-5 rounded-[10px] relative w-full ">
       <div className="w-[57px] h-[57px] bg-neutral-50 rounded-[10px] flex items-center justify-center">
         <Image
           src={image}

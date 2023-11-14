@@ -119,14 +119,14 @@ always have a clear view of your gas supply status.
   return (
     <div className="flex flex-col items-center justify-center w-full ">
       <div className="flex items-center justify-center w-full mt-5 ">
-        <div className="relative overflow-x-scroll ">
+        <div className="relative  ">
           <div className="flex items-center justify-between w-full gap-8 ">
             {labelss.map((label, index) => (
               <p
                 key={index}
                 className={`text-xl font-medium tracking-tight text-center cursor-pointer  lg:w-[94px] h-[47px] flex items-center justify-center ${
                   label.active
-                    ? "bg-blue-300 text-blue-600 font-semibold"
+                    ? "bg-[#F2F7FF] text-blue-500 font-semibold"
                     : "text-zinc-600"
                 }  rounded-full mb-3`}
                 onClick={() => handleLabelClick(label)}
@@ -136,7 +136,7 @@ always have a clear view of your gas supply status.
             ))}
           </div>
           <div
-            className="absolute bottom-0 h-1 transition-all bg-blue-600 rounded-full ml-[1.2rem]"
+            className="absolute bottom-0 h-1 transition-all bg-blue-600 rounded-full ml-[1.2rem] "
             style={{ width: `${width}px` }}
           ></div>
         </div>

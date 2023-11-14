@@ -1,3 +1,4 @@
+"use client";
 import TransparentLogoIcon from "@/assets/icons/transparent-logo-icon.svg";
 import TelevisionIcon from "@/assets/icons/television-icon.svg";
 import QuestionGirlIcon from "@/assets/icons/question-girl-icon.svg";
@@ -10,6 +11,7 @@ import React from "react";
 import Carousal from "../components/ui/carousal";
 import AppTypes from "../components/ui/app-types";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const howItoWorks = [
   {
@@ -79,23 +81,20 @@ confidence and peace of mind...`,
 
 const faqs = [
   {
-    name: "How do I create an account on Chian?",
-    description: `To create an account, simply download Chian App
-    and sign up using your email address and set a password.`,
+    name: "What is Chian Gas?",
+    description: `Chian Gas is a digital platform connecting gas users with
+trusted gas vendors for convenient and efficient gas refills.`,
   },
   {
-    name: `Can I track the gas level in my cylinder through
-    the Chian app?`,
-    description: `To create an account, simply download Chian App
-    and sign up using your email address and set a password.`,
+    name: `How do I download the Chian Gas app?`,
+    description: `From your Google PlayStore or Apple AppStore`,
   },
   {
-    name: "How can I place an order for a gas refill?",
-    description: `To create an account, simply download Chian App
-    and sign up using your email address and set a password.`,
+    name: "Is my information safe on Chian Gas?",
+    description: `Yes All Information are Save and Secure with Chain Gas`,
   },
   {
-    name: "What payment methods are accepted for gas refills?",
+    name: "How can I check the gas level in my cylinder with Chian Gas?",
     description: `To create an account, simply download Chian App
     and sign up using your email address and set a password.`,
   },
@@ -103,6 +102,7 @@ const faqs = [
 
 export default function Home() {
   // const [isModalOpen, setIsModalOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <div className="w-full overflow-x-hidden" id="home">
@@ -139,7 +139,12 @@ export default function Home() {
             secure payment options.
           </p>
 
-          <p className="text-[#0066FF] font-semibold my-8">Learn more...</p>
+          <p
+            className="text-[#0066FF] font-semibold my-8 cursor-pointer"
+            onClick={() => router.push("/support")}
+          >
+            Learn more...
+          </p>
 
           <button className="w-[200px] h-[50px] grid place-content-center rounded-[30px] border border-[#A7AEC1]">
             <Link href={"https://portal.chiangas.com/"} target="_blank">
@@ -274,7 +279,10 @@ export default function Home() {
 
               <div className="flex items-center justify-between w-full mt-5 pr-14">
                 <span className="text-[16px] text-[#DBDDE3]">July 5, 2023</span>
-                <div>
+                <div
+                  onClick={() => router.push("/news")}
+                  className="cursor-pointer"
+                >
                   <span className="text-[14px] sm:text-[16px] font-semibold text-[#5B5B5B]">
                     Read More
                   </span>

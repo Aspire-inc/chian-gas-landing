@@ -118,11 +118,11 @@ function Footer({ handleScrollToTop }: any) {
               Safety
             </span>
           </li>
-          <li className="">
+          {/* <li className="">
             <span className="text-[17px] xl:text-[18px] text-[#5B5B5B]">
               Partner with Chian
             </span>
-          </li>
+          </li> */}
           <li
             className="cursor-pointer"
             onClick={() => {
@@ -157,6 +157,7 @@ function Footer({ handleScrollToTop }: any) {
               <Link
                 href={"https://instagram.com/chian.gas?igshid=MzNlNGNkZWQ4Mg=="}
                 target="_blanks"
+                className="hover:text-white"
               >
                 <Image src={InstagramIcon} alt="" />
               </Link>
