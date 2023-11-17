@@ -57,7 +57,8 @@ function Footer({ handleScrollToTop }: any) {
           <li className="flex items-start gap-x-2">
             <Image src={LocationIcon} alt="" />
             <span className="text-[17px] xl:text-[18px] tracking-wider text-[#5B5B5B]">
-              17C IBB way, Calabar, Cross River State. Nigeria
+              Suite 10 DDS Plaza, km 24 Airport Road, Rukpokwu, Obio/Akpor LGA
+              Rivers state
             </span>
           </li>
         </ul>

@@ -168,7 +168,9 @@ function News() {
               </p>
 
               <div className="flex items-center justify-between w-full mt-5 pr-14">
-                <span className="text-[16px] text-[#DBDDE3]">July 5, 2023</span>
+                <span className="text-[16px] text-[#DBDDE3]">
+                  10th December, 2023
+                </span>
                 <div>
                   <span className="text-[14px] sm:text-[16px] font-semibold text-[#5B5B5B]">
                     Read More
