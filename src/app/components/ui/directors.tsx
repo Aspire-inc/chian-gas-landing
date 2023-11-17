@@ -80,7 +80,7 @@ const FirstDirector = () => {
   return (
     <div className="relative flex items-center w-full overflow-hidden ">
       <div className="lg:w-[calc(100%-429px)]  lg:h-[667px] bg-[#FBFAFA] lg:p-16">
-        <div>
+        <div className="mt-5 lg:mt-0 xl:mt-0 2xl:mt-0">
           <p className="text-blue-800 text-[19px] font-semibold  tracking-tight">
             {DirectorsInfo[currentDirectorIndex]?.title}
           </p>

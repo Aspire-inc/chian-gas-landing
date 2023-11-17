@@ -90,7 +90,7 @@ trusted gas vendors for convenient and efficient gas refills.`,
     description: `From your Google PlayStore or Apple AppStore`,
   },
   {
-    name: "Is my information safe on Chian Gas?",
+    name: "Is my information save on Chian Gas?",
     description: `Yes All Information are Save and Secure with Chain Gas`,
   },
   {
@@ -103,7 +103,16 @@ trusted gas vendors for convenient and efficient gas refills.`,
 export default function Home() {
   // const [isModalOpen, setIsModalOpen] = useState(false);
   const router = useRouter();
+  const scrollToAssurance = (sectionId: any) => {
+    const element = document.getElementById(sectionId);
 
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // If the element doesn't exist on the current page, navigate to the other page with the hash
+      router.push(`/support#${sectionId}`);
+    }
+  };
   return (
     <div className="w-full overflow-x-hidden" id="home">
       <Carousal />
@@ -141,12 +150,13 @@ export default function Home() {
 
           <p
             className="text-[#0066FF] font-semibold my-8 cursor-pointer"
-            onClick={() => router.push("/support")}
+            // onClick={() => router.push("/support")}
+            onClick={() => scrollToAssurance("gas-vendor")}
           >
             Learn more...
           </p>
 
-          <button className="w-[200px] h-[50px] grid place-content-center rounded-[30px] border border-[#A7AEC1]">
+          <button className="w-[200px] h-[50px] grid place-content-center rounded-[30px] border border-[#A7AEC1] hover:bg-[#F99617] hover:text-white hover:border-none">
             <Link href={"https://portal.chiangas.com/"} target="_blank">
               Enrol Now
             </Link>
@@ -278,7 +288,9 @@ export default function Home() {
               </p>
 
               <div className="flex items-center justify-between w-full mt-5 pr-14">
-                <span className="text-[16px] text-[#DBDDE3]">July 5, 2023</span>
+                <span className="text-[16px] text-[#DBDDE3]">
+                  10th December, 2023
+                </span>
                 <div
                   onClick={() => router.push("/news")}
                   className="cursor-pointer"

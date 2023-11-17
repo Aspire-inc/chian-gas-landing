@@ -147,9 +147,16 @@ export default function DesktopNav() {
           </ul>
 
           <ul className="flex items-center gap-12">
-            <li className="flex items-center cursor-pointer gap-x-1">
-              <Link href={"https://portal.chiangas.com/"} target="_blank">
-                <span className="text-[15px] xl:text-[20px] text-[#5B5B5B]">
+            <li
+              className="flex items-center cursor-pointer gap-x-1 hover:bg-[#F99617] px-[1rem] h-[50px]  rounded-[30px] hover:text-white"
+              // onClick={() => router.push("https://portal.chiangas.com/")}
+            >
+              <Link
+                href={"https://portal.chiangas.com/"}
+                target="_blank"
+                className="hover:text-white"
+              >
+                <span className="text-[15px] xl:text-[20px] text-[#5B5B5B] hover:text-white">
                   Become a Vendor
                 </span>
               </Link>
@@ -160,7 +167,7 @@ export default function DesktopNav() {
               </span>
             </li> */}
             <li onClick={() => setIsModalOpen(true)}>
-              <button className="text-[#5B5B5B] font-semibold text-[13px] xl:text-[16px] w-[150px] xl:w-[200px] h-[50px] rounded-[30px] border border-[#A7AEC1]">
+              <button className="text-[#5B5B5B] font-semibold text-[13px] xl:text-[16px] w-[150px] xl:w-[200px] h-[50px] rounded-[30px] border border-[#A7AEC1] hover:bg-[#F99617] hover:text-white hover:border-none">
                 Download App
               </button>
             </li>

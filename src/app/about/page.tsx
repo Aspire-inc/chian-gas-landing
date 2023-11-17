@@ -6,6 +6,7 @@ import AssuranceTypes from "../components/ui/assurance-types";
 import { UserApp } from "../components/ui/app-types";
 import AboutMob from "@/assets/icons/aboutMob.svg";
 import Image from "next/image";
+import MobileAssurance from "../components/ui/mobile-assurance";
 const howItoWorks = [
   {
     name: " Customer-Centricity",
@@ -46,7 +47,7 @@ Gas is our most valuable asset.`,
 ];
 function About() {
   return (
-    <div className="w-full lg:px-6 xl:px-[5rem] mt-[3rem]">
+    <div className="w-full lg:px-6 xl:px-[5rem] mt-[3rem] overflow-hidden">
       <div className="items-center justify-start hidden w-full lg:flex humans-bg">
         <div className="items-start hidden lg:flex px-28 ">
           <DotDiffText className="text-white">About Us</DotDiffText>
@@ -62,8 +63,8 @@ function About() {
         />
       </div>
       {/* <div></div> */}
-      <div className="flex flex-col items-center p-5 bg-white sm:p-7 ">
-        <div className="flex flex-col mt-7 md:mt-14 2xl:w-[90%] ">
+      <div className="flex flex-col items-center px-[5rem] bg-white">
+        <div className="flex flex-col mt-7 md:mt-14 2xl:w-[90%]">
           <div className="w-full mb-[5rem]">
             <DotDiffText>
               Transforming Gas Supply with Technology: Your Trusted Partner in
@@ -122,7 +123,7 @@ function About() {
             <Directors />
           </div>
           <div
-            className="flex flex-col items-center justify-center "
+            className="flex flex-col items-center justify-center w-full"
             id="assurance"
           >
             <DotDiffText className="mb-10 text-center">
@@ -134,8 +135,11 @@ function About() {
               developed a set of core assurances to ensure you experience the
               best in gas delivery and service:
             </p>
-            <div className="w-full mt-5 ">
+            <div className="hidden w-full mt-5 lg:block">
               <AssuranceTypes />
+            </div>
+            <div className="w-full mt-5 lg:hidden">
+              <MobileAssurance />
             </div>
             <div className="w-full overflow-hidden">
               <div

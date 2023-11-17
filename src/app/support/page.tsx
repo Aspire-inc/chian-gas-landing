@@ -82,6 +82,7 @@ function Support() {
               ? "text-blue-600 bg-slate-50 border-none"
               : "text-zinc-600"
           }`}
+          id="gas-vendor"
         >
           <p className="text-2xl font-bold tracking-tight ">
             I am a gas vendor

@@ -8,7 +8,7 @@ import HandShake from "@/assets/shake.png";
 import GasCyl from "@/assets/gas.png";
 import GreenGas from "@/assets/greenGas.png";
 import WOmanSmile from "@/assets/woman.png";
-function AssuranceTypes() {
+function MobileAssurance() {
   const labels = [
     {
       name: "One",
@@ -117,32 +117,29 @@ always have a clear view of your gas supply status.
   // console.log(width, "This is width");
   // console.log("====================================");
   return (
-    <div className="flex flex-col items-center justify-center w-full ">
-      <div className="flex items-center justify-center w-full mt-5 ">
-        <div className="relative ">
-          <div className="flex items-center justify-between lg:w-full gap-8 w-[380px] px-[3rem] py-[1rem] lg:px-0 lg:py-0 overflow-x-scroll">
-            {labelss.map((label, index) => (
-              <p
-                key={index}
-                className={`text-xl font-medium tracking-tight text-center cursor-pointer px-[16px] lg:w-[94px] h-[47px] flex items-center justify-center ${
-                  label.active
-                    ? "bg-[#F2F7FF] text-blue-500 font-semibold"
-                    : "text-zinc-600"
-                }  rounded-full mb-3`}
-                onClick={() => handleLabelClick(label)}
-              >
-                {label.name}
-              </p>
-            ))}
-          </div>
-          <div
-            className="absolute bottom-0 h-1 transition-all bg-blue-600 rounded-full ml-[1.2rem] hidden lg:block"
-            style={{ width: `${width}px` }}
-          ></div>
+    <div className="w-[380px]">
+      <div className="w-full">
+        <div className="flex items-center w-full pt-2 space-x-5 overflow-x-scroll ">
+          {labelss.map((label, index) => (
+            <p
+              key={index}
+              className={`px-[2rem]  rounded-2xl h-[47px]  flex items-center justify-center" ${
+                label.active
+                  ? "bg-[#F2F7FF] text-blue-500 font-semibold"
+                  : "text-zinc-600"
+              }  rounded-full mb-3`}
+              onClick={() => handleLabelClick(label)}
+            >
+              {label.name}
+            </p>
+          ))}
         </div>
+        {/* <div
+          className=" h-1 transition-all bg-blue-600 rounded-full ml-[1.2rem] "
+          style={{ width: `${width}px` }}
+        ></div> */}
       </div>
-
-      <div className="flex justify-between h-full mt-5 ml-5 space-x-10 ">
+      <div className="justify-between h-full mt-5 ml-5 space-x-10 lg:flex">
         {currentContent && (
           <>
             <div className="hidden lg:block">
@@ -155,8 +152,8 @@ always have a clear view of your gas supply status.
                 />
               </div>
             </div>
-            {/* <div className="border-2"> */}
-            <div className="h-full pl-0 m-0 lg:p-5">
+            {/* <div className=""> */}
+            <div className="h-full" style={{ margin: "0px" }}>
               <p className="text-xl font-semibold tracking-tight text-blue-800">
                 {currentContent.contentTitle}
               </p>
@@ -178,4 +175,4 @@ always have a clear view of your gas supply status.
   );
 }
 
-export default AssuranceTypes;
+export default MobileAssurance;
