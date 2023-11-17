@@ -49,6 +49,7 @@ export default function MobileNav() {
           alt=""
           onClick={() => {
             router.push("/");
+            setShowDropdown(false);
           }}
         />
 
