@@ -63,8 +63,8 @@ function About() {
         />
       </div>
       {/* <div></div> */}
-      <div className="flex flex-col items-center px-[5rem] bg-white">
-        <div className="flex flex-col mt-7 md:mt-14 2xl:w-[90%]">
+      <div className="flex flex-col items-center px-5 2xl:px-[5rem] bg-white">
+        <div className="flex flex-col mt-7 md:mt-14 2xl:w-[90%] w-full">
           <div className="w-full mb-[5rem]">
             <DotDiffText>
               Transforming Gas Supply with Technology: Your Trusted Partner in
@@ -123,7 +123,7 @@ function About() {
             <Directors />
           </div>
           <div
-            className="flex flex-col items-center justify-center w-full"
+            className="flex flex-col items-center justify-center"
             id="assurance"
           >
             <DotDiffText className="mb-10 text-center">
@@ -138,18 +138,18 @@ function About() {
             <div className="hidden w-full mt-5 lg:block">
               <AssuranceTypes />
             </div>
-            <div className="w-full mt-5 lg:hidden">
+            <div className="mt-5 lg:hidden overflow-hidden  w-full">
               <MobileAssurance />
             </div>
-            <div className="w-full overflow-hidden">
-              <div
-                // style={{ marginLeft: `-${appId * 100}%` }}
-                className="w-[300%] flex mt-5 gap-x-3 "
-              >
-                <UserApp />
-                {/* <VendorApp /> */}
-                {/* <DeliveryApp /> */}
-              </div>
+          </div>
+          <div className="w-full overflow-hidden">
+            <div
+              // style={{ marginLeft: `-${appId * 100}%` }}
+              className="w-[300%] flex mt-5 gap-x-3 "
+            >
+              <UserApp />
+              {/* <VendorApp /> */}
+              {/* <DeliveryApp /> */}
             </div>
           </div>
         </div>

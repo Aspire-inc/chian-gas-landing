@@ -150,9 +150,9 @@ function SafetyTips() {
                   Upcoming Safety Posts{" "}
                 </p>
                 <p className="mt-3 text-sm font-normal tracking-tight text-zinc-600">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Mauris eget felis et felis ultrices tempus at sed eros. Lorem
-                  ipsum dolor sit amet, consectet ur adipiscing elit.
+                  Are you a Chian Gas user? Here's a quick guide to ensure
+                  you're using your gas cylinder safely: Regular Check-ups |
+                  Proper Storage | Leak Detection...
                 </p>
                 <p className="mt-3 text-base font-semibold tracking-tight text-amber-500">
                   Kennedy Danjuma{" "}

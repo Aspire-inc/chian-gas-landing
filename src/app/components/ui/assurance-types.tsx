@@ -117,7 +117,7 @@ always have a clear view of your gas supply status.
   // console.log(width, "This is width");
   // console.log("====================================");
   return (
-    <div className="flex flex-col items-center justify-center w-full ">
+    <div className="flex flex-col items-center justify-center w-full overflow-hidden">
       <div className="flex items-center justify-center w-full mt-5 ">
         <div className="relative ">
           <div className="flex items-center justify-between lg:w-full gap-8 w-[380px] px-[3rem] py-[1rem] lg:px-0 lg:py-0 overflow-x-scroll">

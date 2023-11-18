@@ -71,7 +71,7 @@ export const UserApp = () => {
           Never run out of gas unexpectedly! Track your gas levels effortlessly
           with real-time updates.
         </p>
-        <button className=" h-14 px-[123px] py-[15px] mt-6 rounded-[30px] border border-white justify-center items-center  flex hover:bg-amber-500 hover:border-none">
+        <button className=" h-14 px-[23px] py-[15px] mt-6 rounded-[30px] border border-white justify-center items-center  flex hover:bg-amber-500 hover:border-none">
           <p className="text-center text-white 2xl:text-lg font-semibold  leading-normal text-base">
             Download App
           </p>
@@ -103,7 +103,7 @@ const VendorApp = () => {
           We've redefined the way you manage your customers and gas supply just
           from one app.
         </p>
-        <button className=" h-14 px-[123px] py-[15px] mt-6 rounded-[30px] border border-white justify-center items-center  flex hover:bg-amber-500 hover:border-none">
+        <button className=" h-14 px-[23px] py-[15px] mt-6 rounded-[30px] border border-white justify-center items-center  flex hover:bg-amber-500 hover:border-none">
           <p className="text-center text-white 2xl:text-lg font-semibold  leading-normal text-base">
             Download App
           </p>

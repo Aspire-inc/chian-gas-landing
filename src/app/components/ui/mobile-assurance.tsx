@@ -117,7 +117,7 @@ always have a clear view of your gas supply status.
   // console.log(width, "This is width");
   // console.log("====================================");
   return (
-    <div className="w-[380px]">
+    <div className="w-full">
       <div className="w-full">
         <div className="flex items-center w-full pt-2 space-x-5 overflow-x-scroll ">
           {labelss.map((label, index) => (
