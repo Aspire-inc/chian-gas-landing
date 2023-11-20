@@ -31,7 +31,7 @@ export default function FaqCard({ name, description }: FaqCardProps) {
   return (
     <div className="w-full border-b-[0.5px]">
       <div
-        className="flex items-start justify-between py-7 cursor-pointer"
+        className="flex items-start justify-between cursor-pointer py-7"
         onClick={() => setShowDropdown(!showDropdown)}
       >
         <span className="text-[#5B5B5B] font-semibold text-[16px] md:text-[18px] tracking-wider max-w-[calc(100%-100px)]">

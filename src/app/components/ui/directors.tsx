@@ -20,7 +20,7 @@ const DirectorsInfo = [
 creation, which is taking the fore in this economic crisis and challenging
 business times. We tend to solve the right problem with the right people.
 As i look forward to the journey ahead, I have no doubt in my mind that
-the next 10 years will see us living out and transcending our version of a
+the next 10 years will see us living out and transcending our vision of a
 truly great and exceptional organization with a great team and the right
 customer base.`,
     image: "/victor.png",

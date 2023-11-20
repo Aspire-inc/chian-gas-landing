@@ -91,7 +91,7 @@ function Footer({ handleScrollToTop }: any) {
         <ul className="flex flex-col gap-y-5">
           <li>
             <span className="text-[#0043A7] text-[16px] tracking-wider font-bold">
-              Recent News
+              Navigate
             </span>
           </li>
           <li className="">

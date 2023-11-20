@@ -19,6 +19,8 @@ import Link from "next/link";
 // import HeaderBg from "@/assets/headerBg.png";
 import { flushSync } from "react-dom";
 import CustomModal from "./modal";
+import CustomPartnerModal from "./partnerModal";
+import CustomMarketerModal from "./marketerModal";
 
 const companyInfo = [
   {
@@ -57,6 +59,8 @@ export default function DesktopNav() {
   const pathname = usePathname();
   // console.log(pathname, "Pathname");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSponsorModalOpen, setIsSponsorModalOpen] = useState(false);
+  const [isMarketerModalOpen, setIsMarketerModalOpen] = useState(false);
 
   return (
     <nav className="hidden lg:block" id="nav">
@@ -78,12 +82,26 @@ export default function DesktopNav() {
               Vendor
             </span>
           </Link>
-          <span className="text-white text-[14px] font-semibold cursor-pointer">
+          <span
+            className="text-white text-[14px] font-semibold cursor-pointer"
+            onClick={() => setIsSponsorModalOpen(true)}
+          >
             Sponsor
           </span>
-          <span className="text-white text-[14px] font-semibold cursor-pointer">
+          <span
+            className="text-white text-[14px] font-semibold cursor-pointer"
+            onClick={() => setIsMarketerModalOpen(true)}
+          >
             Marketer
           </span>
+          <CustomPartnerModal
+            isOpen={isSponsorModalOpen}
+            onClose={() => setIsSponsorModalOpen(false)}
+          />
+          <CustomMarketerModal
+            isOpen={isMarketerModalOpen}
+            onClose={() => setIsMarketerModalOpen(false)}
+          />
         </div>
       </div>
       <div className="h-[80px] bg-white px-10 flex justify-between">

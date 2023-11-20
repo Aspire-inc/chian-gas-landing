@@ -90,8 +90,8 @@ trusted gas vendors for convenient and efficient gas refills.`,
     description: `From your Google PlayStore or Apple AppStore`,
   },
   {
-    name: "Is my information save on Chian Gas?",
-    description: `Yes All Information are Save and Secure with Chain Gas`,
+    name: "Is my information Safe on Chian Gas?",
+    description: `Yes All Information are Safe and Secure with Chain Gas`,
   },
   {
     name: "How can I check the gas level in my cylinder with Chian Gas?",

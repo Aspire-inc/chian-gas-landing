@@ -6,52 +6,9 @@ import Image from "next/image";
 import FaqCard from "../components/ui/faq-card";
 import VendorFaqCard from "../components/ui/vendor-faq-card";
 import { UserApp } from "../components/ui/app-types";
-const faqs = [
-  {
-    name: "How do I create an account on Chian?",
-    description: `To create an account, simply download Chian App
-    and sign up using your email address and set a password.`,
-  },
-  {
-    name: `Can I track the gas level in my cylinder through
-    the Chian app?`,
-    description: `To create an account, simply download Chian App
-    and sign up using your email address and set a password.`,
-  },
-  {
-    name: "How can I place an order for a gas refill?",
-    description: `To create an account, simply download Chian App
-    and sign up using your email address and set a password.`,
-  },
-  {
-    name: "What payment methods are accepted for gas refills?",
-    description: `To create an account, simply download Chian App
-    and sign up using your email address and set a password.`,
-  },
-];
-const Vendorfaqs = [
-  {
-    name: "How do I become an active vendor?",
-    description: `To become an active vendor, you need to complete our KYC (Know Your Customer) process. This involves providing necessary personal and business information for verification. Once your identity is confirmed, you can start using Chian as a vendor.`,
-  },
-  {
-    name: `Can I track the gas level in my cylinder through
-    the Chian app?`,
-    description: `To create an account, simply download Chian App
-    and sign up using your email address and set a password.`,
-  },
+import { UserFaq, Vendorfaqs } from "../components/mock/vendorData";
+// import { faqs } from "../components/mock/faqs";
 
-  {
-    name: "What payment methods are accepted for gas refills?",
-    description: `To create an account, simply download Chian App
-    and sign up using your email address and set a password.`,
-  },
-  {
-    name: "How do I create an account on Chian?",
-    description: `To create an account, simply download Chian App
-    and sign up using your email address and set a password.`,
-  },
-];
 function Support() {
   const [selectedOption, setSelectedOption] = useState("user");
   console.log(selectedOption, "this is option");
@@ -107,8 +64,12 @@ function Support() {
       <div className="flex items-center justify-center w-full">
         {selectedOption === "user" && (
           <div className="w-[80%]">
-            {faqs.map((faq, i) => (
-              <FaqCard description={faq.description} name={faq.name} key={i} />
+            {UserFaq.map((faq, i) => (
+              <VendorFaqCard
+                description={faq.description}
+                name={faq.name}
+                key={i}
+              />
             ))}
           </div>
         )}

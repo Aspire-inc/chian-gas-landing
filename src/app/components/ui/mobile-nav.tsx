@@ -11,13 +11,17 @@ import { motion } from "framer-motion";
 import React from "react";
 import { useRouter } from "next/navigation";
 import CustomModal from "./modal";
+import CustomPartnerModal from "./partnerModal";
+import CustomMarketerModal from "./marketerModal";
 
 export default function MobileNav() {
   const [showDropdown, setShowDropdown] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const [isSponsorModalOpen, setIsSponsorModalOpen] = useState(false);
+  const [isMarketerModalOpen, setIsMarketerModalOpen] = useState(false);
   const router = useRouter();
   const [showCompanyInfo, setShowCompanyInfo] = useState(false);
+  const [showPatnerInfo, setShowPatnerInfo] = useState(false);
   const scrollToAssurance = (sectionId: any) => {
     const element = document.getElementById(sectionId);
 
@@ -166,9 +170,64 @@ export default function MobileNav() {
                 <span className="text-[26px] text-white font-bold">Safety</span>
               </li>
               <li>
-                <span className="text-[26px] text-white font-bold">
-                  Partner with Chian
-                </span>
+                <div
+                  onClick={() => setShowPatnerInfo(!showPatnerInfo)}
+                  className="flex items-center gap-x-2"
+                >
+                  <span className="text-[26px] text-white font-bold">
+                    Partner with Chain
+                  </span>
+                  <Image
+                    src={WhiteCaretIcon}
+                    alt=""
+                    className={`${
+                      showCompanyInfo ? "rotate-180" : "rotate-0"
+                    } transition-all`}
+                  />
+                </div>
+                {showPatnerInfo ? (
+                  <motion.ul
+                    initial={{ x: "-30%", opacity: 0 }}
+                    animate={{ x: "0%", opacity: 1 }}
+                    className="flex flex-col mt-5 gap-y-5"
+                  >
+                    <li
+                      onClick={() => {
+                        router.push("/about");
+                        setShowDropdown(false);
+                      }}
+                    >
+                      <span className="text-[18px] text-white">
+                        As a Vendor
+                      </span>
+                    </li>
+                    <li
+                      onClick={() => {
+                        setIsSponsorModalOpen(true);
+                        setShowDropdown(false);
+                      }}
+                    >
+                      <span className="text-[18px] text-white">
+                        As a sponsor
+                      </span>
+                    </li>
+                    <li
+                      onClick={() => {
+                        setIsMarketerModalOpen(true);
+                        setShowDropdown(false);
+                      }}
+                    >
+                      <span className="text-[18px] text-white">
+                        As a marketer
+                      </span>
+                    </li>
+                    {/* <li>
+                      <span className="text-[18px] text-white">Blog</span>
+                    </li> */}
+                  </motion.ul>
+                ) : (
+                  ""
+                )}
               </li>
               <li>
                 <span className="text-[26px] text-white font-bold">
@@ -201,6 +260,14 @@ export default function MobileNav() {
         ""
       )}
       <CustomModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <CustomPartnerModal
+        isOpen={isSponsorModalOpen}
+        onClose={() => setIsSponsorModalOpen(false)}
+      />
+      <CustomMarketerModal
+        isOpen={isMarketerModalOpen}
+        onClose={() => setIsMarketerModalOpen(false)}
+      />
     </nav>
   );
 }
