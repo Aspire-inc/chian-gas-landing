@@ -11,8 +11,29 @@ import { UserFaq, Vendorfaqs } from "../components/mock/vendorData";
 
 function Support() {
   const [selectedOption, setSelectedOption] = useState("user");
-  console.log(selectedOption, "this is option");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredVendorfaqs, setFilteredVendorfaqs] = useState(Vendorfaqs);
+  const [filterUserFaq, setFilterUserFaq] = useState(UserFaq);
+  const handleSearch = (event: any) => {
+    const query = event.target.value.toLowerCase();
+    setSearchQuery(query);
 
+    const filteredData = Vendorfaqs.filter((faq) =>
+      faq.name.toLowerCase().includes(query)
+    );
+
+    setFilteredVendorfaqs(filteredData);
+  };
+  const handleUserFaqSearch = (event: any) => {
+    const query = event.target.value.toLowerCase();
+    setSearchQuery(query);
+
+    const filteredData = UserFaq.filter((faq) =>
+      faq.name.toLowerCase().includes(query)
+    );
+
+    setFilterUserFaq(filteredData);
+  };
   return (
     <div className="w-full px-2  xl:px-[5rem] mt-[3rem]">
       <DotDiffText className="text-center">
@@ -51,6 +72,10 @@ function Support() {
           <input
             className="w-[329px] lg:w-[742px] h-[50px] bg-slate-50 rounded-[50px] focus:outline-none pl-8  "
             placeholder="Ask your question"
+            value={searchQuery}
+            onChange={
+              selectedOption === "user" ? handleUserFaqSearch : handleSearch
+            }
           />
           <Image
             src={Search}
@@ -64,7 +89,7 @@ function Support() {
       <div className="flex items-center justify-center w-full">
         {selectedOption === "user" && (
           <div className="w-[80%]">
-            {UserFaq.map((faq, i) => (
+            {filterUserFaq?.map((faq, i) => (
               <VendorFaqCard
                 description={faq.description}
                 name={faq.name}
@@ -75,7 +100,7 @@ function Support() {
         )}
         {selectedOption === "vendor" && (
           <div className="w-[80%]">
-            {Vendorfaqs.map((faq, i) => (
+            {filteredVendorfaqs.map((faq, i) => (
               <VendorFaqCard
                 description={faq.description}
                 name={faq.name}
