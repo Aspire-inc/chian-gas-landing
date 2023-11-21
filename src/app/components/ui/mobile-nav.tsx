@@ -13,6 +13,7 @@ import { useRouter } from "next/navigation";
 import CustomModal from "./modal";
 import CustomPartnerModal from "./partnerModal";
 import CustomMarketerModal from "./marketerModal";
+import Link from "next/link";
 
 export default function MobileNav() {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -191,16 +192,18 @@ export default function MobileNav() {
                     animate={{ x: "0%", opacity: 1 }}
                     className="flex flex-col mt-5 gap-y-5"
                   >
-                    <li
-                      onClick={() => {
-                        router.push("/about");
-                        setShowDropdown(false);
-                      }}
+                    <Link
+                      // onClick={() => {
+                      //   router.push("https://portal.chiangas.com/");
+                      //   setShowDropdown(false);
+                      // }}
+                      href={"https://portal.chiangas.com/"}
+                      target="_blank"
                     >
                       <span className="text-[18px] text-white">
                         As a Vendor
                       </span>
-                    </li>
+                    </Link>
                     <li
                       onClick={() => {
                         setIsSponsorModalOpen(true);

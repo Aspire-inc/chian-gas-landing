@@ -179,8 +179,8 @@ users.`,
   },
   {
     name: ` What happens if my order is not fulfilled?`,
-    description: `Yes, we offer loyalty rewards and discounts to our regular
-users.`,
+    description: `If an order is not fulfilled as expected, contact the vendor
+or our support team to resolve the issue.`,
   },
   {
     name: `How do I become a Chian Gas marketer?`,
