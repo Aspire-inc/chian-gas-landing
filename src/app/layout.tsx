@@ -5,11 +5,15 @@ import { Toaster } from "react-hot-toast";
 import DesktopNav from "./components/ui/desktop-nav";
 import MobileNav from "./components/ui/mobile-nav";
 import Footer from "./components/ui/footer";
+import { Metadata } from "next";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
 });
-
+export const metadata: Metadata = {
+  title: "Chian Gas",
+  description: "connect, refill and cook with ease",
+};
 export default function RootLayout({
   children,
 }: {
