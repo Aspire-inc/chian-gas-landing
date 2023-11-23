@@ -68,20 +68,29 @@ function Footer({ handleScrollToTop }: any) {
               Recent News
             </span>
           </li>
-          <li className="">
+          <li
+            className="cursor-pointer"
+            onClick={() => router.push("/cooking-is-fun")}
+          >
             <span className="text-[17px] xl:text-[18px] text-[#5B5B5B]">
               It's been an incredible journey to get to this point, filled
               with...
             </span>
             <div className="border-[0.5px] border-[#DBDDE3] w-[200px] mt-4"></div>
           </li>
-          <li className="">
+          <li
+            className="cursor-pointer"
+            onClick={() => router.push("/how-to-use-accessories")}
+          >
             <span className="text-[17px] xl:text-[18px] text-[#5B5B5B]">
               Using your Chian Gas level checker...
             </span>
             <div className="border-[0.5px] border-[#DBDDE3] w-[200px] mt-4"></div>
           </li>
-          <li className="">
+          <li
+            className="cursor-pointer"
+            onClick={() => router.push("/tips-on-safety")}
+          >
             <span className="text-[17px] xl:text-[18px] text-[#5B5B5B]">
               Your safety is our top...
             </span>
