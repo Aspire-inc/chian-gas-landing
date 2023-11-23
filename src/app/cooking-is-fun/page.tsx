@@ -1,14 +1,38 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import HeaderBg from "@/assets/icons/header.svg";
-import MobileBg from "@/assets/icons/mobileLaunch.svg";
+import HeaderBg from "@/assets/icons/cooking-is-fun.svg";
+import MobileBg from "@/assets/icons/MobileCook.svg";
 import DotDiffText from "../components/ui/dot-diff-text";
 import { UserApp } from "../components/ui/app-types";
-import { newsPageUpdates } from "../components/mock/vendorData";
 import { useRouter } from "next/navigation";
-
-function News() {
+const newsAndUpdates = [
+  {
+    name: "Our launch date is here",
+    description: `It's been an incredible journey to get to
+this point, filled with hard work,
+dedication, and unwavering...`,
+    image: "/our-launch-date.png",
+    link: "/news",
+  },
+  {
+    name: "How to use accessories",
+    description: `Using your Chian Gas level checker device
+is a breeze. It's easier than you think. We
+listed some steps...`,
+    image: "/how-to-use-accessories.png",
+    link: "/how-to-use-accessories",
+  },
+  {
+    name: "Tips on safety",
+    description: `Your safety is our top concern. We want to
+ensure you use gas in your home with
+confidence and peace of mind...`,
+    image: "/tips-on-safety.png",
+    link: "/tips-on-safety",
+  },
+];
+function CookingIsFun() {
   const router = useRouter();
   return (
     <div className="w-full lg:px-6 xl:px-[5rem] mt-[3rem]">
@@ -28,22 +52,27 @@ function News() {
           className="w-full bg-center bg-cover lg:hidden"
         />
       </div>
-      <div className="w-full  mt-[5rem] grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <div className="w-full  mt-[5rem]">
         <div className=" p-4 lg:p-[5rem] lg:border-t-2">
-          <DotDiffText>Our Launch Date Is Here</DotDiffText>
+          <DotDiffText>Cooking is Fun</DotDiffText>
           <p className="mt-3 text-xl font-normal tracking-tight text-zinc-600">
-            It's been an incredible journey to get to this point, filled with
+            Cooking isn't merely a daily chore; it's a canvas where creativity
+            meets necessity, where ingredients transform into art, and where
+            every dish tells a story. Here at Chian Gas, we understand the
+            profound joy that comes with preparing a delightful meal, and we're
+            on a mission to make your cooking experience not just convenient but
+            downright fun!
             <br />
-            hard work, dedication, and unwavering commitment to
             <br />
-            delivering something truly exceptional. Now, the time has
-            <br />
-            come for you to experience what we've poured our hearts and
-            <br />
-            souls into.
+            Imagine a cooking journey where every step is a pleasure, where
+            you're in control, and where the flame of your culinary passion
+            burns bright. Chian Gas is not just about delivering gas; it's about
+            delivering an experience. With Chian Gas, it's time to transform
+            your kitchen into a haven of culinary adventures. Embrace the joy of
+            cooking, explore new flavors, and let every meal be a celebration
           </p>
         </div>
-        <div className="hidden pt-5 space-x-10 lg:flex">
+        {/* <div className="hidden pt-5 space-x-10 lg:flex">
           <div className="flex flex-col items-start justify-start ">
             <div className=" w-[300px] h-[100px] rounded-tr-[30px] rounded-tl-[30px] rounded-bl-[30px] bg-[#0043A7] flex items-center px-5">
               <p className="text-xs font-normal tracking-tight text-white">
@@ -130,14 +159,14 @@ function News() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="mt-10 md:mt-32 max-w-[95%] xl:max-w-[80%] mx-auto">
         <DotDiffText className="w-full text-center ">
           Upcoming Articles
         </DotDiffText>
         <div className="grid grid-cols-1 grid-rows-3 mt-10 sm:grid-cols-2 lg:grid-cols-3 sm:grid-rows-2 lg:grid-rows-1 gap-7">
-          {newsPageUpdates.map((data, i) => (
+          {newsAndUpdates.map((data, i) => (
             <div key={i} className="flex flex-col items-center md:items-start">
               <div className="max-w-[350px] w-full h-[200px] relative overflow-hidden rounded-[12px]">
                 <Image src={data.image} alt="" fill />
@@ -156,7 +185,7 @@ function News() {
                 <div>
                   <span
                     className="text-[14px] sm:text-[16px] font-semibold text-[#5B5B5B] cursor-pointer"
-                    onClick={() => router.push(`${data.link}`)}
+                    onClick={() => router.push(`${data?.link}`)}
                   >
                     Read More
                   </span>
@@ -181,4 +210,4 @@ function News() {
   );
 }
 
-export default News;
+export default CookingIsFun;

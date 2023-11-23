@@ -232,3 +232,31 @@ for the vendor in the app.`,
 wallet’ and follow the simple steps.`,
   },
 ];
+
+export const newsPageUpdates = [
+  {
+    name: "Cooking is fun",
+    description: `Just like discovering innovative energy solutions
+such as the Chian gas project. Just as we
+experiment with flavors in the kitchen...`,
+    image: "/cooking.png",
+
+    link: "/cooking-is-fun",
+  },
+  {
+    name: "How to use accessories",
+    description: `Using your Chian Gas level checker device
+is a breeze. It's easier than you think. We
+listed some steps...`,
+    image: "/how-to-use-accessories.png",
+    link: "/how-to-use-accessories",
+  },
+  {
+    name: "Tips on safety",
+    description: `Your safety is our top concern. We want to
+ensure you use gas in your home with
+confidence and peace of mind...`,
+    image: "/tips-on-safety.png",
+    link: "/tips-on-safety",
+  },
+];

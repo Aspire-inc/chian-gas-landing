@@ -62,6 +62,7 @@ const newsAndUpdates = [
 this point, filled with hard work,
 dedication, and unwavering...`,
     image: "/our-launch-date.png",
+    link: "/news",
   },
   {
     name: "How to use accessories",
@@ -69,6 +70,7 @@ dedication, and unwavering...`,
 is a breeze. It's easier than you think. We
 listed some steps...`,
     image: "/how-to-use-accessories.png",
+    link: "/how-to-use-accessories",
   },
   {
     name: "Tips on safety",
@@ -76,6 +78,7 @@ listed some steps...`,
 ensure you use gas in your home with
 confidence and peace of mind...`,
     image: "/tips-on-safety.png",
+    link: "/tips-on-safety",
   },
 ];
 
@@ -291,11 +294,11 @@ export default function Home() {
                 <span className="text-[16px] text-[#DBDDE3]">
                   10th December, 2023
                 </span>
-                <div
-                  onClick={() => router.push("/news")}
-                  className="cursor-pointer"
-                >
-                  <span className="text-[14px] sm:text-[16px] font-semibold text-[#5B5B5B]">
+                <div className="cursor-pointer">
+                  <span
+                    className="text-[14px] sm:text-[16px] font-semibold text-[#5B5B5B] cursor-pointer"
+                    onClick={() => router.push(`${data?.link}`)}
+                  >
                     Read More
                   </span>
                   <div className="w-full h-[3px] bg-[#FFDCAE]"></div>
