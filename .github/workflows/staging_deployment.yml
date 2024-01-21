@@ -1,13 +1,13 @@
-name: Production Deployment
+name: Staging Deployment
 
 on:
   push:
-    branches: [ production ]
+    branches: [ master ]
 
 jobs:
   build:
     name: Deploy
-    runs-on: production
+    runs-on: staging
     
     strategy:
       matrix:
