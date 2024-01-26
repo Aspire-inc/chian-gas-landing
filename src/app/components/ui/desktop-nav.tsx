@@ -52,6 +52,7 @@ and Flexibility to all users...`,
     description: `We are not hiring for now.`,
   },
 ];
+const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 export default function DesktopNav() {
   const [showCompanyInfo, setShowCompanyInfo] = useState(false);
@@ -77,7 +78,7 @@ export default function DesktopNav() {
           <span className="text-white text-[14px] font-normal">
             Partner with Chian as a:
           </span>
-          <Link href={"https://portal.chiangas.com/"} target="_blank">
+          <Link href={`${baseUrl}`} target="_blank">
             <span className="text-white text-[14px] font-semibold cursor-pointer">
               Vendor
             </span>
@@ -170,7 +171,7 @@ export default function DesktopNav() {
               // onClick={() => router.push("https://portal.chiangas.com/")}
             >
               <Link
-                href={"https://portal.chiangas.com/"}
+                href={`${baseUrl}`}
                 target="_blank"
                 className="hover:text-white"
               >

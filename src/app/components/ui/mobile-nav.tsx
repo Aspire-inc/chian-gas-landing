@@ -14,7 +14,7 @@ import CustomModal from "./modal";
 import CustomPartnerModal from "./partnerModal";
 import CustomMarketerModal from "./marketerModal";
 import Link from "next/link";
-
+const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
 export default function MobileNav() {
   const [showDropdown, setShowDropdown] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -197,7 +197,7 @@ export default function MobileNav() {
                       //   router.push("https://portal.chiangas.com/");
                       //   setShowDropdown(false);
                       // }}
-                      href={"https://portal.chiangas.com/"}
+                      href={`${baseUrl}`}
                       target="_blank"
                     >
                       <span className="text-[18px] text-white">
