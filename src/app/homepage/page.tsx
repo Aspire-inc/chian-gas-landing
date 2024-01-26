@@ -102,7 +102,10 @@ trusted gas vendors for convenient and efficient gas refills.`,
     and sign up using your email address and set a password.`,
   },
 ];
-
+const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+console.log("====================================");
+console.log(baseUrl, "This is baseUrl");
+console.log("====================================");
 export default function Home() {
   // const [isModalOpen, setIsModalOpen] = useState(false);
   const router = useRouter();
@@ -160,7 +163,7 @@ export default function Home() {
           </p>
 
           <button className="w-[200px] h-[50px] grid place-content-center rounded-[30px] border border-[#A7AEC1] hover:bg-[#F99617] hover:text-white hover:border-none">
-            <Link href={"https://portal.chiangas.com/"} target="_blank">
+            <Link href={`${baseUrl}`} target="_blank">
               Enrol Now
             </Link>
           </button>
