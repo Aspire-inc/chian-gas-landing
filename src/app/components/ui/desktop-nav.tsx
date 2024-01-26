@@ -52,7 +52,6 @@ and Flexibility to all users...`,
     description: `We are not hiring for now.`,
   },
 ];
-const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 export default function DesktopNav() {
   const [showCompanyInfo, setShowCompanyInfo] = useState(false);
@@ -62,6 +61,7 @@ export default function DesktopNav() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSponsorModalOpen, setIsSponsorModalOpen] = useState(false);
   const [isMarketerModalOpen, setIsMarketerModalOpen] = useState(false);
+  const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
 
   return (
     <nav className="hidden lg:block" id="nav">
