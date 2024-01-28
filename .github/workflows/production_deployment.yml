@@ -20,7 +20,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     # - name: Add .env 
-    - run: echo "${{secrets.ENV}}" > .env
+    - run: echo "${{secrets.PROD_ENV}}" > .env
     - run: npm i
     - run: npm run build --if-present
     - run: npm run start:prod
