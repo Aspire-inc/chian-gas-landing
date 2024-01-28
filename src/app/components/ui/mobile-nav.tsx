@@ -14,13 +14,14 @@ import CustomModal from "./modal";
 import CustomPartnerModal from "./partnerModal";
 import CustomMarketerModal from "./marketerModal";
 import Link from "next/link";
-const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
 export default function MobileNav() {
   const [showDropdown, setShowDropdown] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSponsorModalOpen, setIsSponsorModalOpen] = useState(false);
   const [isMarketerModalOpen, setIsMarketerModalOpen] = useState(false);
   const router = useRouter();
+  const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
+
   const [showCompanyInfo, setShowCompanyInfo] = useState(false);
   const [showPatnerInfo, setShowPatnerInfo] = useState(false);
   const scrollToAssurance = (sectionId: any) => {
