@@ -163,6 +163,18 @@ export default function DesktopNav() {
                 Safety
               </span>
             </li>
+            <li
+              className={` h-full flex items-center px-4 hover:bg-blue-50/70 border-b-2 border-transparent hover:border-[#F99617] cursor-pointer ${
+                pathname === "/safety-tips"
+                  ? "border-b-2 border-transparent border-[#F99617] bg-blue-50/70"
+                  : ""
+              }`}
+              onClick={() => router.push("https://chiantechhub.com/")}
+            >
+              <span className="text-[15px] xl:text-[20px] text-[#5B5B5B] ">
+                Academy
+              </span>
+            </li>
           </ul>
 
           <ul className="flex items-center gap-12">
@@ -302,7 +314,7 @@ const CompanyInfo = ({
                     <p className="text-[14px] text-[#8E8E8E]">
                       {info.description}
                     </p>
-                  </motion.div>
+                  </motion.div> 
                 ))}
               </div>
             </div>

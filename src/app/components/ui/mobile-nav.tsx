@@ -171,6 +171,14 @@ export default function MobileNav() {
               >
                 <span className="text-[26px] text-white font-bold">Safety</span>
               </li>
+              <li
+                onClick={() => {
+                  router.push("https://chiantechhub.com/");
+                  setShowDropdown(false);
+                }}
+              >
+                <span className="text-[26px] text-white font-bold">Academy</span>
+              </li>
               <li>
                 <div
                   onClick={() => setShowPatnerInfo(!showPatnerInfo)}
