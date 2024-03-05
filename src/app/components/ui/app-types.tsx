@@ -1,7 +1,9 @@
 "use client";
+import { getOS } from "@/app/utils/userAgent";
 import HalfSmartPhoneIcon from "@/assets/icons/half-smartphone-icon.svg";
 import HalfSmartPhoneIcon2 from "@/assets/icons/VendorPhone.svg";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function AppTypes() {
@@ -56,6 +58,8 @@ export default function AppTypes() {
 }
 
 export const UserApp = () => {
+  const os = getOS();
+
   return (
     <div className="w-[33.3%] pt-12 sm:pt-20 px-4 md:px-14 bg-[#0043A7] rounded-[20px] mt-5 flex lg:justify-between items-start flex-wrap lg:flex-nowrap gap-y-7">
       <div>
@@ -72,9 +76,17 @@ export const UserApp = () => {
           with real-time updates.
         </p>
         <button className=" h-14 px-[23px] py-[15px] mt-6 rounded-[30px] border border-white justify-center items-center  flex hover:bg-amber-500 hover:border-none">
-          <p className="text-center text-white 2xl:text-lg font-semibold  leading-normal text-base">
-            Download App
-          </p>
+        <Link
+            href={
+              os === "ios"
+                ? "https://apps.apple.com/ng/app/chian/id6464393536"
+                : "https://play.google.com/store/apps/details?id=com.chiangas.com"
+            }
+          >
+            <p className="text-center text-white 2xl:text-lg font-semibold  leading-normal text-base">
+              Download App
+            </p>
+          </Link>
         </button>
       </div>
 
@@ -88,6 +100,8 @@ export const UserApp = () => {
 };
 
 const VendorApp = () => {
+  const os = getOS();
+
   return (
     <div className="w-[33.3%] pt-12 sm:pt-20 px-4 md:px-14 bg-[#0043A7] rounded-[20px] mt-5 flex lg:justify-between items-start flex-wrap lg:flex-nowrap gap-y-7">
       <div>
@@ -104,9 +118,17 @@ const VendorApp = () => {
           from one app.
         </p>
         <button className=" h-14 px-[23px] py-[15px] mt-6 rounded-[30px] border border-white justify-center items-center  flex hover:bg-amber-500 hover:border-none">
-          <p className="text-center text-white 2xl:text-lg font-semibold  leading-normal text-base">
-            Download App
-          </p>
+          <Link
+            href={
+              os === "ios"
+                ? "https://apps.apple.com/ng/app/chian/id6464393536"
+                : "https://play.google.com/store/apps/details?id=com.chiangas.com"
+            }
+          >
+            <p className="text-center text-white 2xl:text-lg font-semibold  leading-normal text-base">
+              Download App
+            </p>
+          </Link>
         </button>
       </div>
 
