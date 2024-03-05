@@ -178,12 +178,29 @@ function Footer({ handleScrollToTop }: any) {
           </div>
 
           <span className="text-[#0043A7] tracking-wider text-[16px] font-bold">
-            Get our apps
+            Get Our User Apps
           </span>
 
           <div className="flex flex-wrap gap-3 xl:flex-nowrap">
+            <Link href={'https://apps.apple.com/ng/app/chian/id6464393536'} target="_blanks">
             <Image src={DownloadOnAppStoreIcon} alt="" />
+            </Link>
+            <Link href={"https://play.google.com/store/apps/details?id=com.chiangas.com"} target="_blank">
+
             <Image src={GetOnGooglePlayIcon} alt="" />
+            </Link>
+          </div>
+          <span className="text-[#0043A7] tracking-wider text-[16px] font-bold">
+            Get Our Vendor Apps
+          </span>
+
+          <div className="flex flex-wrap gap-3 xl:flex-nowrap">
+            <Link href={"https://apps.apple.com/ng/app/chian-vendor/id6473828109"} target="_blank">
+            <Image src={DownloadOnAppStoreIcon} alt="" />
+            </Link>
+            <Link href={"https://play.google.com/store/apps/details?id=com.chianvendor.com"} target="_blank">
+            <Image src={GetOnGooglePlayIcon} alt="" />
+            </Link>
           </div>
         </div>
       </div>
