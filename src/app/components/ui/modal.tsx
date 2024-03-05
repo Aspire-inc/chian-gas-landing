@@ -4,6 +4,7 @@ import Image from "next/image";
 import { QRCode } from "react-qrcode-logo";
 import LogoIcon from "@/assets/icons/Cancel.svg";
 import Logo from "@/assets/icons/logo-icon.svg";
+import { getOS } from "@/app/utils/userAgent";
 
 interface ModalProps {
   isOpen: boolean;
@@ -12,6 +13,9 @@ interface ModalProps {
 
 const CustomModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const [users, setUsers] = useState("Gas User");
+  const os = getOS();
+// console.log(os,"This is OS");
+
   const changeUser = () => {
     setUsers(users === "Gas User" ? "Vendor" : "Gas User");
   };
@@ -59,10 +63,10 @@ const CustomModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                 {/* <div className="flex items-center justify-center h-[180px] w-[180px] rounded-tl-lg  border-tr"></div> */}
                 <div className="bg-white h-[270px] w-[270px] flex items-center justify-center rounded-xl">
                   <QRCode
-                    value="https://github.com/gcoro/react-qrcode-logo"
+                    value={os ==='ios' ? 'https://apps.apple.com/ng/app/chian/id6464393536':'https://play.google.com/store/apps/details?id=com.chiangas.com'}
                     logoPaddingStyle="square"
                     // logoPadding={30}
-                    logoImage="https://images.unsplash.com/photo-1695653420624-4a23b2ffc77c?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    logoImage=""
                     // qrStyle="dots"
                     size={250}
                     // eyeRadius={50}
