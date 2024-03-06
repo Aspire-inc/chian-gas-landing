@@ -161,7 +161,9 @@ function Footer({ handleScrollToTop }: any) {
               </Link>
             </div>
             <div className="w-[60px] h-[60px] flex items-center justify-center rounded-[16px] border border-[#5B5B5B]">
+              <Link href={"https://twitter.com/ChianGas51995"} target="_blank">
               <Image src={TwitterIcon} alt="" />
+              </Link>
             </div>
             <div className="w-[60px] h-[60px] flex items-center justify-center rounded-[16px] border border-[#5B5B5B]">
               <Link

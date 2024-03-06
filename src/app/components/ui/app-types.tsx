@@ -121,8 +121,8 @@ const VendorApp = () => {
           <Link
             href={
               os === "ios"
-                ? "https://apps.apple.com/ng/app/chian/id6464393536"
-                : "https://play.google.com/store/apps/details?id=com.chiangas.com"
+                ? "https://apps.apple.com/ng/app/chian-vendor/id6473828109"
+                : "https://play.google.com/store/apps/details?id=com.chianvendor.com"
             }
           >
             <p className="text-center text-white 2xl:text-lg font-semibold  leading-normal text-base">
