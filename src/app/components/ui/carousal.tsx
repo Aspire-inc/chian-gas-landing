@@ -111,7 +111,7 @@ export default function Carousal() {
                 your cylinders with just a few taps on your device.
               </p>
 
-              <Link
+              {/* <Link
                 href={
                   os === "ios"
                     ? "https://apps.apple.com/ng/app/chian/id6464393536"
@@ -125,7 +125,7 @@ export default function Carousal() {
                 >
                   Download App
                 </button>
-              </Link>
+              </Link> */}
             </div>
           </motion.section>
         </AnimatePresence>
