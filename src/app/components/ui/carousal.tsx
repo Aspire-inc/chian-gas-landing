@@ -6,6 +6,8 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import { flushSync } from "react-dom";
+import Link from "next/link";
+import { getOS } from "@/app/utils/userAgent";
 
 const variants: Variants = {
   initial: (direction) => {
@@ -35,6 +37,8 @@ const variants: Variants = {
 };
 
 export default function Carousal() {
+  const os = getOS();
+
   const content = [
     "/woman-feeding-man.png",
     "/gas-cooker.png",
@@ -107,9 +111,21 @@ export default function Carousal() {
                 your cylinders with just a few taps on your device.
               </p>
 
-              <button className="text-white bg-[#F99617] w-[200px] h-[56px] rounded-[30px] flex items-center justify-center font-semibold">
-                Download App
-              </button>
+              <Link
+                href={
+                  os === "ios"
+                    ? "https://apps.apple.com/ng/app/chian/id6464393536"
+                    : "https://play.google.com/store/apps/details?id=com.chiangas.com"
+                }
+                target="_blank"
+              >
+                <button
+                  className="text-white bg-[#F99617] w-[200px] h-[56px] rounded-[30px] flex items-center justify-center font-semibold cursor-pointer"
+                  // onClick={() => alert("Sups Fool")}
+                >
+                  Download App
+                </button>
+              </Link>
             </div>
           </motion.section>
         </AnimatePresence>
