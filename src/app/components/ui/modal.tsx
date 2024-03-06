@@ -63,7 +63,7 @@ const CustomModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                 {/* <div className="flex items-center justify-center h-[180px] w-[180px] rounded-tl-lg  border-tr"></div> */}
                 <div className="bg-white h-[270px] w-[270px] flex items-center justify-center rounded-xl">
                   <QRCode
-                    value={os ==='ios' ? 'https://apps.apple.com/ng/app/chian/id6464393536':'https://play.google.com/store/apps/details?id=com.chiangas.com'}
+                    value={users === "Gas User" ? 'https://play.google.com/store/apps/details?id=com.chiangas.com':'https://play.google.com/store/apps/details?id=com.chianvendor.com'}
                     logoPaddingStyle="square"
                     // logoPadding={30}
                     logoImage=""
